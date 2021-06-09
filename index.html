@@ -1,40 +1,53 @@
 <!-- Defines the document type-->
-<!doctype html>
+<!DOCTYPE html>
 
 <!-- Defines an HTML document and its content as being British English-->
 <html lang="en-GB">
-  
   <!-- Defines the metadata and information for the document -->
   <head>
-
     <!-- SITE DATA -->
     <!-- The title given to the page in the browser tab and bookmark-->
     <title>marcclare.dev</title>
     <!-- Specifies the character encoding for the HTML document -->
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <!-- Sets zoom to 100% on mobile browsers as CSS will allow site to display correctly  -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <!-- SITE RESOURCES -->
     <!-- Link to the JQuery library -->
     <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script> -->
     <!-- Link to the external JS scripts -->
     <!-- <script src="js/scripts.js"></script> -->
     <!-- Link to the external stylesheet used to sytle the documents elements -->
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/styles.css" />
     <!-- Link to the font-awesome icon library -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
     <!-- Adds shortcut icons -->
-    <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
-    <link rel="manifest" href="img/favicon/site.webmanifest">
-
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="img/favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="img/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="img/favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="img/favicon/site.webmanifest" />
   </head>
-  
+
   <!-- Defines the documents body -->
   <body>
-
     <!-- Container for the drop down menu -->
     <div class="dropdown">
       <!-- Drop down menu button -->
@@ -42,14 +55,18 @@
       <!-- Drop down menu items (HIDDEN) -->
       <div class="dropdown-content">
         <a href="https://marcclare.dev"><i class="fa fa-home"></i></a>
-        <a href="https://marcclare.dev/contact" target="_blank"><i class="fa fa-envelope"></i></a>
-        <a href="https://github.com/Scarnface" target="_blank"><i class="fa fa-github"></i></a>
+        <a href="https://marcclare.dev/contact" target="_blank"
+          ><i class="fa fa-envelope"></i
+        ></a>
+        <a href="https://github.com/Scarnface" target="_blank"
+          ><i class="fa fa-github"></i
+        ></a>
       </div>
     </div>
 
     <!-- Hero image -->
     <div class="hero-image">
-       <!-- Hero text -->
+      <!-- Hero text -->
       <div class="hero-text">
         <h1>marcclare.dev</h1>
         <h2>&lt;&#92;&gt; A Portfolio of Work</h2>
@@ -58,51 +75,67 @@
 
     <!-- Introduction -->
     <section>
-      <p class="section-text">Welcome to my portfolio!<br><br>
-      I'm a full-stack web developer and coding enthusiast from the United Kingdom.<br><br>
-      Please have a look around at my latest projects and feel free to get in touch!</p>
+      <p class="section-text">
+        Welcome to my portfolio!<br /><br />
+        I'm a full-stack web developer and coding enthusiast from the United
+        Kingdom.<br /><br />
+        Please have a look at my latest projects and feel free to get in touch!
+      </p>
     </section>
 
     <section>
       <!-- Portfolio Gallery Grid -->
       <div class="gallery">
         <div class="card">
-          <a href="https://marcclare.dev/projects/multiAPI/index.html" target="_blank">
-            <img src="img/multiAPI.jpg" alt="multiAPI screenshot"></a>
+          <a
+            href="https://marcclare.dev/projects/multiAPI/index.html"
+            target="_blank"
+          >
+            <img src="img/multiAPI.jpg" alt="multiAPI screenshot"
+          /></a>
           <h3>Multi API</h3>
           <p>Geonames APIs parsed dynamically to an HTML web page.</p>
         </div>
         <div class="card">
-          <a href="https://marcclare.dev/projects/musicstache/index.html" target="_blank">
-            <img src="img/musicstache.jpg" alt="musicstache screenshot"></a>
+          <a
+            href="https://marcclare.dev/projects/musicstache/index.html"
+            target="_blank"
+          >
+            <img src="img/musicstache.jpg" alt="musicstache screenshot"
+          /></a>
           <h3>Music Stache</h3>
           <p>HTML, CSS, JavaScript, and Handlebars to make a music store!</p>
         </div>
         <div class="card">
           <a href="https://bluejam.surge.sh/" target="_blank">
-            <img src="img/bluejam.jpg" alt="BLUEjam screenshot"></a>
+            <img src="img/bluejam.jpg" alt="BLUEjam screenshot"
+          /></a>
           <h3>BLUEjam</h3>
           <p>Spotify custom tracklist creator in REACT.</p>
         </div>
         <div class="card">
-          <a href="https://marcclare.dev/projects/codestrips/public/index.html" target="_blank">
-            <img src="img/codestrips.jpg" alt="Codestrips screenshot"></a>
+          <a
+            href="https://marcclare.dev/projects/codestrips/public/index.html"
+            target="_blank"
+          >
+            <img src="img/codestrips.jpg" alt="Codestrips screenshot"
+          /></a>
           <h3>Codestrips</h3>
-          <p>A comic strip app using Express, SQLite, and the sqlite3 node module.</p>
+          <p>
+            A comic strip app using Express, SQLite, and the sqlite3 node
+            module.
+          </p>
         </div>
       </div>
     </section>
-    
-    <section>
-    </section>
+
+    <section></section>
 
     <!-- Site Info -->
     <footer>
       <p>Copyright &copy; 2021 marcclare.dev. All Rights Reserved.</p>
       <!-- The site's CSS uses transitions, which are bugged in chrome and run on page load, here's a really technical fix -->
-      <script> </script>
+      <script></script>
     </footer>
-
   </body>
-  
-</html> 
+</html>
