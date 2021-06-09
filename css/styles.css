@@ -1,0 +1,207 @@
+/* ================================= 
+  Fonts
+==================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap');
+
+/* ================================= 
+  Base Element Styles
+==================================== */
+
+/* Colour scheme CSS hex */
+:root {
+  --dark-purple: #242038ff;
+  --amethyst: #9067c6ff;
+  --middle-blue-purple: #8d86c9ff;
+  --lavender-gray: #cac4ceff;
+  --linen: #f7ece1ff;
+}
+
+/* Include border and padding in total dimensions */
+* {
+  box-sizing: border-box;
+}
+
+/* Set the specific height for the entire document relative to the viewport */
+body,
+html {
+  height: 100%;
+  background-color: var(--dark-purple);
+  /* Specify the desired and fallback fonts */
+  font-family: "Roboto", Arial, sans-serif;
+}
+
+/* ================================= 
+  Layout Sections
+==================================== */
+
+/* Style a default section */
+section {
+  padding: 2rem 10%;
+  color: var(--linen);
+  text-align: center;
+}
+
+/* Style a diagonal section and alternate applying it to default sections  */
+section:nth-of-type(even) {
+  background: var(--amethyst);
+  /* Add a diagonal effect. Viewport width units used to make angle consistent across screen widths */
+  clip-path: polygon(0 6vw, 100% 0, 100% calc(100% - 6vw), 0 100%);
+  padding: 10rem 10%;
+}
+
+/*Scales the sections's font size depending on the screen size, vmax ensures a larger minimum size */
+.section-text {
+  font-weight: 700;
+  font-size: 2vmax;
+}
+
+/* ================================= 
+  Hamburger Menu
+==================================== */
+
+/* Position the menu button container and stick it to the top left regardless of scrolling */
+.dropdown {
+  position: fixed;
+  left: 1rem;
+  top: 1rem;
+  text-align: center;
+  /* Display over all other content */
+  z-index: 1;
+}
+
+.dropbtn {
+  background-color: #00000000;
+  color: var(--middle-blue-purple);
+  padding: 0.25rem 0.5rem;
+  font-size: 3rem;
+  transition: all 1s ease-in-out;
+  /* Remove default button styling */
+  border: none;
+}
+
+.dropdown-content {
+  /* Hide initialy */
+  opacity: 0;
+  transform: scale(0);
+  transition: all 1s ease-in-out;
+}
+
+.dropdown-content a {
+  color: var(--middle-blue-purple);
+  padding: 0.25rem 0.5rem;
+  font-size: 3rem;
+  display: block;
+  /* Remove default link styling */
+  text-decoration: none;
+}
+
+/* Removes the highlight box on visited buttons in mobile browsers */
+.dropbtn:focus {
+  outline-style: none;
+}
+
+/* Make the menu bigger on selection */
+.dropdown:hover .dropbtn {
+  cursor: pointer;
+  transform: scale(1.5);
+}
+
+/* Highlight the current menu item */
+.dropdown-content a:hover {
+  color: var(--linen);
+  transition: all 1s ease;
+}
+
+/* Expand and fade in the menu on pressing the menu button */
+.dropdown:hover .dropdown-content {
+  opacity: 1;
+  transform-origin: center;
+  transform: scale(1);
+}
+
+/* ================================= 
+  Hero
+==================================== */
+
+.hero-image {
+  /* Link to the required image with a linear-gradient to darken its apperance increasing readability of the overlayed text */
+  background-image: linear-gradient(#00000060, #00000060), url("../img/heroimg.jpg");
+  /* Set a specific height of the hero image relative to the viewport */
+  height: 50%;
+  /* Position and center the image to scale correctly on all viewports */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  /* Add a diagonal effect. Viewport width units used to make angle consistent across screen widths */
+  clip-path: polygon(0 0, 100% 0, 100% calc(100% - 6vw), 0 100%);
+}
+
+.hero-text {
+  font-weight: 900;
+  color: var(--linen);
+  /* Centre the text and position it relative to the image */
+  text-align: center;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  /* Adjusts for the size of the content */
+  transform: translate(-50%, -50%);
+  max-width: 70%;
+  /*Scales the title's font size depending on the screen size, vmax ensures a larger minimum size */
+  font-size: 2.5vmax;
+  /* Reduces the white space between the two headers */
+  line-height: 0.7;
+}
+
+/* Styles the subheading font size !!!! Hero text is already 2.5vmax, why is h2 being made so big without this? !!!!*/
+.hero-text h2 {
+  font-size: 2.5vmax;
+}
+
+/* ================================= 
+  Gallery
+==================================== */
+
+.gallery {
+  display: flex;
+  /* Decrease number of items per row depending on screen size */
+  flex-wrap: wrap;
+}
+
+.card {
+  background-color: var(--lavender-gray);
+  color: var(--dark-purple);
+  margin: 0.5rem;
+  border-radius: 0.8rem;
+  padding: 0.7rem;
+  /* set the initial and minimum size of the flexible content items */
+  flex-grow: 1;
+  flex-basis: 16rem;
+}
+
+.card img {
+  border-radius: 0.8rem;
+  width: 100%;
+}
+
+.card:hover {
+  /* Makes the cursor a pointer over the whole card to better indicate its function as a link */
+  cursor: pointer;
+  background-color: var(--linen);
+  filter: drop-shadow(0 0 0.75rem #000);
+  transition: all 1s ease;
+}
+
+/* ================================= 
+  Footer
+==================================== */
+
+footer {
+  text-align: center;
+  font-size: 0.7rem;
+  padding: 0.2rem;
+  background-color: var(--lavender-gray);
+  color: var(--dark-purple);
+}
