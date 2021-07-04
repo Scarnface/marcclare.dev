@@ -19,16 +19,16 @@
     <!-- Link to the JQuery library -->
     <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script> -->
     <!-- Link to the external JS scripts -->
-    <!-- <script src="js/scripts.js"></script> -->
+    <!-- <script src="libs/js/scripts.js"></script> -->
     <!-- Link to the external stylesheet used to sytle the documents elements -->
-    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="libs/css/styles.css" />
     <!-- Link to the font-awesome icon library -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
     <!-- Adds shortcut icons -->
-    <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png"/>
-    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png"/>
-    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png"/>
-    <link rel="manifest" href="img/favicon/site.webmanifest"/>
+    <link rel="apple-touch-icon" sizes="180x180" href="libs/img/favicon/apple-touch-icon.png"/>
+    <link rel="icon" type="image/png" sizes="32x32" href="libs/img/favicon/favicon-32x32.png"/>
+    <link rel="icon" type="image/png" sizes="16x16" href="libs/img/favicon/favicon-16x16.png"/>
+    <link rel="manifest" href="libs/img/favicon/site.webmanifest"/>
 
   </head>
 
@@ -40,83 +40,108 @@
       <!-- Drop down menu button -->
       <button class="dropbtn"><i class="fa fa-bars"></i></button>
       <!-- Drop down menu items (HIDDEN) -->
-      <div class="dropdown-content">
+      <nav class="dropdown-content">
         <a href="https://marcclare.dev"><i class="fa fa-home"></i></a>
         <a href="https://marcclare.dev/contact" target="_blank"><i class="fa fa-envelope"></i></a>
         <a href="https://github.com/Scarnface" target="_blank"><i class="fa fa-github"></i></a>
-      </div>
+      </nav>
     </div>
 
     <!-- HERO -->
-    <div class="hero-image">
+    <header class="hero-image">
       <!-- Hero text -->
       <div class="hero-text">
         <h1>marcclare.dev</h1>
         <h2>&lt;&#92;&gt; A Portfolio of Work</h2>
       </div>
-    </div>
+    </header>
 
     <!-- INTRODUCTION -->
-    <section>
+    <section class="dsection">
       <p class="section-text">
         Welcome to my portfolio!<br /><br />
-        I'm a full-stack web developer and coding enthusiast from the United
-        Kingdom.<br /><br />
+        I'm a full-stack developer and coding enthusiast from Norwich, England. I currently work as a Scion in the Netmatters Scion
+         Coalition Scheme. After finishing university with a BSc first class and a PGDE distinction, I lived in Viet Nam where I worked as a 
+         teacher. I've also taught GCSE and A-Level Computer Science here in the UK.<br /><br />
         Please have a look at my latest projects and feel free to get in touch!
       </p>
     </section>
 
     <!-- CARD GALLERY -->
-    <section>
+    <section class="dsection">
       <div class="gallery">
 
         <div class="card">
-          <a href="https://marcclare.dev/projects/multiAPI/index.html" target="_blank">
-            <img src="img/multiAPI.jpg" alt="multiAPI screenshot"/></a>
-          <h3>Multi API</h3>
-          <p>Geonames APIs parsed dynamically to an HTML web page.</p>
+          <img src="libs/img/rgs.jpg" alt="Construction screenshot"/>
+          <aside class="overlay">
+            <h3>Ricks's Garage Sale</h3>
+            <p>Prototyping with Axure.</p>
+            <button href="#" target="_blank">Project</button>
+            <button>Github</button>
+          </aside>
         </div>
 
         <div class="card">
-          <a href="https://marcclare.dev/projects/musicstache/index.html" target="_blank">
-            <img src="img/musicstache.jpg" alt="musicstache screenshot"/></a>
-          <h3>Music Stache</h3>
-          <p>HTML, CSS, JavaScript, and Handlebars to make a music store!</p>
+          <img src="libs/img/netmatters.jpg" alt="Netmatters screenshot"/>
+          <aside class="overlay">
+            <h3>Netmatters</h3>
+            <p>Netmatters clone with scss.</p>
+            <button href="https://marcclare.dev/projects/Netmatters/index.html" target="_blank">Project</button>
+            <button>Github</button>
+          </aside>
         </div>
 
         <div class="card">
-          <a href="https://bluejam.surge.sh/" target="_blank">
-            <img src="img/bluejam.jpg" alt="BLUEjam screenshot"/></a>
-          <h3>BLUEjam</h3>
-          <p>Spotify custom tracklist creator in REACT.</p>
+          <img src="libs/img/multiAPI.jpg" alt="multiAPI screenshot"/>
+          <aside class="overlay">
+            <h3>Multi API</h3>
+            <p>Geonames APIs parsed dynamically to an HTML web page.</p>
+            <button href="https://marcclare.dev/projects/multiAPI/index.html" target="_blank">Project</button>
+            <button>Github</button>
+          </aside>
+
         </div>
 
         <div class="card">
-          <a href="https://marcclare.dev/projects/codestrips/public/index.html" target="_blank">
-            <img src="img/codestrips.jpg" alt="Codestrips screenshot"/></a>
-          <h3>Codestrips</h3>
-          <p>A comic strip app using Express, SQLite, and the sqlite3 node module.</p>
+          <img src="libs/img/musicstache.jpg" alt="musicstache screenshot"/></a>
+          <aside class="overlay">
+            <h3>Music Stache</h3>
+            <p>HTML, CSS, JavaScript, and Handlebars to make a music store!</p>
+            <button href="https://marcclare.dev/projects/musicstache/index.html" target="_blank">Project</button>
+            <button>Github</button>
+          </aside>
         </div>
 
         <div class="card">
-          <a href="https://marcclare.dev/projects/" target="_blank">
-            <img src="img/uc.jpg" alt="Construction screenshot"/></a>
-          <h3>TBD</h3>
-          <p>To be determined.</p>
+          <img src="libs/img/bluejam.jpg" alt="BLUEjam screenshot"/>
+          <aside class="overlay">
+            <h3>BLUEjam</h3>
+            <p>Spotify custom tracklist creator in REACT.</p>
+            <button href="https://bluejam.surge.sh/" target="_blank">Project</button>
+            <button>Github</button>
+          </aside>
         </div>
 
         <div class="card">
-          <a href="https://marcclare.dev/projects/" target="_blank">
-            <img src="img/uc.jpg" alt="Construction screenshot"/></a>
-          <h3>TBD</h3>
-          <p>To be determined.</p>
+          <img src="libs/img/codestrips.jpg" alt="Codestrips screenshot"/>
+          <aside class="overlay">
+            <h3>Codestrips</h3>
+            <p>A comic strip app using Express, SQLite, and the sqlite3 node module.</p>
+            <button href="https://marcclare.dev/projects/codestrips/public/index.html" target="_blank">Project</button>
+            <button>Github</button>
+          </aside>
         </div>
 
       </div>
     </section>
 
-    <!-- TBD -->
-    <section></section>
+    <!-- Awards and Memberships -->
+    <section class="dsection">
+      <div class="badge-wrapper">
+        <img src="libs/img/HTML5.png" alt="Microsoft award">
+        <img src="libs/img/bcs-logo.svg" alt="BCS Membership">
+      <div>
+    </section>
 
     <!-- FOOTER -->
     <footer>

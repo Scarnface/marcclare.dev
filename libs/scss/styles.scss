@@ -36,14 +36,14 @@ html {
 ==================================== */
 
 /* Style a default section */
-section {
+.dsection {
   padding: 2rem 10%;
   color: var(--linen);
   text-align: center;
 }
 
 /* Style a diagonal section and alternate applying it to default sections  */
-section:nth-of-type(even) {
+.dsection:nth-of-type(even) {
   background: var(--amethyst);
   /* Add a diagonal effect. Viewport width units used to make angle consistent across screen widths */
   clip-path: polygon(0 6vw, 100% 0, 100% calc(100% - 6vw), 0 100%);
@@ -53,17 +53,17 @@ section:nth-of-type(even) {
 /*Scales the sections's font size depending on the screen size, vmax ensures a larger minimum size */
 .section-text {
   font-weight: 700;
-  font-size: 2vmax;
+  font-size: 1.75vmax;
 }
 
 /* ================================= 
   Hamburger Menu
 ==================================== */
 
-/* Position the menu button container and stick it to the top left regardless of scrolling */
+/* Position the menu button container and stick it to the top right regardless of scrolling */
 .dropdown {
   position: fixed;
-  left: 1rem;
+  right: 1rem;
   top: 1rem;
   text-align: center;
   /* Display over all other content */
@@ -102,9 +102,9 @@ section:nth-of-type(even) {
 }
 
 /* Make the menu bigger on selection */
-.dropdown:hover .dropbtn {
+.dropbtn:hover {
   cursor: pointer;
-  transform: scale(1.5);
+  transform: scale(1.25);
 }
 
 /* Highlight the current menu item */
@@ -114,7 +114,8 @@ section:nth-of-type(even) {
 }
 
 /* Expand and fade in the menu on pressing the menu button */
-.dropdown:hover .dropdown-content {
+.dropbtn:hover~.dropdown-content,
+.dropdown-content:hover {
   opacity: 1;
   transform-origin: center;
   transform: scale(1);
@@ -166,38 +167,63 @@ section:nth-of-type(even) {
 
 .gallery {
   max-width: 100%;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  grid-template-rows: repeat(auto-fit, minmax(450px, 1fr));
-  grid-gap: 1rem;
-  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .card {
-  /* !!! height value untill buttons are added !!! */
-  height: 450px;
-  background-color: var(--middle-blue-purple);
-  color: var(--dark-purple);
-  border: solid 0.3rem var(--dark-purple);
+  width: 300px;
+  height: 300px;
+  position: relative;
   border-radius: 0.8rem;
-  padding: 0.7rem;
-  /* set the initial and minimum size of the flexible content items */
-  flex-grow: 1;
-  flex-basis: 16rem;
+  &:not(:last-child) {
+    margin-bottom: 30px;
+  }
+  img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
 }
 
-.card img {
-  border-radius: 0.8rem;
+.overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #000000CC;
   width: 100%;
+  height: 100%;
+  transform: scale(0);
+  transition: .3s ease;
 }
 
-.card:hover {
+.card:hover .overlay{
   /* Makes the cursor a pointer over the whole card to better indicate its function as a link */
   cursor: pointer;
-  color: var(--dark-purple);
-  background-color: var(--lavender-gray);
-  filter: drop-shadow(0 0 0.75rem #000);
-  transition: all 1s ease;
+  transform: scale(1);
+}
+
+.card:hover img {
+  filter: grayscale(100%);
+}
+
+/* ================================= 
+  Awards and Memberships
+==================================== */
+
+.badge-wrapper {
+  display:flex;
+  justify-content: center;
+  img {
+    flex-shrink: 1;
+    width: auto;
+    height: 150px;
+    &:not(:last-of-type) {
+      padding-right: 25px;
+    }
+  }
 }
 
 /* ================================= 
