@@ -7,28 +7,34 @@
   <!-- Defines the metadata and information for the document -->
   <head>
 
-    <!-- SITE DATA -->
-    <!-- The title given to the page in the browser tab and bookmark-->
+    <!-- ================================= 
+      SITE DATA
+    ================================== -->
     <title>marcclare.dev</title>
-    <!-- Specifies the character encoding for the HTML document -->
     <meta charset="utf-8" />
-    <!-- Sets zoom to 100% on mobile browsers as CSS will allow site to display correctly  -->
+    <meta name="keywords" content="Marc Clare, Developer, For Hire, Web Design, Digital Marketing, SEO" />   
+    <meta name="description" content="Web Services Company">  
+    <meta name="author" content="Marc Clare">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- SITE RESOURCES -->
-    <!-- Link to the JQuery library -->
-    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script> -->
-    <!-- Link to the external JS scripts -->
-    <!-- <script src="libs/js/scripts.js"></script> -->
-    <!-- Link to the external stylesheet used to sytle the documents elements -->
-    <link rel="stylesheet" href="libs/css/styles.css" />
-    <!-- Link to the font-awesome icon library -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
-    <!-- Adds shortcut icons -->
+    <!-- ================================= 
+      SITE RESOURCES
+    ================================== -->
+    <!-- FONTAWESOME -->
+    <script src="https://kit.fontawesome.com/a36ca304f3.js" crossorigin="anonymous"></script>
+    <!-- NORMALIZE -->
+    <link type="text/css" rel="stylesheet" href="libs/css/normalize.css" />
+    <!-- CUSTOM CSS -->
+    <link type="text/css" rel="stylesheet" href="libs/css/styles.css" />
+    <!-- FAVICON -->
     <link rel="apple-touch-icon" sizes="180x180" href="libs/img/favicon/apple-touch-icon.png"/>
     <link rel="icon" type="image/png" sizes="32x32" href="libs/img/favicon/favicon-32x32.png"/>
     <link rel="icon" type="image/png" sizes="16x16" href="libs/img/favicon/favicon-16x16.png"/>
     <link rel="manifest" href="libs/img/favicon/site.webmanifest"/>
+    <!-- JQUERY -->
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script> -->
+    <!-- JS -->
+    <!-- <script src="libs/js/scripts.js"></script> -->
 
   </head>
 
@@ -58,26 +64,27 @@
 
     <!-- INTRODUCTION -->
     <section class="dsection">
-      <p class="section-text">
-        Welcome to my portfolio!<br /><br />
-        I'm a full-stack developer and coding enthusiast from Norwich, England. I currently work as a Scion in the Netmatters Scion
-         Coalition Scheme. After finishing university with a BSc first class and a PGDE distinction, I lived in Viet Nam where I worked as a 
-         teacher. I've also taught GCSE and A-Level Computer Science here in the UK.<br /><br />
-        Please have a look at my latest projects and feel free to get in touch!
-      </p>
+      <div class="section-text">
+        <h3>Welcome to my portfolio!</h3>
+        <p>I'm a full-stack developer and coding enthusiast from Norwich, England. I currently work as a Scion in the Netmatters Scion
+         Coalition Scheme. After finishing university with a BSc first class and a PGDE distinction I lived in Viet Nam where I worked as a 
+         teacher. I've also taught GCSE and A-Level Computer Science here in the UK.</p>
+        <p>Please have a look at my latest projects and feel free to get in touch!</p>
+      </div>
     </section>
 
     <!-- CARD GALLERY -->
-    <section class="dsection">
-      <div class="gallery">
+    <div class="dsection">
+      <section class="gallery">
 
         <div class="card">
-          <img src="libs/img/rgs.jpg" alt="Construction screenshot"/>
+          <img src="libs/img/rgs.jpg" alt="Rick's Garage Screenshot"/>
           <aside class="overlay">
-            <h3>Ricks's Garage Sale</h3>
-            <p>Prototyping with Axure.</p>
-            <button href="#" target="_blank">Project</button>
-            <button>Github</button>
+            <h3>Rick's Garage Sale</h3>
+            <p>A high fidelity prototype with logic of a web store in Axure.</p>
+            <div>
+              <button href="#" target="_blank"><i class="fas fa-globe"></i> Project</button>
+            </div>
           </aside>
         </div>
 
@@ -85,9 +92,11 @@
           <img src="libs/img/netmatters.jpg" alt="Netmatters screenshot"/>
           <aside class="overlay">
             <h3>Netmatters</h3>
-            <p>Netmatters clone with scss.</p>
-            <button href="https://marcclare.dev/projects/Netmatters/index.html" target="_blank">Project</button>
-            <button>Github</button>
+            <p>A full front end clone of the Netmatters corporate site with SCSS.</p>
+            <div>
+              <button href="https://marcclare.dev/projects/Netmatters/index.html" target="_blank"><i class="fas fa-globe"></i> Project</button>
+              <button href="https://github.com/Scarnface/Netmatters-Reflection-One" target="_blank"><i class="fab fa-github"></i> Github</button>
+            </div>
           </aside>
         </div>
 
@@ -95,20 +104,23 @@
           <img src="libs/img/multiAPI.jpg" alt="multiAPI screenshot"/>
           <aside class="overlay">
             <h3>Multi API</h3>
-            <p>Geonames APIs parsed dynamically to an HTML web page.</p>
-            <button href="https://marcclare.dev/projects/multiAPI/index.html" target="_blank">Project</button>
-            <button>Github</button>
+            <p>Geonames APIs parsed dynamically to an HTML web page with AJAX, PHP and CURL.</p>
+            <div>
+              <button href="https://marcclare.dev/projects/multiAPI/index.html" target="_blank"><i class="fas fa-globe"></i>Project</button>
+              <button href="https://github.com/Scarnface/multiAPI" target="_blank"><i class="fab fa-github"></i> Github</button>
+            </div>
           </aside>
-
         </div>
 
         <div class="card">
           <img src="libs/img/musicstache.jpg" alt="musicstache screenshot"/></a>
           <aside class="overlay">
             <h3>Music Stache</h3>
-            <p>HTML, CSS, JavaScript, and Handlebars to make a music store!</p>
-            <button href="https://marcclare.dev/projects/musicstache/index.html" target="_blank">Project</button>
-            <button>Github</button>
+            <p>HTML, CSS, JavaScript, and Handlebars to make a music store frontend.</p>
+            <div>
+              <button href="https://marcclare.dev/projects/musicstache/index.html" target="_blank"><i class="fas fa-globe"></i> Project</button>
+              <button href="https://github.com/Scarnface/musicstache" target="_blank"><i class="fab fa-github"></i> Github</button>
+            </div>
           </aside>
         </div>
 
@@ -116,9 +128,11 @@
           <img src="libs/img/bluejam.jpg" alt="BLUEjam screenshot"/>
           <aside class="overlay">
             <h3>BLUEjam</h3>
-            <p>Spotify custom tracklist creator in REACT.</p>
-            <button href="https://bluejam.surge.sh/" target="_blank">Project</button>
-            <button>Github</button>
+            <p>A REACT application for creating and storing custom Spotify playlists.</p>
+            <div>
+              <button href="https://bluejam.surge.sh/" target="_blank"><i class="fas fa-globe"></i> Project</button>
+              <button href="https://github.com/Scarnface/BLUEjam" target="_blank"><i class="fab fa-github"></i> Github</button>
+            </div>
           </aside>
         </div>
 
@@ -127,21 +141,23 @@
           <aside class="overlay">
             <h3>Codestrips</h3>
             <p>A comic strip app using Express, SQLite, and the sqlite3 node module.</p>
-            <button href="https://marcclare.dev/projects/codestrips/public/index.html" target="_blank">Project</button>
-            <button>Github</button>
+            <div>
+              <button href="https://marcclare.dev/projects/codestrips/public/index.html" target="_blank"><i class="fas fa-globe"></i> Project</button>
+              <button href="https://github.com/Scarnface/codestrips" target="_blank"><i class="fab fa-github"></i> Github</button>
+            </div>
           </aside>
         </div>
 
-      </div>
-    </section>
+      </section>
+    </div>
 
     <!-- Awards and Memberships -->
-    <section class="dsection">
-      <div class="badge-wrapper">
+    <div class="dsection">
+      <section class="badge-wrapper">
         <img src="libs/img/HTML5.png" alt="Microsoft award">
         <img src="libs/img/bcs-logo.svg" alt="BCS Membership">
-      <div>
-    </section>
+      <section>
+    </div>
 
     <!-- FOOTER -->
     <footer>
