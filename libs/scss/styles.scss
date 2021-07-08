@@ -47,13 +47,20 @@ button {
   cursor: pointer;
 }
 
+.margin-wrapper {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
 /* ================================= 
   Layout Sections
 ==================================== */
 
 // Style a default section
 .dsection {
-  padding: 2rem 10%;
+  padding: 2rem 0;
   color: $linen;
   text-align: center;
   // Style a diagonal section and alternate applying it to default sections
@@ -61,7 +68,7 @@ button {
     background: $amethyst;
     // Add a diagonal effect. Viewport width units used to make angle consistent across screen widths
     clip-path: polygon(0 6vw, 100% 0, 100% calc(100% - 6vw), 0 100%);
-    padding: 4rem 10%; // ! BREAKPOINT NEEDED FOR LARGER VIEWPORTS
+    padding: 4rem 0; // ! BREAKPOINT NEEDED FOR LARGER VIEWPORTS
   }
 }
 
@@ -71,12 +78,10 @@ button {
 
 #nmlogo-container {
   position: relative;
-  height: 32px;
-  width: 32px;
-  margin:v0 auto;
+  width: 2rem;
+  margin: 0 auto;
   img {
-    height: 32px;
-    width: 32px;
+    width: 2rem;
     position: absolute;
     left: 0;
     transition: opacity 1s ease;
@@ -180,13 +185,12 @@ button {
   left: 50%;
   // Adjusts for the size of the content
   transform: translate(-50%, -50%);
-  max-width: 70%;
   h1 {
-    font-size: 2.25em;
+    font-size: 2.75em;
     margin-bottom: 20px;
   }
   h2 {
-    font-size: 1.25em;
+    font-size: 1.5em;
   }
 }
 
@@ -194,7 +198,7 @@ button {
   Introduction
 ==================================== */
 
-// Scales the sections's font size depending on the screen size, vmax ensures a larger minimum size
+// Scales the sections's font size
 .section-text {
   font-weight: 700;
   font-size: 1em;
@@ -216,11 +220,13 @@ button {
   max-width: 100%;
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 // Portfolio Item
 .card {
-  width: 300px;
+  width: 100%;
+  max-width: 400px;
   height: 300px;
   position: relative;
   &:not(:last-child) {
@@ -251,10 +257,15 @@ button {
   width: 100%;
   height: 100%;
   transform: scale(0);
-  transition: .3s ease;
+  transition: .5s ease-in;
   h3 {
     font-size: 1.5em;
     font-weight: 700;
+  }
+  h3,
+  p,
+  div {
+    width: 100%;
   }
 }
 

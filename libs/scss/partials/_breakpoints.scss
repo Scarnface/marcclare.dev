@@ -2,26 +2,68 @@
   S - Small devices (phones, 768px and down)
 ================================================================== */
 @media only screen and (max-width: 767px) {
-  
+  // CONTAINER
+  .margin-wrapper {
+    width: 100%;
+  }
 }
 
 /* ================================================================== 
   M - Medium devices (landscape tablets, 768px and up)
 ================================================================== */
 @media only screen and (min-width: 768px) {
-  
+  // CONTAINER
+  .margin-wrapper {
+    width: 750px;
+  }
+
+  // LAYOUT SECTIONS
+  body .dsection:nth-of-type(even) {
+    padding: 6rem 0;
+  }
+
+  // HAMBURGER
+  body #nmlogo-container {
+    width: 3rem;
+    img {
+      width: 3rem;
+    }
+  }
+
+  body .dropbtn,
+  body .dropdown-content a
+  {
+    font-size: 3rem;
+  }
+
+  // HERO
+  body .hero-text {
+    h1 {
+      font-size: 4rem;
+      margin-bottom: 20px;
+    }
+    h2 {
+      font-size: 2rem;
+    }
+  }
 }
 
 /* ================================================================== 
   L - Large devices (laptops/desktops, 992px and up)
 ================================================================== */
 @media only screen and (min-width: 992px) {
- 
+  // CONTAINER
+  .margin-wrapper {
+    width: 970px;
+  }
 }
 
 /* ================================================================== 
   XL - Extra large devices (large laptops and desktops, 1200px and up)
 ================================================================== */
 @media only screen and (min-width: 1260px) {
-  
+  // CONTAINER
+  .margin-wrapper {
+    width: 1200px;
+  }
 }

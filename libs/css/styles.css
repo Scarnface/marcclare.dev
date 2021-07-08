@@ -5,15 +5,59 @@
 /* ================================================================== 
   S - Small devices (phones, 768px and down)
 ================================================================== */
+@media only screen and (max-width: 767px) {
+  .margin-wrapper {
+    width: 100%;
+  }
+}
+
 /* ================================================================== 
   M - Medium devices (landscape tablets, 768px and up)
 ================================================================== */
+@media only screen and (min-width: 768px) {
+  .margin-wrapper {
+    width: 750px;
+  }
+  body .dsection:nth-of-type(even) {
+    padding: 6rem 0;
+  }
+  body #nmlogo-container {
+    width: 3rem;
+  }
+  body #nmlogo-container img {
+    width: 3rem;
+  }
+  body .dropbtn,
+  body .dropdown-content a {
+    font-size: 3rem;
+  }
+  body .hero-text h1 {
+    font-size: 4rem;
+    margin-bottom: 20px;
+  }
+  body .hero-text h2 {
+    font-size: 2rem;
+  }
+}
+
 /* ================================================================== 
   L - Large devices (laptops/desktops, 992px and up)
 ================================================================== */
+@media only screen and (min-width: 992px) {
+  .margin-wrapper {
+    width: 970px;
+  }
+}
+
 /* ================================================================== 
   XL - Extra large devices (large laptops and desktops, 1200px and up)
 ================================================================== */
+@media only screen and (min-width: 1260px) {
+  .margin-wrapper {
+    width: 1200px;
+  }
+}
+
 /* ================================= 
   VARIABLES
 ==================================== */
@@ -42,11 +86,18 @@ button {
   cursor: pointer;
 }
 
+.margin-wrapper {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
 /* ================================= 
   Layout Sections
 ==================================== */
 .dsection {
-  padding: 2rem 10%;
+  padding: 2rem 0;
   color: #f7ece1ff;
   text-align: center;
 }
@@ -54,7 +105,7 @@ button {
 .dsection:nth-of-type(even) {
   background: #9067c6ff;
   clip-path: polygon(0 6vw, 100% 0, 100% calc(100% - 6vw), 0 100%);
-  padding: 4rem 10%;
+  padding: 4rem 0;
 }
 
 /* ================================= 
@@ -62,14 +113,12 @@ button {
 ==================================== */
 #nmlogo-container {
   position: relative;
-  height: 32px;
-  width: 32px;
-  margin: v0 auto;
+  width: 2rem;
+  margin: 0 auto;
 }
 
 #nmlogo-container img {
-  height: 32px;
-  width: 32px;
+  width: 2rem;
   position: absolute;
   left: 0;
   transition: opacity 1s ease;
@@ -162,16 +211,15 @@ button {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  max-width: 70%;
 }
 
 .hero-text h1 {
-  font-size: 2.25em;
+  font-size: 2.75em;
   margin-bottom: 20px;
 }
 
 .hero-text h2 {
-  font-size: 1.25em;
+  font-size: 1.5em;
 }
 
 /* ================================= 
@@ -198,10 +246,12 @@ button {
   max-width: 100%;
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 .card {
-  width: 300px;
+  width: 100%;
+  max-width: 400px;
   height: 300px;
   position: relative;
 }
@@ -233,12 +283,18 @@ button {
   width: 100%;
   height: 100%;
   transform: scale(0);
-  transition: .3s ease;
+  transition: .5s ease-in;
 }
 
 .overlay h3 {
   font-size: 1.5em;
   font-weight: 700;
+}
+
+.overlay h3,
+.overlay p,
+.overlay div {
+  width: 100%;
 }
 
 .button {
