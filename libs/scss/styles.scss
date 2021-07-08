@@ -7,17 +7,18 @@
 @import "partials/breakpoints";
 
 /* ================================= 
-  Base Element Styles
+  VARIABLES
 ==================================== */
 
-// Colour scheme CSS hex
-:root {
-  --dark-purple: #242038ff;
-  --amethyst: #9067c6ff;
-  --middle-blue-purple: #8d86c9ff;
-  --lavender-gray: #cac4ceff;
-  --linen: #f7ece1ff;
-}
+$dark-purple: #242038ff;
+$amethyst: #9067c6ff;
+$middle-blue-purple: #8d86c9ff;
+$lavender-gray: #cac4ceff;
+$linen: #f7ece1ff;
+
+/* ================================= 
+  Base Element Styles
+==================================== */
 
 * {
   // Include border and padding in total dimensions
@@ -30,7 +31,7 @@
 body,
 html {
   height: 100%;
-  background-color: var(--dark-purple);
+  background-color: $dark-purple;
   // Specify the desired and fallback fonts
   font-family: "Roboto", Arial, sans-serif;
   font-weight: 400;
@@ -53,11 +54,11 @@ button {
 // Style a default section
 .dsection {
   padding: 2rem 10%;
-  color: var(--linen);
+  color: $linen;
   text-align: center;
   // Style a diagonal section and alternate applying it to default sections
   &:nth-of-type(even) {
-    background: var(--amethyst);
+    background: $amethyst;
     // Add a diagonal effect. Viewport width units used to make angle consistent across screen widths
     clip-path: polygon(0 6vw, 100% 0, 100% calc(100% - 6vw), 0 100%);
     padding: 4rem 10%; // ! BREAKPOINT NEEDED FOR LARGER VIEWPORTS
@@ -68,8 +69,28 @@ button {
   Hamburger Menu
 ==================================== */
 
+#nmlogo-container {
+  position: relative;
+  height: 32px;
+  width: 32px;
+  margin:v0 auto;
+  img {
+    height: 32px;
+    width: 32px;
+    position: absolute;
+    left: 0;
+    transition: opacity 1s ease;
+  }
+  img.nmlogotop:hover {
+    opacity:0;
+  }
+}
+
 // Position the menu button container and stick it to the top right regardless of scrolling
 .dropdown {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row-reverse;
   position: fixed;
   right: 1rem;
   top: 1rem;
@@ -80,10 +101,10 @@ button {
 
 .dropbtn {
   background-color: #00000000;
-  color: var(--middle-blue-purple);
+  color: $middle-blue-purple;
   padding: 0.25rem 0.5rem;
-  font-size: 3rem;
-  transition: all 1s ease-in-out;
+  font-size: 2rem;
+  transition: all 1s ease;
   // Removes the highlight box on visited buttons in mobile browsers
   &:focus {
     outline-style: none;
@@ -91,27 +112,34 @@ button {
   // Make the menu bigger on selection
   &:hover {
     cursor: pointer;
-    color: var(--linen);
-    transform: scale(1.25);
+    color: $linen;
   }
 }
 
 .dropdown-content {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row-reverse;
   // Hide initialy
   opacity: 0;
   transform: scale(0);
   transition: all 1s ease-in-out;
   a {
-    color: var(--middle-blue-purple);
+    color: $middle-blue-purple;
     padding: 0.25rem 0.5rem;
-    font-size: 3rem;
+    font-size: 2rem;
     display: block;
+    transition: all 1s ease;
     // Remove default link styling
     text-decoration: none;
+    // Aligns the custom Netmatters logo image with fontawesome icons
+    &:nth-of-type(4) {
+      margin-top: 2px;
+    }
   }
   // Highlight the current menu item
   a:hover {
-    color: var(--lavender-gray);
+    color: $lavender-gray;
     transition: all 1s ease;
   }
 }
@@ -144,7 +172,7 @@ button {
 
 .hero-text {
   font-weight: 900;
-  color: var(--linen);
+  color: $linen;
   // Centre the text and position it relative to the image
   text-align: center;
   position: absolute;
@@ -233,8 +261,8 @@ button {
 .button {
   text-decoration: none;
   padding: 10px 10px;
-  background-color: var(--middle-blue-purple);
-  color: var(--linen);
+  background-color: $middle-blue-purple;
+  color: $linen;
   font-size: 1em;
   letter-spacing: 0.5px;
   // Add right margin to first button, but only if it's not a lone button
@@ -242,8 +270,8 @@ button {
     margin-right: 20px;
   }
   &:hover {
-    background-color: var(--linen);
-    color: var(--middle-blue-purple);
+    background-color: $linen;
+    color: $middle-blue-purple;
   }
 }
 
@@ -282,6 +310,6 @@ footer {
   text-align: center;
   font-size: 0.7rem;
   padding: 0.2rem;
-  background-color: var(--lavender-gray);
-  color: var(--dark-purple);
+  background-color: $lavender-gray;
+  color: $dark-purple;
 }

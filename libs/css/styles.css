@@ -15,16 +15,11 @@
   XL - Extra large devices (large laptops and desktops, 1200px and up)
 ================================================================== */
 /* ================================= 
+  VARIABLES
+==================================== */
+/* ================================= 
   Base Element Styles
 ==================================== */
-:root {
-  --dark-purple: #242038ff;
-  --amethyst: #9067c6ff;
-  --middle-blue-purple: #8d86c9ff;
-  --lavender-gray: #cac4ceff;
-  --linen: #f7ece1ff;
-}
-
 * {
   box-sizing: border-box;
   margin: 0;
@@ -33,7 +28,7 @@
 body,
 html {
   height: 100%;
-  background-color: var(--dark-purple);
+  background-color: #242038ff;
   font-family: "Roboto", Arial, sans-serif;
   font-weight: 400;
 }
@@ -52,12 +47,12 @@ button {
 ==================================== */
 .dsection {
   padding: 2rem 10%;
-  color: var(--linen);
+  color: #f7ece1ff;
   text-align: center;
 }
 
 .dsection:nth-of-type(even) {
-  background: var(--amethyst);
+  background: #9067c6ff;
   clip-path: polygon(0 6vw, 100% 0, 100% calc(100% - 6vw), 0 100%);
   padding: 4rem 10%;
 }
@@ -65,7 +60,29 @@ button {
 /* ================================= 
   Hamburger Menu
 ==================================== */
+#nmlogo-container {
+  position: relative;
+  height: 32px;
+  width: 32px;
+  margin: v0 auto;
+}
+
+#nmlogo-container img {
+  height: 32px;
+  width: 32px;
+  position: absolute;
+  left: 0;
+  transition: opacity 1s ease;
+}
+
+#nmlogo-container img.nmlogotop:hover {
+  opacity: 0;
+}
+
 .dropdown {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row-reverse;
   position: fixed;
   right: 1rem;
   top: 1rem;
@@ -75,10 +92,10 @@ button {
 
 .dropbtn {
   background-color: #00000000;
-  color: var(--middle-blue-purple);
+  color: #8d86c9ff;
   padding: 0.25rem 0.5rem;
-  font-size: 3rem;
-  transition: all 1s ease-in-out;
+  font-size: 2rem;
+  transition: all 1s ease;
 }
 
 .dropbtn:focus {
@@ -87,26 +104,33 @@ button {
 
 .dropbtn:hover {
   cursor: pointer;
-  color: var(--linen);
-  transform: scale(1.25);
+  color: #f7ece1ff;
 }
 
 .dropdown-content {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row-reverse;
   opacity: 0;
   transform: scale(0);
   transition: all 1s ease-in-out;
 }
 
 .dropdown-content a {
-  color: var(--middle-blue-purple);
+  color: #8d86c9ff;
   padding: 0.25rem 0.5rem;
-  font-size: 3rem;
+  font-size: 2rem;
   display: block;
+  transition: all 1s ease;
   text-decoration: none;
 }
 
+.dropdown-content a:nth-of-type(4) {
+  margin-top: 2px;
+}
+
 .dropdown-content a:hover {
-  color: var(--lavender-gray);
+  color: #cac4ceff;
   transition: all 1s ease;
 }
 
@@ -132,7 +156,7 @@ button {
 
 .hero-text {
   font-weight: 900;
-  color: var(--linen);
+  color: #f7ece1ff;
   text-align: center;
   position: absolute;
   top: 50%;
@@ -220,8 +244,8 @@ button {
 .button {
   text-decoration: none;
   padding: 10px 10px;
-  background-color: var(--middle-blue-purple);
-  color: var(--linen);
+  background-color: #8d86c9ff;
+  color: #f7ece1ff;
   font-size: 1em;
   letter-spacing: 0.5px;
 }
@@ -231,8 +255,8 @@ button {
 }
 
 .button:hover {
-  background-color: var(--linen);
-  color: var(--middle-blue-purple);
+  background-color: #f7ece1ff;
+  color: #8d86c9ff;
 }
 
 .card:hover .overlay {
@@ -268,7 +292,7 @@ footer {
   text-align: center;
   font-size: 0.7rem;
   padding: 0.2rem;
-  background-color: var(--lavender-gray);
-  color: var(--dark-purple);
+  background-color: #cac4ceff;
+  color: #242038ff;
 }
 /*# sourceMappingURL=styles.css.map */
