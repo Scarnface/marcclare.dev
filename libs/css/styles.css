@@ -1,7 +1,19 @@
 /* ================================= 
-  Fonts
+  IMPORTS
 ==================================== */
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,400;0,700;1,100;1,400&display=swap");
+/* ================================================================== 
+  S - Small devices (phones, 768px and down)
+================================================================== */
+/* ================================================================== 
+  M - Medium devices (landscape tablets, 768px and up)
+================================================================== */
+/* ================================================================== 
+  L - Large devices (laptops/desktops, 992px and up)
+================================================================== */
+/* ================================================================== 
+  XL - Extra large devices (large laptops and desktops, 1200px and up)
+================================================================== */
 /* ================================= 
   Base Element Styles
 ==================================== */
@@ -123,7 +135,7 @@ button {
   color: var(--linen);
   text-align: center;
   position: absolute;
-  top: 40%;
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   max-width: 70%;
@@ -178,7 +190,6 @@ button {
   display: block;
   width: 100%;
   height: 100%;
-  object-fit: cover;
   border: solid 3px #000;
   border-radius: 5px;
 }
@@ -206,7 +217,8 @@ button {
   font-weight: 700;
 }
 
-.overlay button {
+.button {
+  text-decoration: none;
   padding: 10px 10px;
   background-color: var(--middle-blue-purple);
   color: var(--linen);
@@ -214,11 +226,11 @@ button {
   letter-spacing: 0.5px;
 }
 
-.overlay button:first-of-type {
-  margin-right: 10px;
+.button:not(:nth-last-child(1)) {
+  margin-right: 20px;
 }
 
-.overlay button:hover {
+.button:hover {
   background-color: var(--linen);
   color: var(--middle-blue-purple);
 }
