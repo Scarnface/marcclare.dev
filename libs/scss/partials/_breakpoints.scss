@@ -47,16 +47,6 @@
     }
   }
 
-  // INTRODUCTION
-  body .section-text {
-    h3 {
-      font-size: 1.75rem;
-    }
-    p {
-      font-size: 1.25rem;
-    }
-  }
-
   // GALLERY
   body .card {
     width: 455px;
@@ -168,7 +158,7 @@
 
   body .about-wrapper {
     max-width: calc(30% - 10px);
-    height: 435px;
+    height: 400px;
     &:nth-of-type(3) {
       margin-left: 0;
       margin-right: 0;

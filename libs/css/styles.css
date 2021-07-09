@@ -38,12 +38,6 @@
   body .hero-text h2 {
     font-size: 2rem;
   }
-  body .section-text h3 {
-    font-size: 1.75rem;
-  }
-  body .section-text p {
-    font-size: 1.25rem;
-  }
   body .card {
     width: 455px;
     max-width: 75%;
@@ -127,7 +121,7 @@
   }
   body .about-wrapper {
     max-width: calc(30% - 10px);
-    height: 435px;
+    height: 400px;
   }
   body .about-wrapper:nth-of-type(3) {
     margin-left: 0;
@@ -299,12 +293,12 @@ textarea:focus, input:focus {
 }
 
 .section-text h3 {
-  font-size: 1.5rem;
+  font-size: 1.75rem;
   margin-bottom: 20px;
 }
 
 .section-text p {
-  font-size: 1rem;
+  font-size: 1.25rem;
   margin-bottom: 15px;
 }
 
@@ -478,6 +472,7 @@ textarea:focus, input:focus {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  align-content: flex-start;
   text-align: left;
   max-width: 450px;
   border-radius: 5px;
@@ -490,21 +485,10 @@ textarea:focus, input:focus {
   margin-bottom: 30px;
 }
 
-.about-wrapper h4,
-.about-wrapper ul,
-.about-wrapper p {
-  padding-top: 1rem;
-}
-
 .about-wrapper h4 {
   width: 100%;
+  padding: 15px 0;
   font-size: 1.25rem;
-}
-
-.about-wrapper ul {
-  width: 100%;
-  margin: 0;
-  padding-left: 1rem;
 }
 
 .about-wrapper a:first-of-type {
@@ -513,7 +497,7 @@ textarea:focus, input:focus {
 }
 
 #th-profile {
-  margin-top: 1rem;
+  margin-top: 2rem;
   text-decoration: none;
   color: #8d86c9ff;
   font-weight: 700;
