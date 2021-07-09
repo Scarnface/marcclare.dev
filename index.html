@@ -43,8 +43,8 @@
       <a class="dropbtn"><i class="fa fa-bars"></i></a>
       <!-- Drop down menu items (HIDDEN) -->
       <nav class="dropdown-content">
-        <a href="https://marcclare.dev"><i class="fa fa-home"></i></a>
-        <a href="https://marcclare.dev/contact" target="_blank"><i class="fa fa-envelope"></i></a>
+        <a href="#home"><i class="fa fa-home"></i></a>
+        <a href="#contact" target="_blank"><i class="fa fa-envelope"></i></a>
         <a href="https://github.com/Scarnface" target="_blank"><i class="fa fa-github"></i></a>
         <a href="https://www.netmatters.co.uk/scions-coalition-scheme" target="_blank">
           <div id="nmlogo-container">
@@ -56,7 +56,7 @@
     </div>
 
     <!-- HERO -->
-    <header class="hero-image">
+    <header id="home" class="hero-image">
       <div class="margin-wrapper">
         <!-- Hero text -->
         <div class="hero-text">
@@ -158,6 +158,29 @@
         </section>
       </div>
     </div>
+
+    <!-- CONTACT -->
+    <div class="dsection">
+      <div class="margin-wrapper">
+        <form id="contact" class="contact-form">
+
+          <h3 class="contact-form-title">Get In Touch</h3>
+
+          <label for="name">Full Name</label>
+          <input class="input" type="text" name="name" placeholder="Example: John Doe" required>
+
+          <label for="email">Email</label>
+          <input class="input" type="text" name="email" placeholder="Example: a@b.com" required>
+
+          <label for="message">Your Message</label>
+          <textarea class="input" name="message" placeholder="Type your message here..." required></textarea>
+
+          <input type="submit" value="Submit">
+
+        </form>
+      </div>
+    </div>
+
 
     <!-- AWARDS AND MEMBERSHIPS -->
     <div class="dsection">
