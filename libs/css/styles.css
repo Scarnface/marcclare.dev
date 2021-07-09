@@ -49,6 +49,16 @@
     max-width: 75%;
     flex-grow: 1;
   }
+  body .about {
+    justify-content: space-between;
+  }
+  body .about-wrapper {
+    max-width: calc(50% - 15px);
+  }
+  body .about-wrapper:nth-of-type(3) {
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 /* ================================================================== 
@@ -111,6 +121,17 @@
   }
   body .contact-form-title {
     font-size: 2.25rem;
+  }
+  body .about-title {
+    font-size: 2.25rem;
+  }
+  body .about-wrapper {
+    max-width: calc(30% - 10px);
+    height: 435px;
+  }
+  body .about-wrapper:nth-of-type(3) {
+    margin-left: 0;
+    margin-right: 0;
   }
 }
 
@@ -180,23 +201,6 @@ textarea:focus, input:focus {
 /* ================================= 
   Hamburger Menu
 ==================================== */
-#nmlogo-container {
-  position: relative;
-  width: 2rem;
-  margin: 0 auto;
-}
-
-#nmlogo-container img {
-  width: 2rem;
-  position: absolute;
-  left: 0;
-  transition: opacity 1s ease;
-}
-
-#nmlogo-container img.nmlogotop:hover {
-  opacity: 0;
-}
-
 .dropdown {
   display: flex;
   flex-wrap: wrap;
@@ -241,10 +245,6 @@ textarea:focus, input:focus {
   display: block;
   transition: all 1s ease;
   text-decoration: none;
-}
-
-.dropdown-content a:nth-of-type(4) {
-  margin-top: 2px;
 }
 
 .dropdown-content a:hover {
@@ -453,6 +453,99 @@ textarea:focus, input:focus {
   line-height: 1.2;
   text-align: center;
   padding-bottom: 1.5rem;
+}
+
+/* ================================= 
+  About
+==================================== */
+.about {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.about-title {
+  width: 100%;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #f7ece1ff;
+  line-height: 1.2;
+  text-align: center;
+  padding-bottom: 1.5rem;
+}
+
+.about-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: left;
+  max-width: 450px;
+  border-radius: 5px;
+  padding: 1.5rem;
+  background-color: #242038ff;
+  color: #f7ece1ff;
+}
+
+.about-wrapper:not(:last-of-type) {
+  margin-bottom: 30px;
+}
+
+.about-wrapper h4,
+.about-wrapper ul,
+.about-wrapper p {
+  padding-top: 1rem;
+}
+
+.about-wrapper h4 {
+  width: 100%;
+  font-size: 1.25rem;
+}
+
+.about-wrapper ul {
+  width: 100%;
+  margin: 0;
+  padding-left: 1rem;
+}
+
+.about-wrapper a:first-of-type {
+  max-width: 70px;
+  max-height: 70px;
+}
+
+#th-profile {
+  margin-top: 1rem;
+  text-decoration: none;
+  color: #8d86c9ff;
+  font-weight: 700;
+}
+
+#th-profile:hover {
+  color: #f7ece1ff;
+}
+
+.icon-nmlogo {
+  mask: url("/libs/img/nm.svg");
+}
+
+.icon-scslogo {
+  mask: url("/libs/img/scs.svg");
+}
+
+.icon-thlogo {
+  mask: url("/libs/img/th.png");
+}
+
+.icon {
+  display: inline-block;
+  width: 70px;
+  height: 70px;
+  background: #8d86c9ff;
+  mask-size: cover;
+}
+
+.icon:hover,
+.icon:focus {
+  background: #f7ece1ff;
 }
 
 /* ================================= 

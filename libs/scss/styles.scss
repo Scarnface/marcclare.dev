@@ -81,28 +81,13 @@ textarea:focus, input:focus {
     background: $amethyst;
     // Add a diagonal effect. Viewport width units used to make angle consistent across screen widths
     clip-path: polygon(0 6vw, 100% 0, 100% calc(100% - 6vw), 0 100%);
-    padding: 4rem 0; // ! BREAKPOINT NEEDED FOR LARGER VIEWPORTS
+    padding: 4rem 0;
   }
 }
 
 /* ================================= 
   Hamburger Menu
 ==================================== */
-
-#nmlogo-container {
-  position: relative;
-  width: 2rem;
-  margin: 0 auto;
-  img {
-    width: 2rem;
-    position: absolute;
-    left: 0;
-    transition: opacity 1s ease;
-  }
-  img.nmlogotop:hover {
-    opacity:0;
-  }
-}
 
 // Position the menu button container and stick it to the top right regardless of scrolling
 .dropdown {
@@ -150,10 +135,6 @@ textarea:focus, input:focus {
     transition: all 1s ease;
     // Remove default link styling
     text-decoration: none;
-    // Aligns the custom Netmatters logo image with fontawesome icons
-    &:nth-of-type(4) {
-      margin-top: 2px;
-    }
   }
   // Highlight the current menu item
   a:hover {
@@ -368,6 +349,94 @@ textarea:focus, input:focus {
   text-align: center;
   padding-bottom: 1.5rem;
 }
+
+/* ================================= 
+  About
+==================================== */
+.about {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.about-title {
+  width: 100%;
+  font-size: 2rem;
+  font-weight: 700;
+  color: $linen;
+  line-height: 1.2;
+  text-align: center;
+  padding-bottom: 1.5rem;
+}
+
+.about-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: left;
+  max-width: 450px;
+  &:not(:last-of-type) {
+    margin-bottom: 30px;
+  }
+  border-radius: 5px;
+  padding: 1.5rem;
+  background-color: $dark-purple;
+  color: $linen;
+  h4,
+  ul,
+  p {
+    padding-top: 1rem;
+    
+  }
+  h4 {
+    width: 100%;
+    font-size: 1.25rem;
+  }
+  ul {
+    width: 100%;
+    margin: 0;
+    padding-left: 1rem;
+  }
+  a:first-of-type {
+    max-width: 70px;
+    max-height: 70px;
+  }
+}
+
+#th-profile {
+  margin-top: 1rem;
+  text-decoration: none;
+  color: $middle-blue-purple;
+  font-weight: 700;
+  &:hover {
+    color: $linen;
+  }
+}
+
+.icon-nmlogo {
+  mask: url("/libs/img/nm.svg");
+}
+
+.icon-scslogo {
+  mask: url("/libs/img/scs.svg");
+}
+
+.icon-thlogo {
+  mask: url("/libs/img/th.png");
+}
+
+.icon {
+  display: inline-block;
+  width: 70px;
+  height: 70px;
+  background: $middle-blue-purple;
+  mask-size: cover;
+}
+.icon:hover,
+.icon:focus {
+  background: $linen;
+}
+
 
 /* ================================= 
   Awards and Memberships

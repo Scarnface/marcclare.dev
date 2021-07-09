@@ -63,6 +63,19 @@
     max-width: 75%;
     flex-grow: 1;
   }
+
+  // ABOUT
+  body .about {
+    justify-content: space-between;
+  }
+
+  body .about-wrapper {
+    max-width: calc(50% - 15px);
+    &:nth-of-type(3) {
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
 }
 
 /* ================================================================== 
@@ -146,5 +159,19 @@
   // CONTACT
   body .contact-form-title {
     font-size: 2.25rem;
+  }
+
+  // ABOUT
+  body .about-title {
+    font-size: 2.25rem;
+  }
+
+  body .about-wrapper {
+    max-width: calc(30% - 10px);
+    height: 435px;
+    &:nth-of-type(3) {
+      margin-left: 0;
+      margin-right: 0;
+    }
   }
 }
