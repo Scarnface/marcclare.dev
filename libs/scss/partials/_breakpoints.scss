@@ -78,7 +78,7 @@
   }
 
   // INTRODUCTION
-  body .section-text {
+  body .intro-text {
     h3 {
       font-size: 2rem;
     }
@@ -117,13 +117,17 @@
     padding: 8rem 0;
   }
 
+  body .section-title {
+    font-size: 2.25rem;
+  }
+
   // HERO
   body .hero-text h1 {
     font-size: 5rem;
   }
 
   // INTRODUCTION
-  body .section-text {
+  body .intro-text {
     h3 {
       font-size: 2.25rem;
       margin-bottom: 40px;
@@ -146,16 +150,7 @@
     }
   }
 
-  // CONTACT
-  body .contact-form-title {
-    font-size: 2.25rem;
-  }
-
   // ABOUT
-  body .about-title {
-    font-size: 2.25rem;
-  }
-
   body .about-wrapper {
     max-width: calc(30% - 10px);
     height: 400px;
