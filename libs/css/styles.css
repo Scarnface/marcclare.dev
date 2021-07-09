@@ -80,6 +80,11 @@
   body .card:nth-of-type(odd) {
     margin-right: 30px;
   }
+  .contact-form {
+    max-width: 970px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 /* ================================================================== 
@@ -198,7 +203,6 @@ input:focus {
   color: #f7ece1ff;
   line-height: 1.2;
   text-align: center;
-  text-shadow: 2px 2px 8px #000;
 }
 
 /* ================================= 
@@ -306,7 +310,6 @@ input:focus {
 .intro-text h3 {
   margin-bottom: 20px;
   font-size: 1.75rem;
-  text-shadow: 2px 2px 8px #000;
 }
 
 .intro-text p {
@@ -329,6 +332,7 @@ input:focus {
   max-width: 400px;
   height: 300px;
   position: relative;
+  border-radius: 5px;
   box-shadow: 2px 2px 8px #000;
 }
 
@@ -376,10 +380,11 @@ input:focus {
 
 .button {
   text-decoration: none;
+  border: solid 3px #9067c6ff;
   border-radius: 3px;
   padding: 10px 10px;
-  background-color: #9067c6ff;
-  color: #f7ece1ff;
+  background-color: transparent;
+  color: #9067c6ff;
   font-size: 1rem;
   letter-spacing: 0.5px;
 }
@@ -389,8 +394,8 @@ input:focus {
 }
 
 .button:hover {
-  background-color: #f7ece1ff;
-  color: #9067c6ff;
+  background-color: #9067c6ff;
+  color: #f7ece1ff;
 }
 
 .card:hover .overlay {
@@ -429,7 +434,7 @@ input:focus {
 .contact-form input[type=text]:focus,
 .contact-form select:focus,
 .contact-form textarea:focus {
-  box-shadow: inset 0 0 15px #9067c6ff;
+  border: solid 3px #9067c6ff;
 }
 
 .contact-form label {
@@ -437,19 +442,19 @@ input:focus {
 }
 
 .contact-form input[type=submit] {
-  border: none;
+  border: solid 3px #9067c6ff;
   border-radius: 4px;
   padding: 10px 20px;
-  background-color: #9067c6ff;
-  color: #f7ece1ff;
+  background-color: transparent;
+  color: #9067c6ff;
   font-size: 1rem;
   text-transform: uppercase;
 }
 
 .contact-form input[type=submit]:hover {
   cursor: pointer;
-  background-color: #f7ece1ff;
-  color: #9067c6ff;
+  background-color: #9067c6ff;
+  color: #f7ece1ff;
 }
 
 .contact-form textarea {

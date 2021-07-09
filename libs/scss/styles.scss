@@ -94,7 +94,6 @@ input:focus {
   color: $linen;
   line-height: 1.2;
   text-align: center;
-  text-shadow: 2px 2px 8px #000;
 }
 
 /* ================================= 
@@ -212,7 +211,6 @@ input:focus {
   h3 {
     margin-bottom: 20px;
     font-size: 1.75rem;
-    text-shadow: 2px 2px 8px #000;
   }
   p {
     margin-bottom: 15px;
@@ -238,6 +236,7 @@ input:focus {
   max-width: 400px;
   height: 300px;
   position: relative;
+  border-radius: 5px;
   &:not(:last-child) {
     margin-bottom: 30px;
   }
@@ -282,10 +281,11 @@ input:focus {
 
 .button {
   text-decoration: none;
+  border: solid 3px $amethyst;
   border-radius: 3px;
   padding: 10px 10px;
-  background-color: $amethyst;
-  color: $linen;
+  background-color: transparent;
+  color: $amethyst;
   font-size: 1rem;
   letter-spacing: 0.5px;
   // Add right margin to first button, but only if it's not a lone button
@@ -293,8 +293,8 @@ input:focus {
     margin-right: 20px;
   }
   &:hover {
-    background-color: $linen;
-    color: $amethyst;
+    background-color: $amethyst;
+    color: $linen;
   }
 }
 
@@ -332,24 +332,24 @@ input:focus {
     font-family: inherit;
     font-size: 1rem;
     &:focus {
-      box-shadow: inset 0 0 15px $amethyst;
+      border: solid 3px $amethyst;
     }
   }
   label {
     margin-bottom: 5px;
   }
   input[type=submit] {
-    border: none;
+    border: solid 3px $amethyst;
     border-radius: 4px;
     padding: 10px 20px;
-    background-color: $amethyst;
-    color: $linen;
+    background-color: transparent;
+    color: $amethyst;
     font-size: 1rem;
     text-transform: uppercase;
     &:hover {
       cursor: pointer;
-      background-color: $linen;
-      color: $amethyst;
+      background-color: $amethyst;
+      color: $linen;
     }
   }
   textarea {
