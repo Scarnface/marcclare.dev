@@ -28,27 +28,27 @@
     <link rel="icon" type="image/png" sizes="32x32" href="libs/img/favicon/favicon-32x32.png"/>
     <link rel="icon" type="image/png" sizes="16x16" href="libs/img/favicon/favicon-16x16.png"/>
     <link rel="manifest" href="libs/img/favicon/site.webmanifest"/>
-    <!-- JQUERY -->
-    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script> -->
-    <!-- JS -->
-    <!-- <script src="libs/js/scripts.js"></script> -->
 
   </head>
 
   <body>
-
-    <!-- DROP DOWN MENU -->
-    <div class="dropdown">
-      <!-- Drop down menu button -->
-      <a class="dropbtn"><i class="fa fa-bars"></i></a>
-      <!-- Drop down menu items (HIDDEN) -->
-      <nav class="dropdown-content">
-        <a href="#home"><i class="fa fa-home"></i></a>
-        <a href="#contact"><i class="fa fa-envelope"></i></a>
-        <a href="#info"><i class="fas fa-info-circle"></i></a>
-        <a href="https://github.com/Scarnface" target="_blank"><i class="fa fa-github"></i></a>
-      </nav>
-    </div>
+    <!-- TODO Trigger only on button hover not menu hover as bigger than button -->
+    <!-- MENU  -->
+    <nav class="menu">
+      <!-- Menu container -->
+      <div class="menu-container">
+        <!-- Menu button -->
+        <a id="menu-btn-primary" class="menu-btn"><i class="fa fa-bars"></i></a>
+        <!-- Menu items (HIDDEN) -->
+        <div class="menu-content">
+          <a id="menu-btn-4" class="menu-btn" href="https://github.com/Scarnface" target="_blank"><i class="fa fa-github"></i></a>
+          <a id="menu-btn-3" class="menu-btn" href="#info"><i class="fas fa-info-circle"></i></a>
+          <a id="menu-btn-2" class="menu-btn" href="#contact"><i class="fa fa-envelope"></i></a>
+          <a id="menu-btn-1" class="menu-btn" href="#home"><i class="fa fa-home"></i></a>
+          <a id="menu-btn-secondary" class="menu-btn"><i class="fa fa-bars"></i></a>
+        </div>
+      </div>
+    </nav>
 
     <!-- HERO -->
     <header id="home" class="hero-image">
@@ -237,6 +237,14 @@
         <script> </script>
       </div>
     </footer>
+
+    <!-- ================================= 
+      SCRIPTS
+    ================================== -->
+    <!-- JQUERY -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <!-- JS -->
+    <script src="libs/js/scripts.js"></script>
 
   </body> 
 

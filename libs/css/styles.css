@@ -2,6 +2,24 @@
   Imports
 ==================================== */
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,400;0,700;1,100;1,400&display=swap");
+/* ================================= 
+  Mixins
+==================================== */
+/* ================================= 
+  Animation
+==================================== */
+@keyframes slide-in {
+  0% {
+    transform: translate(350px, 0) rotate(0deg);
+  }
+  90% {
+    transform: translate(-30px, 0) rotate(810deg);
+  }
+  100% {
+    transform: translate(0, 0) rotate(720deg);
+  }
+}
+
 /* ================================================================== 
   S - Small devices (phones, 768px and down)
 ================================================================== */
@@ -21,8 +39,7 @@
   body .dsection:nth-of-type(even) {
     padding: 6rem 0;
   }
-  body .dropbtn,
-  body .dropdown-content a {
+  body .menu-btn {
     font-size: 3rem;
   }
   body .hero-text h1 {
@@ -200,66 +217,66 @@ input:focus {
 }
 
 /* ================================= 
-  Hamburger Menu
+  Menu
 ==================================== */
-.dropdown {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row-reverse;
+.menu {
+  width: 100%;
   position: fixed;
   right: 1rem;
   top: 1rem;
-  text-align: center;
   z-index: 1;
 }
 
-.dropbtn {
-  padding: 0.25rem 0.5rem;
-  background-color: #00000000;
+.menu-container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row-reverse;
+  text-align: center;
+}
+
+.menu-btn {
+  display: inline-block;
   color: #9067c6ff;
   text-shadow: 2px 2px 8px #000;
   font-size: 2rem;
   transition: all 1s ease;
 }
 
-.dropbtn:focus {
+.menu-btn:focus {
   outline-style: none;
 }
 
-.dropbtn:hover {
+.menu-btn:hover {
   cursor: pointer;
   color: #f7ece1ff;
 }
 
-.dropdown-content {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row-reverse;
-  opacity: 0;
-  transform: scale(0);
-  transition: all 1s ease-in-out;
+#menu-btn-1 {
+  margin-right: 15px;
+  animation: slide-in 1s linear;
+  animation-fill-mode: both;
+  animation-delay: 0.8s;
 }
 
-.dropdown-content a {
-  display: block;
-  padding: 0.25rem 0.5rem;
-  color: #9067c6ff;
-  text-shadow: 2px 2px 8px #000;
-  text-decoration: none;
-  font-size: 2rem;
-  transition: all 1s ease;
+#menu-btn-2 {
+  margin-right: 15px;
+  animation: slide-in 1s linear;
+  animation-fill-mode: both;
+  animation-delay: 0.6s;
 }
 
-.dropdown-content a:hover {
-  color: #cac4ceff;
-  transition: all 1s ease;
+#menu-btn-3 {
+  margin-right: 15px;
+  animation: slide-in 1s linear;
+  animation-fill-mode: both;
+  animation-delay: 0.4s;
 }
 
-.dropbtn:hover ~ .dropdown-content,
-.dropdown-content:hover {
-  opacity: 1;
-  transform-origin: center;
-  transform: scale(1);
+#menu-btn-4 {
+  margin-right: 15px;
+  animation: slide-in 1s linear;
+  animation-fill-mode: both;
+  animation-delay: 0.2s;
 }
 
 /* ================================= 

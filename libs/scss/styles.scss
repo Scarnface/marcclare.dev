@@ -4,6 +4,8 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,400;0,700;1,100;1,400&display=swap');
 
+@import "partials/mixins";
+@import "partials/animation";
 @import "partials/breakpoints";
 
 /* ================================= 
@@ -97,25 +99,29 @@ input:focus {
 }
 
 /* ================================= 
-  Hamburger Menu
+  Menu
 ==================================== */
 
 // Position the menu button container and stick it to the top right regardless of scrolling
-.dropdown {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row-reverse;
+.menu {
+  width: 100%;
   position: fixed;
   right: 1rem;
   top: 1rem;
-  text-align: center;
   // Display over all other content
   z-index: 1;
 }
 
-.dropbtn {
-  padding: 0.25rem 0.5rem;
-  background-color: #00000000;
+.menu-container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row-reverse;
+  text-align: center;
+}
+
+// Default styling for all buttons
+.menu-btn {
+  display: inline-block;
   color: $amethyst;
   text-shadow: 2px 2px 8px #000;
   font-size: 2rem;
@@ -124,44 +130,27 @@ input:focus {
   &:focus {
     outline-style: none;
   }
-  // Make the menu bigger on selection
   &:hover {
     cursor: pointer;
     color: $linen;
   }
 }
 
-.dropdown-content {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row-reverse;
-  // Hide initialy
-  opacity: 0;
-  transform: scale(0);
-  transition: all 1s ease-in-out;
-  a {
-    display: block;
-    padding: 0.25rem 0.5rem;
-    color: $amethyst;
-    text-shadow: 2px 2px 8px #000;
-    // Remove default link styling
-    text-decoration: none;
-    font-size: 2rem;
-    transition: all 1s ease;
-  }
-  // Highlight the current menu item
-  a:hover {
-    color: $lavender-gray;
-    transition: all 1s ease;
-  }
+// Slide in animations with unique delays
+#menu-btn-1 {
+  @include menu-buttons(menu-btn-1, .8s);
 }
 
-// Expand and fade in the menu on pressing the menu button
-.dropbtn:hover~.dropdown-content,
-.dropdown-content:hover {
-  opacity: 1;
-  transform-origin: center;
-  transform: scale(1);
+#menu-btn-2 {
+  @include menu-buttons(menu-btn-2, .6s);
+}
+
+#menu-btn-3 {
+  @include menu-buttons(menu-btn-3, .4s);
+}
+
+#menu-btn-4 {
+  @include menu-buttons(menu-btn-4, .2s);
 }
 
 /* ================================= 
