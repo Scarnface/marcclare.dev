@@ -478,7 +478,7 @@ input:focus {
 }
 
 /* ================================= 
-  About
+  About // !TODO Make icon hover have fade. Probably need JS
 ==================================== */
 .about {
   display: flex;
@@ -514,40 +514,41 @@ input:focus {
   max-height: 70px;
 }
 
+.about-wrapper a:first-of-type:hover .icon {
+  display: none;
+}
+
+.about-wrapper a:first-of-type:hover .icon-hover {
+  display: inline-block;
+}
+
+.icon {
+  width: 70px;
+  height: 70px;
+  position: relative;
+  left: 0px;
+  top: 0px;
+}
+
+.icon-hover {
+  width: 70px;
+  height: 70px;
+  position: relative;
+  left: 0px;
+  top: 0px;
+  display: none;
+}
+
 #th-profile {
   margin-top: 2rem;
   text-decoration: none;
   color: #9067c6ff;
   font-weight: 700;
+  transition: all 1s ease;
 }
 
 #th-profile:hover {
   color: #f7ece1ff;
-}
-
-.icon-nmlogo {
-  mask: url("/libs/img/nm.svg");
-}
-
-.icon-scslogo {
-  mask: url("/libs/img/scs.svg");
-}
-
-.icon-thlogo {
-  mask: url("/libs/img/th.png");
-}
-
-.icon {
-  display: inline-block;
-  width: 70px;
-  height: 70px;
-  background: #9067c6ff;
-  mask-size: cover;
-}
-
-.icon:hover,
-.icon:focus {
-  background: #f7ece1ff;
 }
 
 /* ================================= 
