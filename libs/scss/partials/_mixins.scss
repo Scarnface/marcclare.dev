@@ -5,7 +5,7 @@
 @mixin menu-buttons($ID, $delay) {
   & {
     margin-right: 15px;
-    animation: slide-in 1s linear; 
+    animation: slide-in .75s linear; 
     animation-fill-mode: both;
     animation-delay: $delay;
   }

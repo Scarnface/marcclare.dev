@@ -110,12 +110,10 @@ input:focus {
   top: 1rem;
   // Display over all other content
   z-index: 1;
+  text-align: center;
 }
 
-.menu-container {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row-reverse;
+.menu-content {
   text-align: center;
 }
 
@@ -134,6 +132,13 @@ input:focus {
     cursor: pointer;
     color: $linen;
   }
+}
+
+// Animations change the stacking context. This pulls the main menu button above the others
+#menu-btn-primary,
+#menu-btn-secondary {
+  position: relative;
+  z-index: 2;
 }
 
 // Slide in animations with unique delays

@@ -12,7 +12,7 @@
   0% {
     transform: translate(350px, 0) rotate(0deg);
   }
-  90% {
+  80% {
     transform: translate(-30px, 0) rotate(810deg);
   }
   100% {
@@ -225,12 +225,10 @@ input:focus {
   right: 1rem;
   top: 1rem;
   z-index: 1;
+  text-align: center;
 }
 
-.menu-container {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row-reverse;
+.menu-content {
   text-align: center;
 }
 
@@ -251,30 +249,36 @@ input:focus {
   color: #f7ece1ff;
 }
 
+#menu-btn-primary,
+#menu-btn-secondary {
+  position: relative;
+  z-index: 2;
+}
+
 #menu-btn-1 {
   margin-right: 15px;
-  animation: slide-in 1s linear;
+  animation: slide-in .75s linear;
   animation-fill-mode: both;
   animation-delay: 0.8s;
 }
 
 #menu-btn-2 {
   margin-right: 15px;
-  animation: slide-in 1s linear;
+  animation: slide-in .75s linear;
   animation-fill-mode: both;
   animation-delay: 0.6s;
 }
 
 #menu-btn-3 {
   margin-right: 15px;
-  animation: slide-in 1s linear;
+  animation: slide-in .75s linear;
   animation-fill-mode: both;
   animation-delay: 0.4s;
 }
 
 #menu-btn-4 {
   margin-right: 15px;
-  animation: slide-in 1s linear;
+  animation: slide-in .75s linear;
   animation-fill-mode: both;
   animation-delay: 0.2s;
 }
