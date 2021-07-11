@@ -220,7 +220,7 @@ input:focus {
   Menu
 ==================================== */
 .menu {
-  width: 100%;
+  width: fit-content;
   position: fixed;
   right: 1rem;
   top: 1rem;

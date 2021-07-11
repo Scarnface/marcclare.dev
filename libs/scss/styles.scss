@@ -104,7 +104,7 @@ input:focus {
 
 // Position the menu button container and stick it to the top right regardless of scrolling
 .menu {
-  width: 100%;
+  width: fit-content;
   position: fixed;
   right: 1rem;
   top: 1rem;
