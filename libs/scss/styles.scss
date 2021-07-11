@@ -165,8 +165,8 @@ input:focus {
 .hero-image {
   // Link to the required image with a linear-gradient to darken its apperance increasing readability of the overlayed text
   background-image: linear-gradient(#00000060, #00000060), url("../img/heroimg.jpg");
-  // Set a specific height of the hero image relative to the viewport
-  height: 114vh;
+  // Sets the image height to always fill the viewport at the highest clipped Y value
+  height: calc(100% + 6vw);
   // Position and center the image to scale correctly on all viewports
   background-position: center;
   background-repeat: no-repeat;
@@ -192,6 +192,35 @@ input:focus {
   }
   h2 {
     font-size: 1.5rem;
+  }
+}
+
+.scroll-arrow {
+  position: absolute;
+  // Positions at the bottom of the viewport accounting for diagonal clipping
+  bottom: 6vw;
+  left: 50%;
+  transform: translateX(-50%);
+  color: $linen;
+  div:nth-of-type(1) {
+    font-size: 1.1rem;
+    font-weight: 700;
+    transform: rotate(90deg);
+  }
+  div:nth-of-type(2) {
+    padding-top: 10px;
+    font-size: 4rem;
+    transform: scaleX(1.75);
+    animation: pulse 3s infinite;
+    animation-delay: 2.4s;
+  }
+}
+
+// Sets pulse animation on each letter and staggers delay
+@for $i from 1 through 11 {
+  #scroll-text span:nth-of-type(#{$i}) {
+    animation: pulse 3s infinite;
+    animation-delay: #{$i * 0.2}s;
   }
 }
 
@@ -226,7 +255,6 @@ input:focus {
 
 // Portfolio Item
 .card {
-  width: 100%;
   max-width: 400px;
   height: 300px;
   position: relative;
