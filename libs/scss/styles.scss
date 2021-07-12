@@ -326,7 +326,7 @@ input:focus {
   }
   &:hover {
     background-color: $amethyst;
-    color: $linen;
+    color: #000000;
   }
 }
 
@@ -382,7 +382,7 @@ input:focus {
     &:hover {
       cursor: pointer;
       background-color: $amethyst;
-      color: $linen;
+      color: #000000;
     }
   }
   textarea {

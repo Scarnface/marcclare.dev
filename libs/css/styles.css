@@ -526,7 +526,7 @@ input:focus {
 
 .button:hover {
   background-color: #9067c6ff;
-  color: #f7ece1ff;
+  color: #000000;
 }
 
 .card:hover .overlay {
@@ -585,7 +585,7 @@ input:focus {
 .contact-form input[type=submit]:hover {
   cursor: pointer;
   background-color: #9067c6ff;
-  color: #f7ece1ff;
+  color: #000000;
 }
 
 .contact-form textarea {
