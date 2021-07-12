@@ -164,7 +164,7 @@ input:focus {
 
 .hero-image {
   // Link to the required image with a linear-gradient to darken its apperance increasing readability of the overlayed text
-  background-image: linear-gradient(#00000060, #00000060), url("../img/heroimg.jpg");
+  background-image: linear-gradient(#00000060, #00000060), url("../img/heroimg.webp");
   // Sets the image height to always fill the viewport at the highest clipped Y value
   height: calc(100% + 6vw);
   // Position and center the image to scale correctly on all viewports
@@ -185,7 +185,7 @@ input:focus {
   position: fixed;
   opacity: 0.1;
   animation: noise 8s steps(10) infinite;
-  background-image: url("/libs/img/grain.jpg");
+  background-image: url("../img/grain.webp");
   content: "";
 }
 

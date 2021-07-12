@@ -322,7 +322,7 @@ input:focus {
   Hero
 ==================================== */
 .hero-image {
-  background-image: linear-gradient(#00000060, #00000060), url("../img/heroimg.jpg");
+  background-image: linear-gradient(#00000060, #00000060), url("../img/heroimg.webp");
   height: calc(100% + 6vw);
   background-position: center;
   background-repeat: no-repeat;
@@ -339,7 +339,7 @@ input:focus {
   position: fixed;
   opacity: 0.1;
   animation: noise 8s steps(10) infinite;
-  background-image: url("/libs/img/grain.jpg");
+  background-image: url("../img/grain.webp");
   content: "";
 }
 
