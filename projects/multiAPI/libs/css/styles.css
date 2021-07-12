@@ -1,5 +1,6 @@
 body {
   text-align: center;
+  background-image: url("../img/space.jpg");
 }
 
 table,
@@ -8,7 +9,7 @@ td {
   text-align: center;
   font-family: Arial, sans-serif;
   font-size: 1.5rem;
-  border: 3px solid black;
+  border: 3px solid white;
   border-collapse: collapse;
 }
 
@@ -19,11 +20,11 @@ table {
 
 table td:first-child {
   text-align: left;
-  background-color: #999966;
+  background-color: lemonchiffon;
 }
 
 table td:nth-child(2) {
-  background-color: #66ff33;
+  background-color: lightgray;
 }
 
 td {
@@ -34,14 +35,34 @@ td {
   text-align: center;
   font-family: Arial, sans-serif;
   font-size: 3rem;
-  color: #000000;
-  text-shadow: 0em 0.02em 0.02em #4d4d4d;
+  color: rgb(247, 210, 4);
 }
 
 .section {
+  width: 30%;
   padding: 10px;
   display: inline-block;
-  border: 3px solid black;
+  border: 3px solid lightgrey;
+}
+
+button {
+  width: 180px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  background-color: rgb(247, 210, 4);
+}
+
+input {
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+}
+
+input:focus {
+  outline: 3px solid rgb(247, 210, 4);
 }
 
 #latResult,
