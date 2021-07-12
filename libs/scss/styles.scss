@@ -38,7 +38,7 @@ html {
   font-family: "Roboto", Arial, sans-serif;
   font-weight: 400;
   color: $linen;
-  text-align: center;
+  text-align: left;
 }
 
 // Add a consistent margin to the whole document
@@ -143,19 +143,23 @@ input:focus {
 
 // Slide in animations with unique delays
 #menu-btn-1 {
-  @include menu-buttons(menu-btn-1, .8s);
+  @include menu-buttons(menu-btn-1, 1s);
 }
 
 #menu-btn-2 {
-  @include menu-buttons(menu-btn-2, .6s);
+  @include menu-buttons(menu-btn-2, .8s);
 }
 
 #menu-btn-3 {
-  @include menu-buttons(menu-btn-3, .4s);
+  @include menu-buttons(menu-btn-3, .6s);
 }
 
 #menu-btn-4 {
-  @include menu-buttons(menu-btn-4, .2s);
+  @include menu-buttons(menu-btn-4, .4s);
+}
+
+#menu-btn-5 {
+  @include menu-buttons(menu-btn-5, .2s);
 }
 
 /* ================================= 
@@ -220,6 +224,7 @@ input:focus {
     transform: rotate(90deg) translateX(-40px);
   }
   div:nth-of-type(2) {
+    text-align: center;
     line-height: 3rem;
     font-size: 3rem;
     animation: pulse 3s infinite;
@@ -270,6 +275,7 @@ input:focus {
   height: 300px;
   position: relative;
   border-radius: 5px;
+  text-align: center;
   &:not(:last-child) {
     margin-bottom: 30px;
   }
