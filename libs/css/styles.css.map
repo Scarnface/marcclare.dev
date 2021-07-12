@@ -4,7 +4,7 @@
     "sources": [
         "../scss/styles.scss",
         "../scss/partials/_mixins.scss",
-        "../scss/partials/_animation.scss",
+        "../scss/partials/_animations.scss",
         "../scss/partials/_breakpoints.scss"
     ],
     "names": [],
