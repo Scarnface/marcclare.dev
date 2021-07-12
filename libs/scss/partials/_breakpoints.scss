@@ -69,13 +69,8 @@
   }
 
   // INTRODUCTION
-  body .intro-text {
-    h3 {
-      font-size: 2rem;
-    }
-    p {
-      font-size: 1.5rem;
-    }
+  body .intro-text p {
+    font-size: 1.5rem;
   }
 
   // GALLERY
@@ -125,15 +120,9 @@
   }
 
   // INTRODUCTION
-  body .intro-text {
-    h3 {
-      font-size: 2.25rem;
-      margin-bottom: 40px;
-    }
-    p {
-      font-size: 1.75rem;
-      margin-bottom: 30px;
-    }
+  body .intro-text p {
+    font-size: 1.75rem;
+    margin-bottom: 30px;
   }
 
   // GALLERY

@@ -29,6 +29,39 @@
   }
 }
 
+@keyframes noise {
+  0%, 100% {
+    transform: translate(0, 0);
+  }
+  10% {
+    transform: translate(-5%, -10%);
+  }
+  20% {
+    transform: translate(-15%, 5%);
+  }
+  30% {
+    transform: translate(10%, -25%);
+  }
+  40% {
+    transform: translate(-5%, 25%);
+  }
+  50% {
+    transform: translate(-15%, 10%);
+  }
+  60% {
+    transform: translate(10%, 0%);
+  }
+  70% {
+    transform: translate(0%, 15%);
+  }
+  80% {
+    transform: translate(5%, 25%);
+  }
+  90% {
+    transform: translate(-10%, 10%);
+  }
+}
+
 /* ================================================================== 
   S - Small devices (phones, 768px and down)
 ================================================================== */
@@ -82,9 +115,6 @@
   .margin-wrapper {
     width: 970px;
   }
-  body .intro-text h3 {
-    font-size: 2rem;
-  }
   body .intro-text p {
     font-size: 1.5rem;
   }
@@ -122,10 +152,6 @@
   }
   body .hero-text h1 {
     font-size: 5rem;
-  }
-  body .intro-text h3 {
-    font-size: 2.25rem;
-    margin-bottom: 40px;
   }
   body .intro-text p {
     font-size: 1.75rem;
@@ -305,7 +331,21 @@ input:focus {
   clip-path: polygon(0 0, 100% 0, 100% calc(100% - 6vw), 0 100%);
 }
 
+.hero-image:after {
+  width: 350%;
+  height: 350%;
+  top: -100%;
+  left: -50%;
+  position: fixed;
+  opacity: 0.05;
+  mix-blend-mode: color-dodge;
+  animation: noise 8s steps(10) infinite;
+  background-image: url("/libs/img/grain.jpg");
+  content: "";
+}
+
 .hero-text {
+  width: 100%;
   font-weight: 900;
   color: #f7ece1ff;
   text-align: center;
@@ -313,15 +353,12 @@ input:focus {
   top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
+  font-size: 1rem;
 }
 
-.hero-text h1 {
-  margin-bottom: 20px;
-  font-size: 2.75rem;
-}
-
-.hero-text h2 {
-  font-size: 1.5rem;
+.hero-text span {
+  color: #9067c6ff;
+  text-shadow: 2px 2px 8px #000;
 }
 
 .scroll-arrow {
@@ -404,16 +441,8 @@ input:focus {
 /* ================================= 
   Introduction
 ==================================== */
-.intro-text {
-  font-weight: 700;
-}
-
-.intro-text h3 {
-  margin-bottom: 20px;
-  font-size: 1.75rem;
-}
-
 .intro-text p {
+  font-weight: 700;
   margin-bottom: 15px;
   font-size: 1.25rem;
 }
