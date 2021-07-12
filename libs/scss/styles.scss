@@ -218,18 +218,20 @@ input:focus {
   left: 50%;
   transform: translateX(-50%) translateY(10px);
   color: $linen;
-  div:nth-of-type(1) {
-    font-size: 1.1rem;
-    font-weight: 700;
-    transform: rotate(90deg) translateX(-40px);
-  }
-  div:nth-of-type(2) {
-    text-align: center;
-    line-height: 3rem;
-    font-size: 3rem;
-    animation: pulse 3s infinite;
-    animation-delay: 2.4s;
-  }
+}
+
+#scroll-text {
+  font-size: 1.1rem;
+  font-weight: 700;
+  transform: rotate(90deg) translateX(-40px);
+}
+
+#scroll-arrow {
+  text-align: center;
+  line-height: 3rem;
+  font-size: 3rem;
+  animation: pulse 3s infinite;
+  animation-delay: 2.4s;
 }
 
 // Sets pulse animation on each letter and staggers delay
