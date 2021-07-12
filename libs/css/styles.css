@@ -337,8 +337,7 @@ input:focus {
   top: -100%;
   left: -50%;
   position: fixed;
-  opacity: 0.05;
-  mix-blend-mode: color-dodge;
+  opacity: 0.1;
   animation: noise 8s steps(10) infinite;
   background-image: url("/libs/img/grain.jpg");
   content: "";
@@ -445,6 +444,11 @@ input:focus {
   font-weight: 700;
   margin-bottom: 15px;
   font-size: 1.25rem;
+}
+
+.intro-text a {
+  text-decoration: none;
+  color: #9067c6ff;
 }
 
 /* ================================= 

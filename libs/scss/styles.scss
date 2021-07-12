@@ -183,8 +183,7 @@ input:focus {
   top: -100%;
   left: -50%;
   position: fixed;
-  opacity: 0.05;
-  mix-blend-mode: color-dodge;
+  opacity: 0.1;
   animation: noise 8s steps(10) infinite;
   background-image: url("/libs/img/grain.jpg");
   content: "";
@@ -242,10 +241,16 @@ input:focus {
 ==================================== */
 
 // Scales the sections's font size
-.intro-text p {
+.intro-text {
+  p {
   font-weight: 700;
   margin-bottom: 15px;
   font-size: 1.25rem;
+  }
+  a {
+    text-decoration: none;
+    color: $amethyst;
+  }
 }
 
 /* ================================= 
@@ -327,14 +332,15 @@ input:focus {
   }
 }
 
-.card:hover .overlay{
+.card:hover {
+  .overlay{
   // Reveal the card info on mouseover
   transform: scale(1);
-}
-
-.card:hover img {
-  // Turn the image B&W on mouseover
-  filter: grayscale(100%);
+  }
+  img {
+    // Turn the image B&W on mouseover
+    filter: grayscale(100%);
+  }
 }
 
 /* ================================= 
