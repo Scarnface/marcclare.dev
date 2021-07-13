@@ -63,7 +63,9 @@
       <div class="hero-text">
         <h1>Hi, I'm <span>Marc Clare</span>.<br>I'm a full-stack web developer.</h1>
       </div>
-      <div class="scroll-arrow">
+      <!-- Can't anchor an animation. This is a hidden hotspot area for it. -->
+      <a href="#intro"><span class="scroll-hotspot"></span></a>
+      <div class="scroll-wrapper">
         <div id="scroll-text"><span>S</span><span>C</span><span>R</span><span>O</span><span>L</span><span>L</span>
           <span>&nbsp;</span><span>D</span><span>O</span><span>W</span><span>N</span></div>
         <div id="scroll-arrow"><span class="fas fa-chevron-down"></span></div>
@@ -73,7 +75,7 @@
     <!-- INTRODUCTION -->
     <section class="dsection">
       <div class="margin-wrapper">
-        <div class="intro-text">
+        <div id="intro" class="intro-text">
           <h3 class="section-title">&lt;A Portfolio of Work&#47;&gt;</h3>
           <p>I live in Norwich, England and currently work in the Netmatters Scion Coalition Scheme. I left university with 
             a BSc and a PGDE, with an emphasis on computer graphics and teaching computer science respectively, which has given
@@ -250,7 +252,7 @@
     <footer>
       <div class="margin-wrapper">
         <p>Copyright &copy; 2021 marcclare.dev. All Rights Reserved.</p>
-        <!-- The site's CSS uses transitions, which are bugged in chrome and run on page load, here's a really technical fix -->
+        <!-- The site's CSS uses transitions, which are bugged in chrome and run on page load, here's a really technical fix. -->
         <script> </script>
       </div>
     </footer>

@@ -367,7 +367,22 @@ input:focus {
   text-shadow: 2px 2px 8px #000;
 }
 
-.scroll-arrow {
+.scroll-hotspot {
+  width: 42px;
+  height: 170px;
+  display: block;
+  position: absolute;
+  bottom: 6vw;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+}
+
+.scroll-hotspot:hover {
+  cursor: pointer;
+}
+
+.scroll-wrapper {
   position: absolute;
   bottom: 6vw;
   left: 50%;
@@ -603,7 +618,7 @@ input:focus {
 }
 
 /* ================================= 
-  About // !TODO Make icon hover have fade. Probably need JS
+  About // !TODO Make img hover have fade. Probably need JS
 ==================================== */
 .about {
   display: flex;

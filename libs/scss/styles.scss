@@ -23,25 +23,25 @@ $linen: #f7ece1ff;
 ==================================== */
 
 * {
-  // Include border and padding in total dimensions
+  // Include border and padding in total dimensions.
   box-sizing: border-box;
-  // Removes auto margins added by browsers
+  // Removes auto margins added by browsers.
   margin: 0;
 }
 
-// Set the specific height for the entire document relative to the viewport
+// Set the specific height for the entire document relative to the viewport.
 body,
 html {
   height: 100%;
   background-color: $dark-purple;
-  // Specify the desired and fallback fonts
+  // Specify the desired and fallback fonts.
   font-family: "Roboto", Arial, sans-serif;
   font-weight: 400;
   color: $linen;
   text-align: left;
 }
 
-// Add a consistent margin to the whole document
+// Add a consistent margin to the whole document.
 .margin-wrapper {
   margin-left: auto;
   margin-right: auto;
@@ -49,7 +49,7 @@ html {
   padding-right: 15px;
 }
 
-// Remove default styling to allow custom styling
+// Remove default styling to allow custom styling.
 button {
   text-transform: uppercase;
   text-decoration: none;
@@ -79,10 +79,10 @@ input:focus {
 // Style a default section
 .dsection {
   padding: 2rem 0;
-  // Style a diagonal section and alternate applying it to default sections
+  // Style a diagonal section and alternate applying it to default sections.
   &:nth-of-type(even) {
     background-image: radial-gradient($amethyst, $dark-purple);
-    // Add a diagonal effect. Viewport width units used to make angle consistent across screen widths
+    // Add a diagonal effect. Viewport width units used to make angle consistent across screen widths.
     clip-path: polygon(0 6vw, 100% 0, 100% calc(100% - 6vw), 0 100%);
     padding: 4rem 0;
   }
@@ -102,13 +102,13 @@ input:focus {
   Menu
 ==================================== */
 
-// Position the menu button container and stick it to the top right regardless of scrolling
+// Position the menu button container and stick it to the top right regardless of scrolling.
 .menu {
   width: fit-content;
   position: fixed;
   right: 1rem;
   top: 1rem;
-  // Display over all other content
+  // Display over all other content.
   z-index: 1;
   text-align: center;
 }
@@ -117,14 +117,14 @@ input:focus {
   text-align: center;
 }
 
-// Default styling for all buttons
+// Default styling for all buttons.
 .menu-btn {
   display: inline-block;
   color: $amethyst;
   text-shadow: 2px 2px 8px #000;
   font-size: 2rem;
   transition: all 1s ease;
-  // Removes the highlight box on visited buttons in mobile browsers
+  // Removes the highlight box on visited buttons in mobile browsers.
   &:focus {
     outline-style: none;
   }
@@ -134,14 +134,14 @@ input:focus {
   }
 }
 
-// Animations change the stacking context. This pulls the main menu button above the others
+// Animations change the stacking context. This pulls the main menu button above the others.
 #menu-btn-primary,
 #menu-btn-secondary {
   position: relative;
   z-index: 2;
 }
 
-// Slide in animations with unique delays
+// Slide in animations with unique delays.
 #menu-btn-1 {
   @include menu-buttons(menu-btn-1, 1s);
 }
@@ -167,20 +167,20 @@ input:focus {
 ==================================== */
 
 .hero-image {
-  // Link to the required image with a linear-gradient to darken its apperance increasing readability of the overlayed text
+  // Link to the required image with a linear-gradient to darken its apperance increasing readability of the overlayed text.
   background-image: linear-gradient(#00000060, #00000060), url("../img/heroimg.webp");
-  // Sets the image height to always fill the viewport at the highest clipped Y value
+  // Sets the image height to always fill the viewport at the highest clipped Y value.
   height: calc(100% + 6vw);
-  // Position and center the image to scale correctly on all viewports
+  // Position and center the image to scale correctly on all viewports.
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
-  // Add a diagonal effect. Viewport width units used to make angle consistent across screen width
+  // Add a diagonal effect. Viewport width units used to make angle consistent across screen width.
   clip-path: polygon(0 0, 100% 0, 100% calc(100% - 6vw), 0 100%);
 }
 
-// The grain effect over the hero image
+// The grain effect over the hero image.
 .hero-image:after {
   width: 350%;
   height: 350%;
@@ -197,12 +197,12 @@ input:focus {
   width: 100%;
   font-weight: 900;
   color: $linen;
-  // Centre the text and position it relative to the image
+  // Centre the text and position it relative to the image.
   text-align: center;
   position: absolute;
   top: 40%;
   left: 50%;
-  // Adjusts for the size of the content
+  // Adjusts for the size of the content.
   transform: translate(-50%, -50%);
   font-size: 1rem;
   span {
@@ -211,9 +211,26 @@ input:focus {
   }
 }
 
-.scroll-arrow {
+// Can't add anchor tags to an animation so this is a hotspot area for the animated scroll arrow.
+.scroll-hotspot {
+  // * Uncomment to make visible for debugging.
+  // background-color: rgba(0, 128, 0, 0.3);
+  width: 42px;
+  height: 170px;
+  display: block;
   position: absolute;
-  // Positions at the bottom of the viewport accounting for diagonal clipping
+  bottom: 6vw;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.scroll-wrapper {
+  position: absolute;
+  // Positions at the bottom of the viewport accounting for diagonal clipping.
   bottom: 6vw;
   left: 50%;
   transform: translateX(-50%) translateY(10px);
@@ -234,7 +251,7 @@ input:focus {
   animation-delay: 2.4s;
 }
 
-// Sets pulse animation on each letter and staggers delay
+// Sets pulse animation on each letter and staggers delay.
 @for $i from 1 through 11 {
   #scroll-text span:nth-of-type(#{$i}) {
     animation: pulse 3s infinite;
@@ -246,7 +263,7 @@ input:focus {
   Introduction
 ==================================== */
 
-// Scales the sections's font size
+// Scales the sections's font size.
 .intro-text {
   p {
   font-weight: 700;
@@ -263,7 +280,7 @@ input:focus {
   Gallery
 ==================================== */
 
-// Responsive container
+// Responsive container.
 .gallery {
   max-width: 100%;
   display: flex;
@@ -271,7 +288,7 @@ input:focus {
   justify-content: center;
 }
 
-// Portfolio Item
+// Portfolio Item.
 .card {
   max-width: 400px;
   height: 300px;
@@ -291,7 +308,7 @@ input:focus {
   }
 }
 
-// Matching Info and Links
+// Matching Info and Links.
 .overlay {
   display: flex;
   flex-wrap: wrap;
@@ -328,7 +345,7 @@ input:focus {
   color: $amethyst;
   font-size: 1rem;
   letter-spacing: 0.5px;
-  // Add right margin to first button, but only if it's not a lone button
+  // Add right margin to first button, but only if it's not a lone button.
   &:not(:nth-last-child(1)) {
     margin-right: 20px;
   }
@@ -340,11 +357,11 @@ input:focus {
 
 .card:hover {
   .overlay{
-  // Reveal the card info on mouseover
+  // Reveal the card info on mouseover.
   transform: scale(1);
   }
   img {
-    // Turn the image B&W on mouseover
+    // Turn the image B&W on mouseover.
     filter: grayscale(100%);
   }
 }
@@ -365,7 +382,7 @@ input:focus {
     margin-bottom: 30px;
     border-radius: 5px;
     padding: 5px 10px;
-    // Allow user to resize text area
+    // Allow user to resize text area.
     resize: vertical;
     box-shadow: inset 0 0 15px #000000;
     background-color: $lavender-gray;
@@ -400,7 +417,7 @@ input:focus {
 }
 
 /* ================================= 
-  About // !TODO Make icon hover have fade. Probably need JS
+  About // !TODO Make img hover have fade. Probably need JS
 ==================================== */
 .about {
   display: flex;
@@ -427,7 +444,7 @@ input:focus {
     padding: 15px 0;
     font-size: 1.25rem;
   }
-  // Hover effect on about icons
+  // Hover effect on about icons.
   a:first-of-type {
     max-width: 70px;
     max-height: 70px;
