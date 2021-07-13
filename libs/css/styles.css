@@ -191,10 +191,10 @@
 body,
 html {
   height: 100%;
-  background-color: #242038ff;
+  background-color: #242038;
   font-family: "Roboto", Arial, sans-serif;
   font-weight: 400;
-  color: #f7ece1ff;
+  color: #f7ece1;
   text-align: left;
 }
 
@@ -236,7 +236,7 @@ input:focus {
 }
 
 .dsection:nth-of-type(even) {
-  background-image: radial-gradient(#9067c6ff, #242038ff);
+  background-image: radial-gradient(#9067c6, #242038);
   clip-path: polygon(0 6vw, 100% 0, 100% calc(100% - 6vw), 0 100%);
   padding: 4rem 0;
 }
@@ -246,7 +246,7 @@ input:focus {
   padding-bottom: 5rem;
   font-size: 2rem;
   font-weight: 700;
-  color: #f7ece1ff;
+  color: #f7ece1;
   line-height: 1.2;
   text-align: center;
 }
@@ -269,7 +269,7 @@ input:focus {
 
 .menu-btn {
   display: inline-block;
-  color: #9067c6ff;
+  color: #9067c6;
   text-shadow: 2px 2px 8px #000;
   font-size: 2rem;
   transition: all 1s ease;
@@ -281,7 +281,7 @@ input:focus {
 
 .menu-btn:hover {
   cursor: pointer;
-  color: #f7ece1ff;
+  color: #f7ece1;
 }
 
 #menu-btn-primary,
@@ -353,7 +353,7 @@ input:focus {
 .hero-text {
   width: 100%;
   font-weight: 900;
-  color: #f7ece1ff;
+  color: #f7ece1;
   text-align: center;
   position: absolute;
   top: 40%;
@@ -363,7 +363,7 @@ input:focus {
 }
 
 .hero-text span {
-  color: #9067c6ff;
+  color: #9067c6;
   text-shadow: 2px 2px 8px #000;
 }
 
@@ -387,7 +387,7 @@ input:focus {
   bottom: 6vw;
   left: 50%;
   transform: translateX(-50%) translateY(10px);
-  color: #f7ece1ff;
+  color: #f7ece1;
 }
 
 #scroll-text {
@@ -470,7 +470,7 @@ input:focus {
 
 .intro-text a {
   text-decoration: none;
-  color: #9067c6ff;
+  color: #9067c6;
 }
 
 /* ================================= 
@@ -535,11 +535,11 @@ input:focus {
 
 .button {
   text-decoration: none;
-  border: solid 3px #9067c6ff;
+  border: solid 3px #9067c6;
   border-radius: 3px;
   padding: 10px 10px;
   background-color: transparent;
-  color: #9067c6ff;
+  color: #9067c6;
   font-size: 1rem;
   letter-spacing: 0.5px;
 }
@@ -549,7 +549,7 @@ input:focus {
 }
 
 .button:hover {
-  background-color: #9067c6ff;
+  background-color: #9067c6;
   color: #000000;
 }
 
@@ -580,8 +580,8 @@ input:focus {
   padding: 5px 10px;
   resize: vertical;
   box-shadow: inset 0 0 15px #000000;
-  background-color: #cac4ceff;
-  color: #242038ff;
+  background-color: #cac4ce;
+  color: #242038;
   font-family: inherit;
   font-size: 1rem;
 }
@@ -589,7 +589,7 @@ input:focus {
 .contact-form input[type=text]:focus,
 .contact-form select:focus,
 .contact-form textarea:focus {
-  border: solid 3px #9067c6ff;
+  border: solid 3px #9067c6;
 }
 
 .contact-form label {
@@ -597,18 +597,18 @@ input:focus {
 }
 
 .contact-form input[type=submit] {
-  border: solid 3px #9067c6ff;
+  border: solid 3px #9067c6;
   border-radius: 4px;
   padding: 10px 20px;
   background-color: transparent;
-  color: #9067c6ff;
+  color: #9067c6;
   font-size: 1rem;
   text-transform: uppercase;
 }
 
 .contact-form input[type=submit]:hover {
   cursor: pointer;
-  background-color: #9067c6ff;
+  background-color: #9067c6;
   color: #000000;
 }
 
@@ -635,8 +635,8 @@ input:focus {
   max-width: 450px;
   border-radius: 5px;
   padding: 1.5rem;
-  background-color: #242038ff;
-  color: #f7ece1ff;
+  background-color: #242038;
+  color: #f7ece1;
 }
 
 .about-wrapper:not(:last-of-type) {
@@ -682,13 +682,13 @@ input:focus {
 #th-profile {
   margin-top: 2rem;
   text-decoration: none;
-  color: #9067c6ff;
+  color: #9067c6;
   font-weight: 700;
   transition: all 1s ease;
 }
 
 #th-profile:hover {
-  color: #f7ece1ff;
+  color: #f7ece1;
 }
 
 /* ================================= 
@@ -716,7 +716,7 @@ footer {
   text-align: center;
   font-size: 0.7rem;
   padding: 0.2rem;
-  background-color: #cac4ceff;
-  color: #242038ff;
+  background-color: #cac4ce;
+  color: #242038;
 }
 /*# sourceMappingURL=styles.css.map */
