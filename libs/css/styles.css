@@ -93,8 +93,6 @@
   }
   body .card {
     width: 455px;
-    max-width: 75%;
-    flex-grow: 1;
   }
   body .about {
     justify-content: space-between;
@@ -174,6 +172,19 @@
   body .about-wrapper:nth-of-type(3) {
     margin-left: 0;
     margin-right: 0;
+  }
+}
+
+/* ================================================================== 
+  IE - 'Special' Edition
+================================================================== */
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  /* IE10+ CSS styles go here */
+  .hero-image {
+    overflow-x: hidden;
+  }
+  body .hero-image:after {
+    display: none;
   }
 }
 
@@ -329,10 +340,11 @@ input:focus {
   Hero
 ==================================== */
 .hero-image {
-  background-image: linear-gradient(#00000060, #00000060), url("../img/heroimg.webp");
+  width: 100%;
   height: calc(100% + 6vw);
-  background-position: center;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.38), rgba(0, 0, 0, 0.38)), url("../img/heroimg.jpg");
   background-repeat: no-repeat;
+  background-position: center;
   background-size: cover;
   position: relative;
   clip-path: polygon(0 0, 100% 0, 100% calc(100% - 6vw), 0 100%);
@@ -515,7 +527,7 @@ input:focus {
   bottom: 0;
   left: 0;
   right: 0;
-  background-color: #000000CC;
+  background-color: rgba(0, 0, 0, 0.8);
   width: 100%;
   height: 100%;
   transform: scale(0);

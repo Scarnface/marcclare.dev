@@ -167,13 +167,14 @@ input:focus {
 ==================================== */
 
 .hero-image {
-  // Link to the required image with a linear-gradient to darken its apperance increasing readability of the overlayed text.
-  background-image: linear-gradient(#00000060, #00000060), url("../img/heroimg.webp");
+  width: 100%;
   // Sets the image height to always fill the viewport at the highest clipped Y value.
   height: calc(100% + 6vw);
+  // Link to the required image with a linear-gradient to darken its apperance increasing readability of the overlayed text.
+  background-image: linear-gradient(rgba(0,0,0,0.38), rgba(0,0,0,0.38)), url("../img/heroimg.jpg");
   // Position and center the image to scale correctly on all viewports.
-  background-position: center;
   background-repeat: no-repeat;
+  background-position: center;
   background-size: cover;
   position: relative;
   // Add a diagonal effect. Viewport width units used to make angle consistent across screen width.
@@ -320,7 +321,7 @@ input:focus {
   bottom: 0;
   left: 0;
   right: 0;
-  background-color: #000000CC;
+  background-color: rgba(0,0,0,0.8);
   width: 100%;
   height: 100%;
   transform: scale(0);

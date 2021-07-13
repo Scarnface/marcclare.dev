@@ -41,8 +41,6 @@
   // GALLERY
   body .card {
     width: 455px;
-    max-width: 75%;
-    flex-grow: 1;
   }
 
   // ABOUT
@@ -145,5 +143,22 @@
       margin-left: 0;
       margin-right: 0;
     }
+  }
+}
+
+/* ================================================================== 
+  IE - 'Special' Edition
+================================================================== */
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  
+  /* IE10+ CSS styles go here */
+
+  // HERO
+  .hero-image {
+    overflow-x: hidden;
+  }
+
+  body .hero-image:after {
+    display: none;
   }
 }
