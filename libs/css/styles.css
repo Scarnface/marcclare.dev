@@ -483,6 +483,11 @@ input:focus {
 .intro-text a {
   text-decoration: none;
   color: #9067c6;
+  transition: all 1s ease;
+}
+
+.intro-text a:hover {
+  color: #f7ece1;
 }
 
 /* ================================= 

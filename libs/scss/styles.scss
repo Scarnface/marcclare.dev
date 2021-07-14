@@ -274,6 +274,10 @@ input:focus {
   a {
     text-decoration: none;
     color: $amethyst;
+    transition: all 1s ease;
+    &:hover {
+      color: $linen;
+    }
   }
 }
 
