@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "AAAA;;;GAGG;AAGH,UAAU;EACR,WAAW,EAAE,oBAAoB;EACjC,UAAU,EAAE,MAAM;EAClB,WAAW,EAAE,GAAG;EAChB,YAAY,ECqCY,KAAK;EDpC7B,GAAG,EAAE,0CAA4C,CAAC,eAAe,EAC/D,yCAA2C,CAAC,cAAc,EAC1D,wCAA0C,CAAC,kBAAkB;;;AAGjE,AAAA,IAAI;AACJ,WAAW,CAAC;EACV,WAAW,EAAE,oBAAoB;EACjC,WAAW,EAAE,GAAG;CACjB",
+    "sources": [
+        "../fontawesome/regular.scss",
+        "../fontawesome/_variables.scss"
+    ],
+    "names": [],
+    "file": "regular.css"
+}
