@@ -5,7 +5,7 @@
 // Hide the menu on page load
 document.addEventListener('DOMContentLoaded', function() {
   $(this).find('.menu-content').hide();
-}, false)
+});
 
 // Switch menu visibilty on hover
 $('.menu').hover(function() {
