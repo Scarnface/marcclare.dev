@@ -15536,6 +15536,35 @@ readers do not read off random characters that represent icons */
   }
 }
 
+.gallery {
+  width: 100%;
+  position: relative;
+}
+
+#gallery-background {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.portfolio-image {
+  width: 150px;
+  height: 110px;
+  position: absolute;
+  border-radius: 3px;
+  top: 65px;
+  left: 295px;
+  opacity: 0.7;
+  transition: filter 1s ease;
+  filter: grayscale(100%);
+}
+
+.portfolio-image:hover {
+  transition: filter 1s ease;
+  filter: grayscale(0%);
+}
+
 /* ================================================================== 
   S - Small devices (phones, 768px and down)
 ================================================================== */
