@@ -6,12 +6,12 @@
 // n = Image ID, sw = Scale width, sh = Scale height, sx = Scale 'left', sy = Scale 'top', d = degrees to rotate
 //--------------------------------------------------------------------------------------------------------------
 const galleryImageData = [
-  { n: '#gI1', sw: 9.8, sh: 16.2, sx: 19.2, sy: 9.4, d: 0 }, // Rick's Garage Sale
-  { n: '#gI2', sw: 9.6, sh: 16, sx: 49.8, sy: 10.1, d: -1 }, // Netmatters
-  { n: '#gI3', sw: 10.4, sh: 16.4, sx: 86.1, sy: 9, d: -2 }, // Multi Api
-  { n: '#gI4', sw: 9.8, sh: 16.2, sx: 55.5, sy: 44, d: 0 }, // Music Stache
-  { n: '#gI5', sw: 9.6, sh: 16.5, sx: 38, sy: 74.1, d: -0.6 }, // blueJAM
-  { n: '#gI6', sw: 9.8, sh: 16.6, sx: 76, sy: 76.3, d: -0.5 }  // Codestrips
+  { n: '#gI1', sw: 11.8, sh: 16.2, sx: 3.8, sy: 9.4, d: 0 }, // Rick's Garage Sale
+  { n: '#gI2', sw: 11.3, sh: 16.2, sx: 40.2, sy: 10.1, d: -1 }, // Netmatters
+  { n: '#gI3', sw: 12.3, sh: 16.4, sx: 83.5, sy: 9, d: -2 }, // Multi Api
+  { n: '#gI4', sw: 11.6, sh: 16.2, sx: 47.2, sy: 44, d: 0 }, // Music Stache
+  { n: '#gI5', sw: 11.6, sh: 16.6, sx: 26.3, sy: 74.1, d: -0.8 }, // blueJAM
+  { n: '#gI6', sw: 11.8, sh: 16.7, sx: 71.3, sy: 76.3, d: -0.5 }  // Codestrips
 ];
 
 // Calculate the size and position of an absolute element in relation to its relative dynamic parent
