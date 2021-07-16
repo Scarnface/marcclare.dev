@@ -1,0 +1,71 @@
+/* ================================= 
+  Menu
+==================================== */
+
+// Position the menu button container and stick it to the top right regardless of scrolling.
+.menu {
+  width: fit-content;
+  position: fixed;
+  right: 1rem;
+  top: 1rem;
+  // Display over all other content.
+  z-index: 1;
+  text-align: center;
+  // Trigger menu on hover
+  &:hover {
+    #menu-btn-primary {
+      display: none;
+    }
+    .menu-content {
+      display: block;
+    }
+  }
+  // Hide on mouse out
+  &:not(:hover) {
+    #menu-btn-primary {
+      display: block;
+    }
+    .menu-content {
+      display: none;
+    }
+  }
+}
+
+.menu-content {
+  display: none;
+  text-align: center;
+}
+
+// Default styling for all buttons.
+.menu-btn {
+  display: inline-block;
+  color: $amethyst;
+  text-shadow: 2px 2px 8px #000;
+  font-size: 2rem;
+  transition: all 1s ease;
+  // Removes the highlight box on visited buttons in mobile browsers.
+  &:focus {
+    outline-style: none;
+  }
+  &:hover {
+    cursor: pointer;
+    color: $linen;
+  }
+}
+
+// Animations change the stacking context. This pulls the main menu button above the others.
+#menu-btn-primary,
+#menu-btn-secondary {
+  position: relative;
+  z-index: 2;
+}
+
+// Slide in animations with unique delays.
+@for $i from 1 through 5 {
+  .menu-content a:nth-of-type(#{$i}) {
+    margin-right: 15px;
+    animation: slide-in .75s linear; 
+    animation-fill-mode: both;
+    animation-delay: #{$i * 0.2}s;
+  }
+}

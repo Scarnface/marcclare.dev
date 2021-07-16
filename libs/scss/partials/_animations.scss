@@ -1,5 +1,5 @@
 /* ================================= 
-  Animation
+  Animations
 ==================================== */
 
 // MENU BUTTON SLIDE IN
@@ -37,4 +37,29 @@
   70% { transform:translate(0%, 15%) }
   80% { transform:translate(5%, 25%) }
   90% { transform:translate(-10%, 10%) }
+}
+
+// FLICKER
+@keyframes flicker {
+  0% { opacity: 0.28; }
+  5% { opacity: 0.35; }
+  10% { opacity: 0.24; }
+  15% { opacity: 0.91; }
+  20% { opacity: 0.18; }
+  25% { opacity: 0.84; }
+  30% { opacity: 0.66; }
+  35% { opacity: 0.68; }
+  40% { opacity: 0.27; }
+  45% { opacity: 0.85; }
+  50% { opacity: 0.96; }
+  55% { opacity: 0.09; }
+  60% { opacity: 0.20; }
+  65% { opacity: 0.72; }
+  70% { opacity: 0.53; }
+  75% { opacity: 0.37; }
+  80% { opacity: 0.71; }
+  85% { opacity: 0.70; }
+  90% { opacity: 0.70; }
+  95% { opacity: 0.36; }
+  100% { opacity: 0.24; }
 }
