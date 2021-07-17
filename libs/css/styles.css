@@ -15917,18 +15917,8 @@ readers do not read off random characters that represent icons */
   width: 300px;
   height: 200px;
   position: absolute;
-  background-color: transparent;
   color: #f7ece1;
-  transition: filter 1s ease;
-}
-
-#project-title {
-  font-size: 3.5rem;
-  padding-bottom: 1rem;
-}
-
-#project-description {
-  font-size: 1.25rem;
+  font-size: 2rem;
 }
 
 /* ================================= 

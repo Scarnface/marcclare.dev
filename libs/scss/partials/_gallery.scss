@@ -91,16 +91,6 @@
   width: 300px;
   height: 200px;
   position: absolute;
-  background-color: transparent;
   color: $linen;
-  transition: filter 1s ease;
-}
-
-#project-title {
-  font-size: 3.5rem;
-  padding-bottom: 1rem;
-}
-
-#project-description {
-  font-size: 1.25rem;
+  font-size: 2rem;
 }
