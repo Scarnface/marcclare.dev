@@ -63,3 +63,22 @@
   95% { opacity: 0.36; }
   100% { opacity: 0.24; }
 }
+
+// NEON TEXT
+@keyframes neon {
+  0% {
+    text-shadow: -1px -1px 1px #fff, -1px 1px 1px #fff, 1px -1px 1px #fff, 1px 1px 1px #fff, 0 0 3px #fff, 
+    0 0 10px #fff, 0 0 20px #fff, 0 0 30px #9067c6, 0 0 40px #9067c6, 0 0 50px #9067c6, 0 0 70px #9067c6, 
+    0 0 100px #9067c6, 0 0 200px #9067c6;
+  }
+  50% {
+    text-shadow: -1px -1px 1px #fff, -1px 1px 1px #fff, 1px -1px 1px #fff, 1px 1px 1px #fff, 0 0 5px #fff, 
+    0 0 15px #fff, 0 0 25px #fff, 0 0 40px #9067c6, 0 0 50px #9067c6, 0 0 60px #9067c6, 0 0 80px #9067c6, 
+    0 0 110px #9067c6, 0 0 210px #9067c6;
+  }
+  100% {
+    text-shadow: -1px -1px 1px #fff, -1px 1px 1px #fff, 1px -1px 1px #fff, 1px 1px 1px #fff, 0 0 3px #fff, 
+    0 0 10px #fff, 0 0 20px #fff, 0 0 30px #9067c6, 0 0 40px #9067c6, 0 0 50px #9067c6, 0 0 70px #9067c6, 
+    0 0 100px #9067c6, 0 0 200px #9067c6;
+  }
+}

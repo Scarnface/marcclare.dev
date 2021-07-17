@@ -55,47 +55,61 @@ let projectData = [
   { t: 'Multi API', d: 'Geonames APIs parsed dynamically to an HTML web page with AJAX, PHP and CURL.' },
   { t: 'Music Stache', d: 'HTML, CSS, JavaScript, and Handlebars to make a music store frontend.' },
   { t: 'BLUEjam', d: 'A REACT application for creating and storing custom Spotify playlists.' },
-  { t: 'Codestrips', d: 'A comic strip app using Express, SQLite, and the SQLite3 node module.' } 
+  { t: 'Codestrips', d: 'A comic strip app using Express, SQLite, and the SQLite3 node module.' },
+  { t: '', d: '' } // Clearing string
 ];
 
+// Create the paragraph element, load the typewriter plugin and pass the corresponding text to it
 let typeText = obj => {
+  $( '#project-info' ).append( '<p id="project-description"></p>' );
+
   let tText = document.getElementById('project-description');
 
   let typewriter = new Typewriter(tText, {
-      loop: true
+      delay: 50,
+      loop: false
   });
 
+  // Type the project title
   typewriter.typeString(obj.t)
       .pauseFor(2500)
       .deleteAll()
+      // Type the project description
       .typeString(obj.d)
       .pauseFor(2500)
       .deleteAll()
+      // CTA
       .typeString('Click the image to view!')
       .pauseFor(2500)
       .start();
 };
 
-$( "#gI1" ).hover(function() {
+// Mouse in events to pass the correct text for each image
+$( '#gI1' ).mouseenter(function() {
   typeText(projectData[0])
 });
 
-$( "#gI2" ).hover(function() {
+$( '#gI2' ).mouseenter(function() {
   typeText(projectData[1])
 });
 
-$( "#gI3" ).hover(function() {
+$( '#gI3' ).mouseenter(function() {
   typeText(projectData[2])
 });
 
-$( "#gI4" ).hover(function() {
+$( '#gI4' ).mouseenter(function() {
   typeText(projectData[3])
 });
 
-$( "#gI5" ).hover(function() {
+$( '#gI5' ).mouseenter(function() {
   typeText(projectData[4])
 });
 
-$( "#gI6" ).hover(function() {
+$( '#gI6' ).mouseenter(function() {
   typeText(projectData[5])
+});
+
+// Mouse out event to stop the plugin and clear the screen
+$( '#gI1, #gI2, #gI3, #gI4, #gI5, #gI6' ).mouseleave(function() {
+  $( '#project-description' ).remove();
 });
