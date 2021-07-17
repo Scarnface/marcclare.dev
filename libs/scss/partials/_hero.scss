@@ -18,7 +18,7 @@
 }
 
 // The grain effect over the hero image.
-.hero-image:after {
+.hero-image::after {
   width: 350%;
   height: 350%;
   top: -100%;

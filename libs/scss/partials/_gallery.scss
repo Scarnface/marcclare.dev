@@ -86,3 +86,21 @@
   // Image transitions to colour with blueglow effect
   filter: grayscale(0%) drop-shadow(0 0 10px rgba(113, 88, 255, 0.7));
 }
+
+#project-info {
+  width: 300px;
+  height: 200px;
+  position: absolute;
+  background-color: transparent;
+  color: $linen;
+  transition: filter 1s ease;
+}
+
+#project-title {
+  font-size: 3.5rem;
+  padding-bottom: 1rem;
+}
+
+#project-description {
+  font-size: 1.25rem;
+}

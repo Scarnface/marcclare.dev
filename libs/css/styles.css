@@ -15641,6 +15641,7 @@ readers do not read off random characters that represent icons */
 .menu-btn {
   display: inline-block;
   color: #9067c6;
+  text-decoration: none;
   text-shadow: 2px 2px 8px #000;
   font-size: 2rem;
   transition: all 1s ease;
@@ -15710,7 +15711,7 @@ readers do not read off random characters that represent icons */
   clip-path: polygon(0 0, 100% 0, 100% calc(100% - 6vw), 0 100%);
 }
 
-.hero-image:after {
+.hero-image::after {
   width: 350%;
   height: 350%;
   top: -100%;
@@ -15910,6 +15911,24 @@ readers do not read off random characters that represent icons */
 
 #gI5:hover, #gI6:hover {
   filter: grayscale(0%) drop-shadow(0 0 10px rgba(113, 88, 255, 0.7));
+}
+
+#project-info {
+  width: 300px;
+  height: 200px;
+  position: absolute;
+  background-color: transparent;
+  color: #f7ece1;
+  transition: filter 1s ease;
+}
+
+#project-title {
+  font-size: 3.5rem;
+  padding-bottom: 1rem;
+}
+
+#project-description {
+  font-size: 1.25rem;
 }
 
 /* ================================= 
