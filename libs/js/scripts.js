@@ -5,6 +5,18 @@
 //-----------------------------------------Array of gallery data -----------------------------------------------
 // n = Image ID, sw = Scale width, sh = Scale height, sx = Scale 'left', sy = Scale 'top', d = degrees to rotate
 //--------------------------------------------------------------------------------------------------------------
+// Single column mobile background.
+const galleryImageDataMob = [
+  { n: '#gI1', sw: 11.8, sh: 16.2, sx: 0, sy: 0, d: 0 }, // Rick's Garage Sale
+  { n: '#gI2', sw: 11.3, sh: 16.2, sx: 0, sy: 0, d: 0 }, // Netmatters
+  { n: '#gI3', sw: 12.3, sh: 16.4, sx: 0, sy: 0, d: 0 }, // Multi Api
+  { n: '#gI4', sw: 11.6, sh: 16.2, sx: 0, sy: 0, d: 0 }, // Music Stache
+  { n: '#gI5', sw: 11.6, sh: 16.6, sx: 0, sy: 0, d: 0 }, // blueJAM
+  { n: '#gI6', sw: 11.8, sh: 16.7, sx: 0, sy: 0, d: 0 },  // Codestrips
+  { n: '#project-info', sw: 37, sh: 26, sx: 0, sy: 0, d: 0 }  // Dynamic info panel
+];
+
+// Multi column large background.
 const galleryImageData = [
   { n: '#gI1', sw: 11.8, sh: 16.2, sx: 3.8, sy: 9.4, d: 0 }, // Rick's Garage Sale
   { n: '#gI2', sw: 11.3, sh: 16.2, sx: 40.2, sy: 10.1, d: -1 }, // Netmatters
@@ -29,7 +41,7 @@ let scaleToBg = array => {
     // Calculate the new position.
     let newLeft = value.sx * bgWidth / 100;
     let newTop = value.sy * bgHeight / 100;
-    // Calculate a corresponding font size for the info div
+    // Calculate a corresponding font size for the info div.
     let fSize = newHeight / 5;
     // Assign the new values.
     $(value.n).width(newWidth);
@@ -39,14 +51,15 @@ let scaleToBg = array => {
   });
 };
 
-// Run on initial page load.
-$(window).load(function() {
-  scaleToBg(galleryImageData);
-});
-
-// Run on resize.
-$(window).resize(function() {
-  scaleToBg(galleryImageData);
+// Run on page load or resize. Choose gallery type based on screen size.
+$(window).on('load resize', function() {
+  if($(window).width() >= 768) {
+    $("#gallery-background").attr("src","libs/img/galleryBackground.jpg");
+    scaleToBg(galleryImageData);
+  } else {
+    $("#gallery-background").attr("src","libs/img/galleryBackground_small.jpg");
+    scaleToBg(galleryImageDataMob);
+  }
 });
 
 //-----------------------------------------Array of project data -----------------------------------------------
