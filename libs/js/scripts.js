@@ -37,6 +37,18 @@ const galleryImageData = [
   { n: '#project-info', sw: 37, sh: 26, sx: 3, sy: 38, d: 0 }       // Dynamic info panel
 ];
 
+//-----------------------------------------Array of project data -----------------------------------------------
+// t = Project title, d = Project description
+//--------------------------------------------------------------------------------------------------------------
+const projectData = [
+  { t: 'Rick\'s Garage Sale', d: 'A high fidelity prototype of a web store, built in Axure.' },
+  { t: 'Netmatters', d: 'A front end clone of the Netmatters corporate site using SCSS.' },
+  { t: 'Multi API', d: 'Geonames APIs parsed dynamically to an HTML web page with AJAX, PHP and CURL.' },
+  { t: 'Music Stache', d: 'HTML, CSS, JavaScript, and Handlebars to make a music store frontend.' },
+  { t: 'BLUEjam', d: 'A REACT application for creating and storing custom Spotify playlists.' },
+  { t: 'Codestrips', d: 'A comic strip app using Express, SQLite, and the SQLite3 node module.' },
+];
+
 // Calculate the size and position of an absolute element in relation to its responsive relative parent.
 let scaleToBg = array => {
   // Calculate the width and height of the parent at the present time.
@@ -65,29 +77,6 @@ let scaleToBg = array => {
   });
 };
 
-// On page load or resize, choose gallery type based on screen size and call function to position elements.
-$(window).on('load resize', function() {
-  if($(window).width() >= 768) {
-    $('#gallery-background').attr('src','libs/img/galleryBackground.jpg');
-    scaleToBg(galleryImageData);
-  } else {
-    $('#gallery-background').attr('src','libs/img/galleryBackground_small.jpg');
-    scaleToBg(galleryImageDataMob);
-  }
-});
-
-//-----------------------------------------Array of project data -----------------------------------------------
-// t = Project title, d = Project description
-//--------------------------------------------------------------------------------------------------------------
-const projectData = [
-  { t: 'Rick\'s Garage Sale', d: 'A high fidelity prototype of a web store, built in Axure.' },
-  { t: 'Netmatters', d: 'A front end clone of the Netmatters corporate site using SCSS.' },
-  { t: 'Multi API', d: 'Geonames APIs parsed dynamically to an HTML web page with AJAX, PHP and CURL.' },
-  { t: 'Music Stache', d: 'HTML, CSS, JavaScript, and Handlebars to make a music store frontend.' },
-  { t: 'BLUEjam', d: 'A REACT application for creating and storing custom Spotify playlists.' },
-  { t: 'Codestrips', d: 'A comic strip app using Express, SQLite, and the SQLite3 node module.' },
-];
-
 // Create the paragraph element, load the typewriter plugin and pass the corresponding text to it.
 let typeText = obj => {
   // Create the HTML element to hold the description. Neccessary as we delete the element to stop the function on mouse out.
@@ -114,7 +103,7 @@ let typeText = obj => {
       .start();
 };
 
-// Mouse in event to load the correct info text, position correctly in mobile and apply hover styling.
+// Mouse in event to load the correct info text, position info text correctly in mobile and apply hover styling.
 $('.portfolio-image').mouseenter(function() {
   // Darken the background and all but event screen for readability.
   $('#gallery-background, .portfolio-image')
@@ -172,4 +161,15 @@ $('.portfolio-image').mouseleave(function() {
   $('#gallery-background, .portfolio-image').css('filter', 'brightness(100%) grayscale(100%) drop-shadow(0 0 10px rgba(177, 177, 252, 0.7))');
   // Delete the HTML element holding the description effectively stopping it.
   $('#project-description').remove();
+});
+
+// On page load or resize, choose gallery type based on screen size and call function to position elements.
+$(window).on('load resize', function() {
+  if($(window).width() >= 768) {
+    $('#gallery-background').attr('src','libs/img/galleryBackground.jpg');
+    scaleToBg(galleryImageData);
+  } else {
+    $('#gallery-background').attr('src','libs/img/galleryBackground_small.jpg');
+    scaleToBg(galleryImageDataMob);
+  }
 });
