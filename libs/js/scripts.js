@@ -13,7 +13,7 @@ const galleryImageDataMob = [
   { n: '#gI4', sw: 32.2, sh: 8.1, sx: 61.2, sy: 54.8, d: 0 }, // Music Stache
   { n: '#gI5', sw: 31.8, sh: 8.1, sx: 3.8, sy: 70, d: -0.6 }, // blueJAM
   { n: '#gI6', sw: 31.2, sh: 8.1, sx: 61.4, sy: 88.4, d: 1.2 },  // Codestrips
-  { n: '#project-info', sw: 37, sh: 12, sx: 40, sy: 3.9, d: 0 }  // Dynamic info panel
+  { n: '#project-info', sw: 55, sh: 12, sx: 40, sy: 2.3, d: 0 }  // Dynamic info panel
 ];
 
 // Multi column large background.
@@ -32,6 +32,7 @@ let scaleToBg = array => {
   // Calculate the width and height of the parent at the present time.
   let bgWidth = $('#gallery-background').width();
   let bgHeight = $('#gallery-background').height();
+  let fSize;
 
   // Loop the array of images.
   $.each(array, (key, value) => {
@@ -42,7 +43,11 @@ let scaleToBg = array => {
     let newLeft = value.sx * bgWidth / 100;
     let newTop = value.sy * bgHeight / 100;
     // Calculate a corresponding font size for the info div.
-    let fSize = newWidth / 14;
+    if($(window).width() <= 768) {
+      fSize = bgWidth / 20;
+    } else {
+      fSize = bgWidth / 40;
+    }
     // Assign the new values.
     $(value.n).width(newWidth);
     $(value.n).height(newHeight);
@@ -67,7 +72,7 @@ $(window).on('load resize', function() {
 //--------------------------------------------------------------------------------------------------------------
 const projectData = [
   { t: 'Rick\'s Garage Sale', d: 'A high fidelity prototype of a web store, built in Axure.' },
-  { t: 'Netmatters', d: 'A full front end clone of the Netmatters corporate site using SCSS for full browser compatability.' },
+  { t: 'Netmatters', d: 'A front end clone of the Netmatters corporate site using SCSS.' },
   { t: 'Multi API', d: 'Geonames APIs parsed dynamically to an HTML web page with AJAX, PHP and CURL.' },
   { t: 'Music Stache', d: 'HTML, CSS, JavaScript, and Handlebars to make a music store frontend.' },
   { t: 'BLUEjam', d: 'A REACT application for creating and storing custom Spotify playlists.' },
