@@ -5,21 +5,18 @@
 .gallery {
   display: flex;
   flex-wrap: wrap;
+  margin-bottom: 30px;
 }
 
 // Container DIV to anchor effects on
 .gallery-container {
   width: 100%;
-  height: 615.45px; //! NOT AUTO SIZING, CUTTING OFF IMAGE
   position: relative;
 }
 
 // The background image
 #gallery-background {
   width: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
 }
 
 .portfolio-image {
@@ -33,7 +30,7 @@
   img {
     width: 100%;
     height: 100%;
-    border-radius: 3px;
+    border-radius: 2px;
   }
   // Universal hover effects. Per image listed below by ID
   &:hover {
@@ -91,6 +88,7 @@
 #project-info {
   width: 300px;
   height: 200px;
+  letter-spacing: 2px;
   position: absolute;
   animation: neon 3s infinite;
 }

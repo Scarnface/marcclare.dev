@@ -7,13 +7,13 @@
 //--------------------------------------------------------------------------------------------------------------
 // Single column mobile background.
 const galleryImageDataMob = [
-  { n: '#gI1', sw: 11.8, sh: 16.2, sx: 0, sy: 0, d: 0 }, // Rick's Garage Sale
-  { n: '#gI2', sw: 11.3, sh: 16.2, sx: 0, sy: 0, d: 0 }, // Netmatters
-  { n: '#gI3', sw: 12.3, sh: 16.4, sx: 0, sy: 0, d: 0 }, // Multi Api
-  { n: '#gI4', sw: 11.6, sh: 16.2, sx: 0, sy: 0, d: 0 }, // Music Stache
-  { n: '#gI5', sw: 11.6, sh: 16.6, sx: 0, sy: 0, d: 0 }, // blueJAM
-  { n: '#gI6', sw: 11.8, sh: 16.7, sx: 0, sy: 0, d: 0 },  // Codestrips
-  { n: '#project-info', sw: 37, sh: 26, sx: 0, sy: 0, d: 0 }  // Dynamic info panel
+  { n: '#gI1', sw: 28.2, sh: 7.2, sx: 5.2, sy: 3.9, d: -0.2 }, // Rick's Garage Sale
+  { n: '#gI2', sw: 32.6, sh: 8.55, sx: 59.7, sy: 20.3, d: 0.4 }, // Netmatters
+  { n: '#gI3', sw: 32.2, sh: 8.1, sx: 41.9, sy: 38.2, d: 0 }, // Multi Api
+  { n: '#gI4', sw: 32.2, sh: 8.1, sx: 61.2, sy: 54.8, d: 0 }, // Music Stache
+  { n: '#gI5', sw: 31.8, sh: 8.1, sx: 3.8, sy: 70, d: -0.6 }, // blueJAM
+  { n: '#gI6', sw: 31.2, sh: 8.1, sx: 61.4, sy: 88.4, d: 1.2 },  // Codestrips
+  { n: '#project-info', sw: 37, sh: 12, sx: 40, sy: 3.9, d: 0 }  // Dynamic info panel
 ];
 
 // Multi column large background.
@@ -42,7 +42,7 @@ let scaleToBg = array => {
     let newLeft = value.sx * bgWidth / 100;
     let newTop = value.sy * bgHeight / 100;
     // Calculate a corresponding font size for the info div.
-    let fSize = newHeight / 5;
+    let fSize = newWidth / 14;
     // Assign the new values.
     $(value.n).width(newWidth);
     $(value.n).height(newHeight);
@@ -54,10 +54,10 @@ let scaleToBg = array => {
 // Run on page load or resize. Choose gallery type based on screen size.
 $(window).on('load resize', function() {
   if($(window).width() >= 768) {
-    $("#gallery-background").attr("src","libs/img/galleryBackground.jpg");
+    $('#gallery-background').attr('src','libs/img/galleryBackground.jpg');
     scaleToBg(galleryImageData);
   } else {
-    $("#gallery-background").attr("src","libs/img/galleryBackground_small.jpg");
+    $('#gallery-background').attr('src','libs/img/galleryBackground_small.jpg');
     scaleToBg(galleryImageDataMob);
   }
 });
