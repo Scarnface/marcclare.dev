@@ -18,12 +18,12 @@ const galleryImageDataMob = [
 
 // Position data for info div when in mobile gallery
 const galleryInfoDataMob = [
-  { n: '#project-info', sw: 55, sh: 10, sx: 40, sy: 3.6, d: 0 },  // Dynamic info panel for #gI1
-  { n: '#project-info', sw: 51, sh: 10, sx: 3, sy: 19.8, d: 0 },  // Dynamic info panel for #gI2
-  { n: '#project-info', sw: 55, sh: 14, sx: 40, sy: 35.8, d: 0 }, // Dynamic info panel for #gI3
-  { n: '#project-info', sw: 53, sh: 10, sx: 3, sy: 53.5, d: 0 },    // Dynamic info panel for #gI4
-  { n: '#project-info', sw: 55, sh: 10, sx: 42, sy: 68.5, d: 0 },   // Dynamic info panel for #gI5
-  { n: '#project-info', sw: 55, sh: 10, sx: 3, sy: 86.8, d: 0 }     // Dynamic info panel for #gI6
+  { n: '#project-info', sw: 55, sh: 10, sx: 40, sy: 4.6, d: 0 },    // Dynamic info panel for #gI1
+  { n: '#project-info', sw: 51, sh: 10, sx: 3, sy: 20.8, d: 0 },    // Dynamic info panel for #gI2
+  { n: '#project-info', sw: 55, sh: 14, sx: 40, sy: 36.2, d: 0 },   // Dynamic info panel for #gI3
+  { n: '#project-info', sw: 53, sh: 10, sx: 3, sy: 54.4, d: 0 },    // Dynamic info panel for #gI4
+  { n: '#project-info', sw: 55, sh: 10, sx: 42, sy: 69.5, d: 0 },   // Dynamic info panel for #gI5
+  { n: '#project-info', sw: 55, sh: 10, sx: 3, sy: 87.5, d: 0 }     // Dynamic info panel for #gI6
 ];
 
 // Multi column large background.
@@ -114,59 +114,62 @@ let typeText = obj => {
       .start();
 };
 
-// Mouse in event to pass the correct text and div position for each image.
+// Mouse in event to load the correct info text, position correctly in mobile and apply hover styling.
 $('.portfolio-image').mouseenter(function() {
-  if($(window).width() < 768) {
-    // Darken the background and all screens for readability.
-    $('#gallery-background, #gI1, #gI2, #gI3, #gI4, #gI5, #gI6').css('opacity', '0.5');
-    // Undarken the event screen
-    $('#' + this.id).css('opacity', '1');
+  // Darken the background and all but event screen for readability.
+  $('#gallery-background, .portfolio-image')
+    .not('#' + this.id)
+    .css('filter', 'brightness(50%) grayscale(100%)');
+
+  // Load the correct info position in mobile version.
+  if($(window).width() < 768) { 
     if( this.id === 'gI1' ) {
       galleryImageDataMob[6] = galleryInfoDataMob[0];
       scaleToBg(galleryImageDataMob);
-      typeText(projectData[0]);
     } else if( this.id === 'gI2' ) {
       galleryImageDataMob[6] = galleryInfoDataMob[1];
       scaleToBg(galleryImageDataMob);
-      typeText(projectData[1]);
     } else if( this.id === 'gI3' ) {
       galleryImageDataMob[6] = galleryInfoDataMob[2];
       scaleToBg(galleryImageDataMob);
-      typeText(projectData[2]);
     } else if( this.id === 'gI4' ) {
       galleryImageDataMob[6] = galleryInfoDataMob[3];
       scaleToBg(galleryImageDataMob);
-      typeText(projectData[3]);
     } else if( this.id === 'gI5' ) {
       galleryImageDataMob[6] = galleryInfoDataMob[4];
       scaleToBg(galleryImageDataMob);
-      typeText(projectData[4]);
     } else if( this.id === 'gI6' ) {
       galleryImageDataMob[6] = galleryInfoDataMob[5];
       scaleToBg(galleryImageDataMob);
-      typeText(projectData[5]);
     }
-  } else {
-    if( this.id === 'gI1' ) {
-      typeText(projectData[0]);
-    } else if( this.id === 'gI2' ) {
-      typeText(projectData[1]);
-    } else if( this.id === 'gI3' ) {
-      typeText(projectData[2]);
-    } else if( this.id === 'gI4' ) {
-      typeText(projectData[3]);
-    } else if( this.id === 'gI5' ) {
-      typeText(projectData[4]);
-    } else if( this.id === 'gI6' ) {
-      typeText(projectData[5]);
-    }
+  }
+  
+  // Set the info text and image hover filters.
+  if( this.id === 'gI1' ) {
+  $('#' + this.id).css('filter', 'brightness(100%) grayscale(0%) drop-shadow(0 0 10px rgba(252, 252, 177, 0.7))');
+  typeText(projectData[0]);
+  } else if( this.id === 'gI2' ) {
+    $('#' + this.id).css('filter', 'brightness(100%) grayscale(0%) drop-shadow(0 0 10px rgba(255, 96, 96, 0.7))');
+    typeText(projectData[1]);
+  } else if( this.id === 'gI3' ) {
+    $('#' + this.id).css('filter', 'brightness(100%) grayscale(0%) drop-shadow(0 0 10px rgba(252, 252, 177, 0.7))');
+    typeText(projectData[2]);
+  } else if( this.id === 'gI4' ) {
+    $('#' + this.id).css('filter', 'brightness(100%) grayscale(0%) drop-shadow(0 0 10px rgba(255, 96, 96, 0.7))');
+    typeText(projectData[3]);
+  } else if( this.id === 'gI5' ) {
+    $('#' + this.id).css('filter', 'brightness(100%) grayscale(0%) drop-shadow(0 0 10px rgba(113, 88, 255, 0.7))');
+    typeText(projectData[4]);
+  } else if( this.id === 'gI6' ) {
+    $('#' + this.id).css('filter', 'brightness(100%) grayscale(0%) drop-shadow(0 0 10px rgba(113, 88, 255, 0.7))');
+    typeText(projectData[5]);
   }
 });
 
 // Mouse out event to stop the plugin and clear the screen.
 $('.portfolio-image').mouseleave(function() {
-  // Remove the darkened background effect if in mobile version.
-  $('#gallery-background, #gI1, #gI2, #gI3, #gI4, #gI5, #gI6').css('opacity', '1.0');
+  // Remove the darkened background effect and reset the image filters.
+  $('#gallery-background, .portfolio-image').css('filter', 'brightness(100%) grayscale(100%) drop-shadow(0 0 10px rgba(177, 177, 252, 0.7))');
   // Delete the HTML element holding the description effectively stopping it.
   $('#project-description').remove();
 });
