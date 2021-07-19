@@ -2,7 +2,9 @@
   Imports
 ==================================== */
 
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,400;0,700;1,100;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Archivo:ital,wght@1,600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap');
 
 @import "partials/variables";
 @import "partials/animations";
@@ -85,12 +87,14 @@ input:focus {
 
 .section-title {
   width: 100%;
-  padding-bottom: 5rem;
-  font-size: 2rem;
-  font-weight: 700;
-  color: $linen;
-  line-height: 1.2;
+  padding: 3rem 0 5rem;
   text-align: center;
+  font-family: 'Source Code Pro', monospace;
+  font-size: 1.5rem;
+  font-weight: 300;
+  line-height: 1.2;
+  color: $linen;
+  animation: neon 3s infinite;
 }
 
 /* ================================= 

@@ -1,7 +1,9 @@
 /* ================================= 
   Imports
 ==================================== */
-@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,400;0,700;1,100;1,400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Archivo:ital,wght@1,600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap");
 /* ================================= 
   Variables
 ==================================== */
@@ -382,6 +384,7 @@
 }
 
 #gallery-background {
+  background-color: #000;
   width: 100%;
 }
 
@@ -448,9 +451,12 @@
 #project-info {
   width: 300px;
   height: 200px;
-  letter-spacing: 2px;
+  font-family: 'Archivo', sans-serif;
+  font-weight: 600;
+  font-style: italic;
+  text-shadow: 2px 2px 4px #000;
   position: absolute;
-  animation: neon 3s infinite;
+  color: #fff;
 }
 
 /* ================================= 
@@ -602,6 +608,9 @@
   body .dsection:nth-of-type(even) {
     padding: 6rem 0;
   }
+  body .section-title {
+    font-size: 2rem;
+  }
   body .menu-btn {
     font-size: 3rem;
   }
@@ -631,6 +640,9 @@
   .margin-wrapper {
     width: 970px;
   }
+  body .section-title {
+    font-size: 2.5rem;
+  }
   body .intro-text p {
     font-size: 1.5rem;
   }
@@ -652,7 +664,7 @@
     padding: 8rem 0;
   }
   body .section-title {
-    font-size: 2.25rem;
+    font-size: 3rem;
   }
   body .hero-text h1 {
     font-size: 5rem;
@@ -746,12 +758,14 @@ input:focus {
 
 .section-title {
   width: 100%;
-  padding-bottom: 5rem;
-  font-size: 2rem;
-  font-weight: 700;
-  color: #f7ece1;
-  line-height: 1.2;
+  padding: 3rem 0 5rem;
   text-align: center;
+  font-family: 'Source Code Pro', monospace;
+  font-size: 1.5rem;
+  font-weight: 300;
+  line-height: 1.2;
+  color: #f7ece1;
+  animation: neon 3s infinite;
 }
 
 /* ================================= 
