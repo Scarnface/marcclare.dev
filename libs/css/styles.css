@@ -385,6 +385,7 @@
 
 #gallery-background {
   width: 100%;
+  transition: filter 1s ease;
 }
 
 .portfolio-image {

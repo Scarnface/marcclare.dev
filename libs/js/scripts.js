@@ -34,7 +34,7 @@ const galleryImageData = [
   { n: '#gI4', sw: 11.6, sh: 16.2, sx: 47.2, sy: 44, d: 0 },        // Music Stache
   { n: '#gI5', sw: 11.6, sh: 16.6, sx: 26.3, sy: 74.1, d: -0.8 },   // blueJAM
   { n: '#gI6', sw: 11.8, sh: 16.7, sx: 71.3, sy: 76.3, d: -0.5 },   // Codestrips
-  { n: '#project-info', sw: 37, sh: 26, sx: 3, sy: 40, d: 0 }       // Dynamic info panel
+  { n: '#project-info', sw: 37, sh: 26, sx: 3, sy: 42, d: 0 }       // Dynamic info panel
 ];
 
 //-----------------------------------------Array of project data -----------------------------------------------
@@ -106,9 +106,7 @@ let typeText = obj => {
 // Mouse in event to load the correct info text, position info text correctly in mobile and apply hover styling.
 $('.portfolio-image').mouseenter(function() {
   // Darken the background and all but event screen for readability.
-  $('#gallery-background, .portfolio-image')
-    .not('#' + this.id)
-    .css('filter', 'brightness(50%) grayscale(100%)');
+  $('#gallery-background, .portfolio-image').not('#' + this.id).css('filter', 'brightness(50%) grayscale(100%)');
 
   // Load the correct info position in mobile version.
   if($(window).width() < 768) { 
@@ -158,7 +156,8 @@ $('.portfolio-image').mouseenter(function() {
 // Mouse out event to stop the plugin and clear the screen.
 $('.portfolio-image').mouseleave(function() {
   // Remove the darkened background effect and reset the image filters.
-  $('#gallery-background, .portfolio-image').css('filter', 'brightness(100%) grayscale(100%) drop-shadow(0 0 10px rgba(177, 177, 252, 0.7))');
+  $('#gallery-background').css('filter', 'brightness(100%)');
+  $('.portfolio-image').css('filter', 'brightness(100%) grayscale(100%) drop-shadow(0 0 10px rgba(177, 177, 252, 0.7))');
   // Delete the HTML element holding the description effectively stopping it.
   $('#project-description').remove();
 });
