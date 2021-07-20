@@ -85,21 +85,20 @@ let typeText = obj => {
   let tText = document.getElementById('project-description');
 
   let typewriter = new Typewriter(tText, {
-      delay: 50,
+      delay: 30,
       loop: false
   });
 
   // Type the project title.
   typewriter.typeString(obj.t)
-      .pauseFor(2500)
+      .pauseFor(500)
       .deleteAll()
       // Type the project description.
       .typeString(obj.d)
-      .pauseFor(2500)
+      .pauseFor(1000)
       .deleteAll()
       // CTA.
       .typeString('Click the image to view!')
-      .pauseFor(2500)
       .start();
 };
 
