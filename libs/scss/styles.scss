@@ -151,3 +151,39 @@ footer {
   background-color: $lavender-gray;
   color: $dark-purple;
 }
+
+/* ================================= 
+  Code Examples
+==================================== */
+
+.example-wrapper {
+  height: 500px;
+  color: $dark-purple;
+  background-color: #e3e3e3;
+  margin-bottom: 30px;
+  border: 5px solid $dark-purple;
+  border-radius: 5px;
+  padding-right: 30px;
+}
+
+.example-pic {
+  max-height: 100%;
+  margin-right: 30px;
+  float: left;
+}
+
+.example-text {
+  font-family: 'Source Code Pro', monospace;
+  font-size: 1.2rem;
+  font-weight: 600;
+  line-height: 1.2;
+  h4 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-top: 15px;
+    margin-bottom: 30px;  
+  }
+  p {
+    margin-bottom: 1.2rem;
+  }
+}
