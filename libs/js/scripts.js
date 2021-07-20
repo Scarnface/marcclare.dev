@@ -165,9 +165,11 @@ $('.portfolio-image').mouseleave(function() {
 // On page load or resize, choose gallery type based on screen size and call function to position elements.
 $(window).on('load resize', function() {
   if($(window).width() >= 768) {
+    $('#gallery-background').css('max-height', '615px');
     $('#gallery-background').attr('src','libs/img/galleryBackground.jpg');
     scaleToBg(galleryImageData);
   } else {
+    $('#gallery-background').css('max-height', '2126px');
     $('#gallery-background').attr('src','libs/img/galleryBackground_small.jpg');
     scaleToBg(galleryImageDataMob);
   }
