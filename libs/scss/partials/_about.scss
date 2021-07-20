@@ -1,5 +1,5 @@
 /* ================================= 
-  About // !TODO Make img hover have fade. Probably need JS
+  About
 ==================================== */
 .about {
   display: flex;
@@ -14,8 +14,9 @@
   align-content: flex-start;
   text-align: left;
   max-width: 450px;
-  &:not(:last-of-type) {
-    margin-bottom: 30px;
+  margin-bottom: 30px;
+  &:last-of-type {
+    margin-bottom: 6rem;
   }
   border-radius: 5px;
   padding: 1.5rem;

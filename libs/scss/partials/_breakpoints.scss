@@ -84,7 +84,7 @@
 }
 
 /* ================================================================== 
-  XL - Extra large devices (large laptops and desktops, 1200px and up)
+  XL - Extra large devices (large laptops and desktops, 1260px and up)
 ================================================================== */
 @media only screen and (min-width: 1260px) {
   // CONTAINER
@@ -95,6 +95,10 @@
   // LAYOUT SECTIONS
   body .dsection:nth-of-type(even) {
     padding: 8rem 0;
+  }
+
+  body .lastDsection {
+    padding: 2rem 0 3rem;
   }
 
   body .section-title {

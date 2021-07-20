@@ -75,7 +75,7 @@ input:focus {
 
 // Style a default section
 .dsection {
-  padding: 2rem 0;
+  padding: 3rem 0 6rem;
   // Style a diagonal section and alternate applying it to default sections.
   &:nth-of-type(even) {
     background-image: radial-gradient($amethyst, $dark-purple);
@@ -85,9 +85,14 @@ input:focus {
   }
 }
 
+.lastDsection {
+  padding: 2rem 0 2rem;
+}
+
 .section-title {
   width: 100%;
-  padding: 3rem 0 5rem;
+  padding-top: 2rem;
+  padding-bottom: 4rem;
   text-align: center;
   font-family: 'Source Code Pro', monospace;
   font-size: 1.5rem;

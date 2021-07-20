@@ -375,7 +375,7 @@
 .gallery {
   display: flex;
   flex-wrap: wrap;
-  margin-bottom: 30px;
+  margin-bottom: 6rem;
 }
 
 .gallery-container {
@@ -501,7 +501,7 @@
 }
 
 /* ================================= 
-  About // !TODO Make img hover have fade. Probably need JS
+  About
 ==================================== */
 .about {
   display: flex;
@@ -516,14 +516,15 @@
   align-content: flex-start;
   text-align: left;
   max-width: 450px;
+  margin-bottom: 30px;
   border-radius: 5px;
   padding: 1.5rem;
   background-color: #242038;
   color: #f7ece1;
 }
 
-.about-wrapper:not(:last-of-type) {
-  margin-bottom: 30px;
+.about-wrapper:last-of-type {
+  margin-bottom: 6rem;
 }
 
 .about-wrapper h4 {
@@ -639,7 +640,7 @@
 }
 
 /* ================================================================== 
-  XL - Extra large devices (large laptops and desktops, 1200px and up)
+  XL - Extra large devices (large laptops and desktops, 1260px and up)
 ================================================================== */
 @media only screen and (min-width: 1260px) {
   .margin-wrapper {
@@ -647,6 +648,9 @@
   }
   body .dsection:nth-of-type(even) {
     padding: 8rem 0;
+  }
+  body .lastDsection {
+    padding: 2rem 0 3rem;
   }
   body .section-title {
     font-size: 3rem;
@@ -732,7 +736,7 @@ input:focus {
   Layout Sections
 ==================================== */
 .dsection {
-  padding: 2rem 0;
+  padding: 3rem 0 6rem;
 }
 
 .dsection:nth-of-type(even) {
@@ -741,9 +745,14 @@ input:focus {
   padding: 4rem 0;
 }
 
+.lastDsection {
+  padding: 2rem 0 2rem;
+}
+
 .section-title {
   width: 100%;
-  padding: 3rem 0 5rem;
+  padding-top: 2rem;
+  padding-bottom: 4rem;
   text-align: center;
   font-family: 'Source Code Pro', monospace;
   font-size: 1.5rem;

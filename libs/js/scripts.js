@@ -34,7 +34,7 @@ const galleryImageData = [
   { n: '#gI4', sw: 11.6, sh: 16.2, sx: 47.2, sy: 44, d: 0 },        // Music Stache
   { n: '#gI5', sw: 11.6, sh: 16.6, sx: 26.3, sy: 74.1, d: -0.8 },   // blueJAM
   { n: '#gI6', sw: 11.8, sh: 16.7, sx: 71.3, sy: 76.3, d: -0.5 },   // Codestrips
-  { n: '#project-info', sw: 37, sh: 26, sx: 3, sy: 38, d: 0 }       // Dynamic info panel
+  { n: '#project-info', sw: 37, sh: 26, sx: 3, sy: 40, d: 0 }       // Dynamic info panel
 ];
 
 //-----------------------------------------Array of project data -----------------------------------------------
@@ -65,7 +65,7 @@ let scaleToBg = array => {
     let newLeft = value.sx * bgWidth / 100;
     let newTop = value.sy * bgHeight / 100;
     // Calculate a corresponding font size for the info div.
-    if($(window).width() <= 768) {
+    if($(window).width() < 768) {
       fSize = bgWidth / 17;
     } else {
       fSize = bgWidth / 40;
