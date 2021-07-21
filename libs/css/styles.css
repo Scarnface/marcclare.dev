@@ -640,6 +640,24 @@
   }
 }
 
+body .example-wrapper {
+  flex-direction: row;
+  align-items: center;
+}
+
+body .example-wrapper a {
+  max-width: 50%;
+}
+
+body .example-pic {
+  padding-left: 15px;
+  max-width: 100%;
+}
+
+body .example-text {
+  max-width: 50%;
+}
+
 /* ================================================================== 
   XL - Extra large devices (large laptops and desktops, 1260px and up)
 ================================================================== */
@@ -671,6 +689,18 @@
     margin-left: 0;
     margin-right: 0;
   }
+}
+
+body .example-pic {
+  padding: 15px 0 15px 15px;
+}
+
+.example-text h4 {
+  font-size: 3rem;
+}
+
+.example-text p {
+  font-size: 1.25rem;
 }
 
 /* ================================================================== 
@@ -815,36 +845,44 @@ footer {
   Code Examples
 ==================================== */
 .example-wrapper {
-  height: 500px;
+  max-height: max-content;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   color: #242038;
-  background-color: #e3e3e3;
-  margin-bottom: 30px;
-  border: 5px solid #242038;
+  background-color: #cac4ce;
+  border: 5px solid #9067c6;
   border-radius: 5px;
-  padding-right: 30px;
+}
+
+.example-wrapper:not(:first-of-type) {
+  margin-bottom: 30px;
+}
+
+.example-wrapper a {
+  max-width: 100%;
 }
 
 .example-pic {
-  max-height: 100%;
-  margin-right: 30px;
-  float: left;
+  max-width: 100%;
 }
 
 .example-text {
   font-family: 'Source Code Pro', monospace;
-  font-size: 1.2rem;
+  font-size: 1rem;
   font-weight: 600;
   line-height: 1.2;
+  padding: 0 15px;
 }
 
 .example-text h4 {
   text-align: center;
-  font-size: 2.5rem;
-  margin-top: 15px;
-  margin-bottom: 30px;
+  font-size: 2rem;
+  padding-top: 15px;
+  padding-bottom: 15px;
 }
 
 .example-text p {
-  margin-bottom: 1.2rem;
+  padding-bottom: 1rem;
 }
 /*# sourceMappingURL=styles.css.map */

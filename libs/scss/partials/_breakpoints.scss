@@ -83,6 +83,24 @@
   }
 }
 
+// CODE EXAMPLES
+body .example-wrapper {
+  flex-direction: row;
+  align-items: center;
+  a {
+    max-width: 50%;
+  }
+}
+
+body .example-pic {
+  padding-left: 15px;
+  max-width: 100%;
+}
+
+body .example-text {
+  max-width: 50%;
+}
+
 /* ================================================================== 
   XL - Extra large devices (large laptops and desktops, 1260px and up)
 ================================================================== */
@@ -124,6 +142,20 @@
       margin-left: 0;
       margin-right: 0;
     }
+  }
+}
+
+// CODE EXAMPLES
+body .example-pic {
+  padding: 15px 0 15px 15px;
+}
+
+.example-text {
+  h4 {
+    font-size: 3rem; 
+  }
+  p {
+    font-size: 1.25rem; 
   }
 }
 
