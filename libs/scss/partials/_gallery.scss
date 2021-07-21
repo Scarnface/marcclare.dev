@@ -50,7 +50,12 @@
     right: 0;
     z-index: 2;
     // The lines of the screen door
-    background: repeating-linear-gradient(transparent, transparent 1px, black 2px, black 2px);
+    background: repeating-linear-gradient(
+      transparent,
+      transparent 1px,
+      black 2px,
+      black 2px
+    );
     pointer-events: none;
   }
   // Adds a flicker effect to the image
@@ -74,7 +79,7 @@
 #project-info {
   width: 300px;
   height: 200px;
-  font-family: 'Roboto Condensed', sans-serif;
+  font-family: "Roboto Condensed", sans-serif;
   font-weight: 400;
   position: absolute;
   color: #fff;

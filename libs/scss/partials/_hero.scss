@@ -7,7 +7,8 @@
   // Sets the image height to always fill the viewport at the highest clipped Y value.
   height: calc(100% + 6vw);
   // Link to the required image with a linear-gradient to darken its apperance increasing readability of the overlayed text.
-  background-image: linear-gradient(rgba(0,0,0,0.38), rgba(0,0,0,0.38)), url("../img/heroimg.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.38), rgba(0, 0, 0, 0.38)),
+    url("../img/heroimg.jpg");
   // Position and center the image to scale correctly on all viewports.
   background-repeat: no-repeat;
   background-position: center;

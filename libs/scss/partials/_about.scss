@@ -32,10 +32,10 @@
     max-width: 70px;
     max-height: 70px;
     &:hover .icon {
-      display:none;
+      display: none;
     }
     &:hover .icon-hover {
-      display:inline-block;
+      display: inline-block;
     }
   }
 }
@@ -43,18 +43,18 @@
 .icon {
   width: 70px;
   height: 70px;
-  position:relative;
-  left:0px;
-  top:0px;
+  position: relative;
+  left: 0px;
+  top: 0px;
 }
 
 .icon-hover {
   width: 70px;
   height: 70px;
-  position:relative;
-  left:0px;
-  top:0px;
-  display:none;
+  position: relative;
+  left: 0px;
+  top: 0px;
+  display: none;
 }
 
 #th-profile {

@@ -2,9 +2,9 @@
   Imports
 ==================================== */
 
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300;600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300;600&display=swap");
 
 @import "partials/variables";
 @import "partials/animations";
@@ -64,7 +64,7 @@ textarea {
   border: none;
 }
 
-textarea:focus, 
+textarea:focus,
 input:focus {
   border-color: transparent;
 }
@@ -94,7 +94,7 @@ input:focus {
   padding-top: 2rem;
   padding-bottom: 4rem;
   text-align: center;
-  font-family: 'Source Code Pro', monospace;
+  font-family: "Source Code Pro", monospace;
   font-size: 1.5rem;
   font-weight: 300;
   line-height: 1.2;
@@ -109,9 +109,9 @@ input:focus {
 // Scales the sections's font size.
 .intro-text {
   p {
-  font-weight: 700;
-  margin-bottom: 15px;
-  font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+    font-size: 1.25rem;
   }
   a {
     text-decoration: none;
@@ -128,7 +128,7 @@ input:focus {
 ==================================== */
 
 .badge-wrapper {
-  display:flex;
+  display: flex;
   justify-content: center;
   img {
     flex-shrink: 1;
@@ -178,7 +178,7 @@ footer {
 }
 
 .example-text {
-  font-family: 'Source Code Pro', monospace;
+  font-family: "Source Code Pro", monospace;
   font-size: 1rem;
   font-weight: 600;
   line-height: 1.2;
@@ -187,7 +187,7 @@ footer {
     text-align: center;
     font-size: 2rem;
     padding-top: 15px;
-    padding-bottom: 15px;  
+    padding-bottom: 15px;
   }
   p {
     padding-bottom: 1rem;

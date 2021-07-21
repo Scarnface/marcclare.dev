@@ -65,7 +65,7 @@
 @for $i from 1 through 5 {
   .menu-content a:nth-of-type(#{$i}) {
     margin-right: 15px;
-    animation: slide-in .75s linear; 
+    animation: slide-in 0.75s linear;
     animation-fill-mode: both;
     animation-delay: #{$i * 0.2}s;
   }
