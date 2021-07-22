@@ -32,31 +32,31 @@
     transform: translate(0, 0);
   }
   10% {
-    transform: translate(-5%, -10%);
+    transform: translate(-5%, 5%);
   }
   20% {
-    transform: translate(-15%, 5%);
+    transform: translate(0%, 10%);
   }
   30% {
-    transform: translate(10%, -25%);
+    transform: translate(5%, -5%);
   }
   40% {
-    transform: translate(-5%, 25%);
+    transform: translate(0%, -10%);
   }
   50% {
-    transform: translate(-15%, 10%);
+    transform: translate(5%, 0%);
   }
   60% {
-    transform: translate(10%, 0%);
+    transform: translate(0%, 5%);
   }
   70% {
-    transform: translate(0%, 15%);
+    transform: translate(-5%, 10%);
   }
   80% {
-    transform: translate(5%, 25%);
+    transform: translate(0%, -5%);
   }
   90% {
-    transform: translate(-10%, 10%);
+    transform: translate(5%, -10%);
   }
 }
 

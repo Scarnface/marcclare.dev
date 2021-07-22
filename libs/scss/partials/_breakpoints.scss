@@ -164,7 +164,7 @@ body .example-pic {
 ================================================================== */
 @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
   // HERO
-  .hero-image {
+  body .hero-image {
     overflow-x: hidden;
   }
 
