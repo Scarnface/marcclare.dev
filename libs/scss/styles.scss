@@ -24,6 +24,8 @@
   box-sizing: border-box;
   // Removes auto margins added by browsers.
   margin: 0;
+  // Fix for fonts appearing at the wrong weight in Chrome.
+  -webkit-font-smoothing: antialiased;
 }
 
 // Set the specific height for the entire document relative to the viewport.
