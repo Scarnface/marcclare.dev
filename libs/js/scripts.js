@@ -1,5 +1,4 @@
 "use strict";
-
 /* ================================= 
   GALLERY
 ==================================== */
@@ -182,7 +181,6 @@ var galleryImageData = [
 //-----------------------------------------Array of project data -----------------------------------------------
 // t = Project title, d = Project description
 //--------------------------------------------------------------------------------------------------------------
-
 var projectData = [
   {
     t: "Rick's Garage Sale",
@@ -215,8 +213,9 @@ var scaleToBg = function scaleToBg(array) {
   // Calculate the width and height of the parent at the present time.
   var bgWidth = $("#gallery-background").width();
   var bgHeight = $("#gallery-background").height();
-  var fSize; // Loop the array of images.
+  var fSize;
 
+  // Loop the array of images.
   $.each(array, function (key, value) {
     // Calculate the new size.
     var newWidth = (value.sw * bgWidth) / 100;
@@ -232,7 +231,6 @@ var scaleToBg = function scaleToBg(array) {
     } else {
       fSize = bgWidth / 40;
     }
-
     // Assign the new values.
     $(value.n).width(newWidth);
     $(value.n).height(newHeight);
@@ -254,7 +252,6 @@ var typeText = function typeText(obj) {
     delay: 30,
     loop: false,
   });
-
   typewriter
     // Type the project title.
     .typeString(obj.t)
@@ -269,87 +266,123 @@ var typeText = function typeText(obj) {
     .start();
 };
 
-// Mouse in event to load the correct info text, position info text correctly in mobile and apply hover styling.
-$(".portfolio-image").mouseenter(function () {
-  // Darken the background and all but event screen for readability.
-  $("#gallery-background, .portfolio-image")
-    .not("#" + this.id)
-    .css("filter", "brightness(50%) grayscale(100%)");
+// Large screen options.
+if ($(window).width() >= 768) {
+  // Mouse in event to load the correct info text, position info text correctly in mobile and apply hover styling.
+  $(".portfolio-image").mouseenter(function () {
+    // Darken the background and all but event screen for readability.
+    $("#gallery-background, .portfolio-image")
+      .not("#" + this.id)
+      .css("filter", "brightness(50%) grayscale(100%)");
 
-  // Load the correct info position in mobile version.
-  if ($(window).width() < 768) {
+    // Set the info text and image hover filters.
     if (this.id === "gI1") {
-      galleryImageDataMob[6] = galleryInfoDataMob[0];
-      scaleToBg(galleryImageDataMob);
+      $("#" + this.id).css(
+        "filter",
+        "brightness(100%) grayscale(0%) drop-shadow(0 0 10px rgba(252, 252, 177, 0.7))"
+      );
+      typeText(projectData[0]);
     } else if (this.id === "gI2") {
-      galleryImageDataMob[6] = galleryInfoDataMob[1];
-      scaleToBg(galleryImageDataMob);
+      $("#" + this.id).css(
+        "filter",
+        "brightness(100%) grayscale(0%) drop-shadow(0 0 10px rgba(255, 96, 96, 0.7))"
+      );
+      typeText(projectData[1]);
     } else if (this.id === "gI3") {
-      galleryImageDataMob[6] = galleryInfoDataMob[2];
-      scaleToBg(galleryImageDataMob);
+      $("#" + this.id).css(
+        "filter",
+        "brightness(100%) grayscale(0%) drop-shadow(0 0 10px rgba(252, 252, 177, 0.7))"
+      );
+      typeText(projectData[2]);
     } else if (this.id === "gI4") {
-      galleryImageDataMob[6] = galleryInfoDataMob[3];
-      scaleToBg(galleryImageDataMob);
+      $("#" + this.id).css(
+        "filter",
+        "brightness(100%) grayscale(0%) drop-shadow(0 0 10px rgba(255, 96, 96, 0.7))"
+      );
+      typeText(projectData[3]);
     } else if (this.id === "gI5") {
-      galleryImageDataMob[6] = galleryInfoDataMob[4];
-      scaleToBg(galleryImageDataMob);
+      $("#" + this.id).css(
+        "filter",
+        "brightness(100%) grayscale(0%) drop-shadow(0 0 10px rgba(113, 88, 255, 0.7))"
+      );
+      typeText(projectData[4]);
     } else if (this.id === "gI6") {
-      galleryImageDataMob[6] = galleryInfoDataMob[5];
-      scaleToBg(galleryImageDataMob);
+      $("#" + this.id).css(
+        "filter",
+        "brightness(100%) grayscale(0%) drop-shadow(0 0 10px rgba(113, 88, 255, 0.7))"
+      );
+      typeText(projectData[5]);
     }
-  }
+  });
 
-  // Set the info text and image hover filters.
-  if (this.id === "gI1") {
-    $("#" + this.id).css(
+  // Mouse out event to stop the plugin and clear the screen.
+  $(".portfolio-image").mouseleave(function () {
+    // Remove the darkened background effect and reset the image filters.
+    $("#gallery-background").css("filter", "brightness(100%)");
+    $(".portfolio-image").css(
       "filter",
-      "brightness(100%) grayscale(0%) drop-shadow(0 0 10px rgba(252, 252, 177, 0.7))"
+      "brightness(100%) grayscale(100%) drop-shadow(0 0 10px rgba(177, 177, 252, 0.7))"
     );
-    typeText(projectData[0]);
-  } else if (this.id === "gI2") {
-    $("#" + this.id).css(
-      "filter",
-      "brightness(100%) grayscale(0%) drop-shadow(0 0 10px rgba(255, 96, 96, 0.7))"
-    );
-    typeText(projectData[1]);
-  } else if (this.id === "gI3") {
-    $("#" + this.id).css(
-      "filter",
-      "brightness(100%) grayscale(0%) drop-shadow(0 0 10px rgba(252, 252, 177, 0.7))"
-    );
-    typeText(projectData[2]);
-  } else if (this.id === "gI4") {
-    $("#" + this.id).css(
-      "filter",
-      "brightness(100%) grayscale(0%) drop-shadow(0 0 10px rgba(255, 96, 96, 0.7))"
-    );
-    typeText(projectData[3]);
-  } else if (this.id === "gI5") {
-    $("#" + this.id).css(
-      "filter",
-      "brightness(100%) grayscale(0%) drop-shadow(0 0 10px rgba(113, 88, 255, 0.7))"
-    );
-    typeText(projectData[4]);
-  } else if (this.id === "gI6") {
-    $("#" + this.id).css(
-      "filter",
-      "brightness(100%) grayscale(0%) drop-shadow(0 0 10px rgba(113, 88, 255, 0.7))"
-    );
-    typeText(projectData[5]);
-  }
-});
+    // Delete the HTML element holding the description effectively stopping it.
+    $("#project-description").remove();
+  });
+}
 
-// Mouse out event to stop the plugin and clear the screen.
-$(".portfolio-image").mouseleave(function () {
-  // Remove the darkened background effect and reset the image filters.
-  $("#gallery-background").css("filter", "brightness(100%)");
-  $(".portfolio-image").css(
-    "filter",
-    "brightness(100%) grayscale(100%) drop-shadow(0 0 10px rgba(177, 177, 252, 0.7))"
+// Mobile options.
+if ($(window).width() < 768) {
+  // Darken the background image for text readability.
+  $("#gallery-background").css("filter", "brightness(70%)");
+  // Detect the objects position in relation to the screen.
+  var observer = new IntersectionObserver(
+    function (entries, observer) {
+      entries.forEach(function (entry) {
+        if (entry.target.id === "gI1") {
+          // Load the corrresponding text into the array for display.
+          galleryImageDataMob[6] = galleryInfoDataMob[0];
+          // Call the positioning function on the array.
+          scaleToBg(galleryImageDataMob);
+          // Call the typewriter function on the description text.
+          typeText(projectData[0]);
+        } else if (entry.target.id === "gI2") {
+          galleryImageDataMob[6] = galleryInfoDataMob[1];
+          scaleToBg(galleryImageDataMob);
+          typeText(projectData[1]);
+        } else if (entry.target.id === "gI3") {
+          galleryImageDataMob[6] = galleryInfoDataMob[2];
+          scaleToBg(galleryImageDataMob);
+          typeText(projectData[2]);
+        } else if (entry.target.id === "gI4") {
+          galleryImageDataMob[6] = galleryInfoDataMob[3];
+          scaleToBg(galleryImageDataMob);
+          typeText(projectData[3]);
+        } else if (entry.target.id === "gI5") {
+          galleryImageDataMob[6] = galleryInfoDataMob[4];
+          scaleToBg(galleryImageDataMob);
+          typeText(projectData[4]);
+        } else if (entry.target.id === "gI6") {
+          galleryImageDataMob[6] = galleryInfoDataMob[5];
+          scaleToBg(galleryImageDataMob);
+          typeText(projectData[5]);
+        }
+      });
+    },
+    // Detect when the object is 350px into the screen.
+    {
+      rootMargin: "0px 0px -350px 0px",
+    }
   );
-  // Delete the HTML element holding the description effectively stopping it.
-  $("#project-description").remove();
-});
+
+  // Loop all portfolio images.
+  document.querySelectorAll(".portfolio-image").forEach(function (img) {
+    // Apply an observer to each.
+    observer.observe(img);
+    // Apply filters to each.
+    $("#" + img.id).css(
+      "filter",
+      "grayscale(0%) drop-shadow(0 0 10px rgba(177, 177, 252, 0.7))"
+    );
+  });
+}
 
 // On page load or resize, choose gallery type based on screen size and call function to position elements.
 $(window).on("load resize", function () {
