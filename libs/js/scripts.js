@@ -256,12 +256,13 @@ var typeText = function typeText(obj) {
     // Type the project title.
     .typeString(obj.t)
     .pauseFor(500)
-    .deleteAll()
+    // Parameter speeds up delete speed.
+    .deleteAll(2)
     // Type the project description.
     .typeString(obj.d)
     .pauseFor(1000)
-    .deleteAll()
-    // CTA.
+    .deleteAll(2)
+    // Type the CTA.
     .typeString("Click the image to view!")
     .start();
 };
