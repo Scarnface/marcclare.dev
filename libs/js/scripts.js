@@ -66,7 +66,7 @@ var galleryImageDataMob = [
   }, // Dynamic info panel
 ];
 
-// Position data for info div when in mobile gallery
+// Position data for info div when in mobile gallery.
 var galleryInfoDataMob = [
   {
     n: "#project-info",
@@ -388,10 +388,12 @@ if ($(window).width() < 768) {
 // On page load or resize, choose gallery type based on screen size and call function to position elements.
 $(window).on("load resize", function () {
   if ($(window).width() >= 768) {
+    // Max height required to initialize correctly.
     $("#gallery-background").css("max-height", "615px");
     $("#gallery-background").attr("src", "libs/img/galleryBackground.jpg");
     scaleToBg(galleryImageData);
   } else {
+    // Max height required to initialize correctly.
     $("#gallery-background").css("max-height", "2126px");
     $("#gallery-background").attr(
       "src",
