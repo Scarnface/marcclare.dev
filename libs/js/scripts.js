@@ -227,7 +227,7 @@ var scaleToBg = function scaleToBg(array) {
 
     // Calculate a corresponding font size for the info div.
     if ($(window).width() < 768) {
-      fSize = bgWidth / 17;
+      fSize = bgWidth / 19;
     } else {
       fSize = bgWidth / 40;
     }
