@@ -692,10 +692,6 @@ body .example-text {
   }
 }
 
-body .example-pic {
-  padding: 15px 0 15px 15px;
-}
-
 .example-text h4 {
   font-size: 3rem;
 }
@@ -857,12 +853,12 @@ footer {
   border-radius: 5px;
 }
 
-.example-wrapper:not(:first-of-type) {
+.example-wrapper:not(:last-of-type) {
   margin-bottom: 30px;
 }
 
 .example-wrapper a {
-  max-width: 100%;
+  align-items: center;
 }
 
 .example-pic {
@@ -870,11 +866,15 @@ footer {
 }
 
 .example-text {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   font-family: "Source Code Pro", monospace;
   font-size: 1rem;
   font-weight: 600;
   line-height: 1.2;
   padding: 0 15px;
+  min-width: 90%;
 }
 
 .example-text h4 {
@@ -882,9 +882,23 @@ footer {
   font-size: 2rem;
   padding-top: 15px;
   padding-bottom: 15px;
+  width: 100%;
 }
 
 .example-text p {
-  padding-bottom: 1rem;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.example-text img {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  max-width: 60%;
+}
+
+.example-text pre {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  white-space: pre-line;
 }
 /*# sourceMappingURL=styles.css.map */

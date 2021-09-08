@@ -9,31 +9,16 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- SEO Data -->
-    <meta
-      name="keywords"
-      content="Marc Clare, Developer, For Hire, Web Design, Digital Marketing, SEO"
-    />
-    <meta
-      name="description"
-      content="The portfolio site of full-stack web developer Marc Clare"
-    />
+    <meta name="keywords" content="Marc Clare, Developer, For Hire, Web Design, Digital Marketing, SEO" />
+    <meta name="description" content="The portfolio site of full-stack web developer Marc Clare" />
     <meta name="author" content="Marc Clare" />
     <!-- Open Graph Preview Data -->
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="marcclare.dev" />
     <meta property="og:title" content="A Portfolio of Work" />
-    <meta
-      property="og:description"
-      content="The portfolio site of full-stack web developer Marc Clare"
-    />
-    <meta
-      property="og:image"
-      content="https://marcclare.dev/libs/img/favicon/android-chrome-512x512.png"
-    />
-    <meta
-      property="og:image:secure_url"
-      content="https://marcclare.dev/libs/img/favicon/android-chrome-512x512.png"
-    />
+    <meta property="og:description" content="The portfolio site of full-stack web developer Marc Clare" />
+    <meta property="og:image" content="https://marcclare.dev/libs/img/favicon/android-chrome-512x512.png" />
+    <meta property="og:image:secure_url" content="https://marcclare.dev/libs/img/favicon/android-chrome-512x512.png" />
 
     <!-- ================================= 
       SITE RESOURCES
@@ -45,23 +30,9 @@
     <!-- CUSTOM CSS -->
     <link type="text/css" rel="stylesheet" href="libs/css/styles.css" />
     <!-- FAVICON -->
-    <link
-      rel="apple-touch-icon"
-      sizes="180x180"
-      href="libs/img/favicon/apple-touch-icon.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="libs/img/favicon/favicon-32x32.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="16x16"
-      href="libs/img/favicon/favicon-16x16.png"
-    />
+    <link rel="apple-touch-icon" sizes="180x180" href="libs/img/favicon/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="libs/img/favicon/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="libs/img/favicon/favicon-16x16.png" />
     <link rel="manifest" href="libs/img/favicon/site.webmanifest" />
   </head>
 
@@ -69,37 +40,17 @@
     <!-- MENU  -->
     <div class="menu">
       <!-- Menu button -->
-      <a id="menu-btn-primary" class="menu-btn"
-        ><i class="fa-solid fa-bars"></i
-      ></a>
+      <a id="menu-btn-primary" class="menu-btn"><i class="fa-solid fa-bars"></i></a>
       <!-- Menu items (HIDDEN) -->
       <nav class="menu-content">
-        <a
-          id="menu-btn-5"
-          class="menu-btn"
-          href="https://github.com/Scarnface"
-          target="_blank"
-          ><i class="fa-brands fa-github"></i
-        ></a>
-        <a
-          id="menu-btn-4"
-          class="menu-btn"
-          href="https://marcclare.dev/codeexamples.html"
-          target="_blank"
+        <a id="menu-btn-5" class="menu-btn" href="https://github.com/Scarnface" target="_blank"><i class="fa-brands fa-github"></i></a>
+        <a id="menu-btn-4" class="menu-btn" href="https://marcclare.dev/codeexamples.html" target="_blank"
           ><i class="fa-solid fa-comment-code"></i
         ></a>
-        <a id="menu-btn-3" class="menu-btn" href="#info"
-          ><i class="fa-solid fa-circle-info"></i
-        ></a>
-        <a id="menu-btn-2" class="menu-btn" href="#contact"
-          ><i class="fa-solid fa-paper-plane"></i
-        ></a>
-        <a id="menu-btn-1" class="menu-btn" href="#home"
-          ><i class="fa-solid fa-home"></i
-        ></a>
-        <a id="menu-btn-secondary" class="menu-btn"
-          ><i class="fa-solid fa-bars"></i
-        ></a>
+        <a id="menu-btn-3" class="menu-btn" href="#info"><i class="fa-solid fa-circle-info"></i></a>
+        <a id="menu-btn-2" class="menu-btn" href="#contact"><i class="fa-solid fa-paper-plane"></i></a>
+        <a id="menu-btn-1" class="menu-btn" href="#home"><i class="fa-solid fa-home"></i></a>
+        <a id="menu-btn-secondary" class="menu-btn"><i class="fa-solid fa-bars"></i></a>
       </nav>
     </div>
 
@@ -108,28 +59,48 @@
         <h3 class="section-title">&lt;Code Examples&#47;&gt;</h3>
 
         <div class="example-wrapper">
-          <a href="https://www.netmatters.co.uk" target="_blank">
-            <img
-              class="example-pic"
-              src="/libs/img/code1.jpg"
-              alt="Netmatters code example"
-            />
-          </a>
+          <div class="example-text">
+            <h4>SQL</h4>
+            <img class="example-pic" src="/libs/img/movie-database.png" alt="Table relationship diagram" />
+            <p><pre> 
+              SELECT reviewer.rev_name AS "Reviewer", movie.mov_title AS "Favourite Movie", 
+                r1.rev_stars AS "Rating"
+              FROM rating as r1
+              INNER JOIN (
+                SELECT rev_id, MAX(rev_stars) as max_rating
+                FROM rating
+                GROUP BY rev_id
+              ) AS r2 ON r1.rev_id = r2.rev_id AND r1.rev_stars = r2.max_rating
+              INNER JOIN movie ON movie.mov_id = r1.mov_id
+              INNER JOIN reviewer ON r1.rev_id = reviewer.rev_id
+              WHERE reviewer.rev_name IS NOT NULL AND r1.rev_stars IS NOT NULL
+              ORDER BY reviewer.rev_name;
+            </pre></p>
+            <img class="example-pic" src="/libs/img/SQLOutput.JPG" alt="SQL output example" />
+            <p> Using the database shown above I have created a query to find the favourite movie of each reviewer.</p>
+            <p>The query first has to implement an inner join with a subquery from the rating table to itself as we want 
+              to find the highest rating given by each reviewer using the 'MAX' function and not return all their ratings. 
+              We need to return this along with the movie and reviewer ID's which cannot be performed in a single query 
+              whilst using the function. From here we join the movie and reviewers tables on the now obtained ID's and 
+              exclude any results that are incomplete, having NULL values.</p>
+              <p>The query outputs a list of critics, sorted alphabetically by name, that shows their favourite movie
+              and the rating they gave it under formatted column headings.</p>
+          </div>
+        </div>
+
+        <div class="example-wrapper">
           <div class="example-text">
             <h4>Netmatters</h4>
+            <img class="example-pic" src="/libs/img/code1.jpg" alt="Netmatters code example" />
             <p>
-              SCSS offers a great opportunity for modular code. The Netmatters'
-              website features a responsive design which loads different headers
-              depending on the width of the screen it is viewed in. This
-              obviously results in some repetition as features are added or
-              removed depending on the version being shown.
+              SCSS offers a great opportunity for modular code. The Netmatters' website features a responsive design which loads different headers
+              depending on the width of the screen it is viewed in. This obviously results in some repetition as features are added or removed
+              depending on the version being shown.
             </p>
             <p>
-              To implement this, I broke down the constituent parts of the
-              header and created them as modules using SCSS mixins. To construct
-              a version of the header I simply added the mixins to a further
-              mixin containing all the required components, these are then
-              called at the appropriate breakpoints.
+              To implement this, I broke down the constituent parts of the header and created them as modules using SCSS mixins. To construct a
+              version of the header I simply added the mixins to a further mixin containing all the required components, these are then called at the
+              appropriate breakpoints.
             </p>
           </div>
         </div>

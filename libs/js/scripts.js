@@ -188,7 +188,7 @@ var projectData = [
   },
   {
     t: "Netmatters",
-    d: "A front end clone of the Netmatters corporate site using SCSS.",
+    d: "A clone of the Netmatters corporate site using JS & SCSS.",
   },
   {
     t: "Multi API",
@@ -278,40 +278,22 @@ if ($(window).width() >= 768) {
 
     // Set the info text and image hover filters.
     if (this.id === "gI1") {
-      $("#" + this.id).css(
-        "filter",
-        "brightness(100%) grayscale(0%) drop-shadow(0 0 10px rgba(252, 252, 177, 0.7))"
-      );
+      $("#" + this.id).css("filter", "brightness(100%) grayscale(0%) drop-shadow(0 0 10px rgba(252, 252, 177, 0.7))");
       typeText(projectData[0]);
     } else if (this.id === "gI2") {
-      $("#" + this.id).css(
-        "filter",
-        "brightness(100%) grayscale(0%) drop-shadow(0 0 10px rgba(255, 96, 96, 0.7))"
-      );
+      $("#" + this.id).css("filter", "brightness(100%) grayscale(0%) drop-shadow(0 0 10px rgba(255, 96, 96, 0.7))");
       typeText(projectData[1]);
     } else if (this.id === "gI3") {
-      $("#" + this.id).css(
-        "filter",
-        "brightness(100%) grayscale(0%) drop-shadow(0 0 10px rgba(252, 252, 177, 0.7))"
-      );
+      $("#" + this.id).css("filter", "brightness(100%) grayscale(0%) drop-shadow(0 0 10px rgba(252, 252, 177, 0.7))");
       typeText(projectData[2]);
     } else if (this.id === "gI4") {
-      $("#" + this.id).css(
-        "filter",
-        "brightness(100%) grayscale(0%) drop-shadow(0 0 10px rgba(255, 96, 96, 0.7))"
-      );
+      $("#" + this.id).css("filter", "brightness(100%) grayscale(0%) drop-shadow(0 0 10px rgba(255, 96, 96, 0.7))");
       typeText(projectData[3]);
     } else if (this.id === "gI5") {
-      $("#" + this.id).css(
-        "filter",
-        "brightness(100%) grayscale(0%) drop-shadow(0 0 10px rgba(113, 88, 255, 0.7))"
-      );
+      $("#" + this.id).css("filter", "brightness(100%) grayscale(0%) drop-shadow(0 0 10px rgba(113, 88, 255, 0.7))");
       typeText(projectData[4]);
     } else if (this.id === "gI6") {
-      $("#" + this.id).css(
-        "filter",
-        "brightness(100%) grayscale(0%) drop-shadow(0 0 10px rgba(113, 88, 255, 0.7))"
-      );
+      $("#" + this.id).css("filter", "brightness(100%) grayscale(0%) drop-shadow(0 0 10px rgba(113, 88, 255, 0.7))");
       typeText(projectData[5]);
     }
   });
@@ -320,10 +302,7 @@ if ($(window).width() >= 768) {
   $(".portfolio-image").mouseleave(function () {
     // Remove the darkened background effect and reset the image filters.
     $("#gallery-background").css("filter", "brightness(100%)");
-    $(".portfolio-image").css(
-      "filter",
-      "brightness(100%) grayscale(100%) drop-shadow(0 0 10px rgba(177, 177, 252, 0.7))"
-    );
+    $(".portfolio-image").css("filter", "brightness(100%) grayscale(100%) drop-shadow(0 0 10px rgba(177, 177, 252, 0.7))");
     // Delete the HTML element holding the description effectively stopping it.
     $("#project-description").remove();
   });
@@ -378,10 +357,7 @@ if ($(window).width() < 768) {
     // Apply an observer to each.
     observer.observe(img);
     // Apply filters to each.
-    $("#" + img.id).css(
-      "filter",
-      "grayscale(0%) drop-shadow(0 0 10px rgba(177, 177, 252, 0.7))"
-    );
+    $("#" + img.id).css("filter", "grayscale(0%) drop-shadow(0 0 10px rgba(177, 177, 252, 0.7))");
   });
 }
 
@@ -395,10 +371,7 @@ $(window).on("load resize", function () {
   } else {
     // Max height required to initialize correctly.
     $("#gallery-background").css("max-height", "2126px");
-    $("#gallery-background").attr(
-      "src",
-      "libs/img/galleryBackground_small.jpg"
-    );
+    $("#gallery-background").attr("src", "libs/img/galleryBackground_small.jpg");
     scaleToBg(galleryImageDataMob);
   }
 });
