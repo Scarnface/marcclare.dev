@@ -196,15 +196,15 @@ var projectData = [
   },
   {
     t: "Music Stache",
-    d: "HTML, CSS, JavaScript, and Handlebars to make a music store frontend.",
+    d: "HTML, CSS, JavaScript and Handlebars to make a music store frontend.",
   },
   {
     t: "Laracasts",
-    d: "A Laravel blog site with MySQL.",
+    d: "A blog site built using Laravel, Tailwind, Alpine & MySQL.",
   },
   {
     t: "Image Store",
-    d: "A dynamic image site using JS and the Unsplash API",
+    d: "A dynamic image site using JS, Axios and the Unsplash API",
   },
 ];
 
@@ -374,9 +374,4 @@ $(window).on("load resize", function () {
     $("#gallery-background").attr("src", "libs/img/galleryBackground_small.jpg");
     scaleToBg(galleryImageDataMob);
   }
-});
-
-$("#menu-btn-primary, #menu-btn-secondary").click(function () {
-  $("#menu-btn-primary").toggle();
-  $("#menu-content").toggle();
 });

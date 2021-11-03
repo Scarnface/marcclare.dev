@@ -461,11 +461,7 @@
   border: solid 3px #9067c6;
 }
 
-.contact-form label {
-  margin-bottom: 5px;
-}
-
-.contact-form input[type="submit"] {
+.contact-form button[type="submit"] {
   border: solid 3px #9067c6;
   border-radius: 4px;
   padding: 10px 20px;
@@ -475,7 +471,7 @@
   text-transform: uppercase;
 }
 
-.contact-form input[type="submit"]:hover {
+.contact-form button[type="submit"]:hover {
   cursor: pointer;
   background-color: #9067c6;
   color: #000000;
@@ -484,6 +480,13 @@
 .contact-form textarea {
   padding-top: 15px;
   height: 200px;
+}
+
+.contactInfo-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
 }
 
 /* ================================= 

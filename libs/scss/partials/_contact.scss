@@ -25,10 +25,7 @@
       border: solid 3px $amethyst;
     }
   }
-  label {
-    margin-bottom: 5px;
-  }
-  input[type="submit"] {
+  button[type="submit"] {
     border: solid 3px $amethyst;
     border-radius: 4px;
     padding: 10px 20px;
@@ -46,4 +43,11 @@
     padding-top: 15px;
     height: 200px;
   }
+}
+
+.contactInfo-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
 }

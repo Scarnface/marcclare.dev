@@ -34,6 +34,18 @@
     <link rel="icon" type="image/png" sizes="32x32" href="libs/img/favicon/favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="libs/img/favicon/favicon-16x16.png" />
     <link rel="manifest" href="libs/img/favicon/site.webmanifest" />
+
+    <!-- ================================= 
+      SCRIPTS
+    ================================== -->
+    <!-- JQUERY -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js" defer></script>
+    <!-- TYPEWRITER -->
+    <script src="libs/js/core.js" defer></script>
+    <!-- JS -->
+    <script src="libs/js/gallery.js" defer></script>
+    <script src="libs/js/menu.js" defer></script>
+    <script src="libs/js/contact.js" defer></script>
   </head>
 
   <body>
@@ -82,7 +94,8 @@
           </p>
           <p>
             As a full-stack developer I can take a project from wireframe prototypes, through asset creation to front and back-end deployment. I am
-            always experimenting and trying new things or just new ways of doing something.
+            always experimenting and trying new things or just new ways of doing something. I've recently started working with WordPress and Laravel
+            and made the jump from VSCode to PHPStorm!
           </p>
           <p>
             Take a look at my latest projects and feel free to
@@ -141,15 +154,17 @@
     <!-- CONTACT -->
     <div class="dsection">
       <div class="margin-wrapper">
-        <form id="contact" class="contact-form">
+        <form action="mailer.php" method="post" id="contact" class="contact-form">
           <h3 class="section-title">&lt;Contact&#47;&gt;</h3>
 
-          <input class="input" type="text" name="name" placeholder="Your Name..." required />
-          <input class="input" type="text" name="email" placeholder="Your Email..." required />
-          <input class="input" type="text" name="subject" placeholder="Message Subject..." required />
-          <textarea class="input" name="message" placeholder="Your Message..." required></textarea>
-          <input type="submit" value="Submit" />
+          <input class="input" id="contactEmail" type="text" name="email" placeholder="Your Email..." />
+          <input class="input" id="contactSubject" type="text" name="subject" placeholder="Message Subject..." />
+          <textarea class="input" id="contactMessage" name="message" placeholder="Your Message..."></textarea>
+          <button id="contactSubmit" type="submit">Submit</button>
         </form>
+        <div class="contactInfo-wrapper">
+          <p id="contactInfo"></p>
+        </div>
       </div>
     </div>
 
@@ -161,8 +176,8 @@
 
           <div class="about-wrapper">
             <a href="https://www.netmatters.co.uk" target="_blank">
-              <img class="icon" src="/libs/img/nm.png" alt="Netmatters logo" />
-              <img class="icon-hover" src="/libs/img/nm-h.png" alt="Netmatters logo" />
+              <img class="icon" src="libs/img/nm.png" alt="Netmatters logo" />
+              <img class="icon-hover" src="libs/img/nm-h.png" alt="Netmatters logo" />
             </a>
             <h4>About Netmatters</h4>
             <p>
@@ -175,8 +190,8 @@
 
           <div class="about-wrapper">
             <a href="https://www.netmatters.co.uk/scions-coalition-scheme" target="_blank">
-              <img class="icon" src="/libs/img/scs.png" alt="SCS logo" />
-              <img class="icon-hover" src="/libs/img/scs-h.png" alt="SCS logo" />
+              <img class="icon" src="libs/img/scs.png" alt="SCS logo" />
+              <img class="icon-hover" src="libs/img/scs-h.png" alt="SCS logo" />
             </a>
             <h4>About the SCS</h4>
             <p>
@@ -189,8 +204,8 @@
 
           <div class="about-wrapper">
             <a href="https://teamtreehouse.com" target="_blank">
-              <img class="icon" src="/libs/img/th.png" alt="Treehouse logo" />
-              <img class="icon-hover" src="/libs/img/th-h.png" alt="Treehouse logo" />
+              <img class="icon" src="libs/img/th.png" alt="Treehouse logo" />
+              <img class="icon-hover" src="libs/img/th-h.png" alt="Treehouse logo" />
             </a>
             <h4>About Treehouse</h4>
             <p>
@@ -223,15 +238,5 @@
         <script></script>
       </div>
     </footer>
-
-    <!-- ================================= 
-      SCRIPTS
-    ================================== -->
-    <!-- JQUERY -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-    <!-- TYPEWRITER -->
-    <script src="libs/js/core.js"></script>
-    <!-- JS -->
-    <script src="libs/js/scripts.js"></script>
   </body>
 </html>
