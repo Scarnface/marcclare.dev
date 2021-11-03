@@ -155,22 +155,6 @@
   text-align: center;
 }
 
-.menu:hover #menu-btn-primary {
-  display: none;
-}
-
-.menu:hover .menu-content {
-  display: block;
-}
-
-.menu:not(:hover) #menu-btn-primary {
-  display: block;
-}
-
-.menu:not(:hover) .menu-content {
-  display: none;
-}
-
 .menu-content {
   display: none;
   text-align: center;

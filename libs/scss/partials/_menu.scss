@@ -11,24 +11,6 @@
   // Display over all other content.
   z-index: 1;
   text-align: center;
-  // Trigger menu on hover
-  &:hover {
-    #menu-btn-primary {
-      display: none;
-    }
-    .menu-content {
-      display: block;
-    }
-  }
-  // Hide on mouse out
-  &:not(:hover) {
-    #menu-btn-primary {
-      display: block;
-    }
-    .menu-content {
-      display: none;
-    }
-  }
 }
 
 .menu-content {

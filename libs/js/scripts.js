@@ -188,7 +188,7 @@ var projectData = [
   },
   {
     t: "Netmatters",
-    d: "A clone of the Netmatters corporate site using JS & SCSS.",
+    d: "A clone of the Netmatters corporate site using PHP, JS & SCSS.",
   },
   {
     t: "Multi API",
@@ -199,12 +199,12 @@ var projectData = [
     d: "HTML, CSS, JavaScript, and Handlebars to make a music store frontend.",
   },
   {
-    t: "BLUEjam",
-    d: "A REACT application for creating and storing custom Spotify playlists.",
+    t: "Laracasts",
+    d: "A Laravel blog site with MySQL.",
   },
   {
-    t: "Codestrips",
-    d: "A comic strip app using Express, SQLite, and the SQLite3 node module.",
+    t: "Image Store",
+    d: "A dynamic image site using JS and the Unsplash API",
   },
 ];
 
@@ -374,4 +374,9 @@ $(window).on("load resize", function () {
     $("#gallery-background").attr("src", "libs/img/galleryBackground_small.jpg");
     scaleToBg(galleryImageDataMob);
   }
+});
+
+$("#menu-btn-primary, #menu-btn-secondary").click(function () {
+  $("#menu-btn-primary").toggle();
+  $("#menu-content").toggle();
 });
