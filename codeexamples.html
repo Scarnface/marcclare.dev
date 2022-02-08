@@ -60,6 +60,40 @@
 
         <div class="example-wrapper">
           <div class="example-text">
+            <h4>Vue</h4>
+            <img class="example-pic" src="/libs/img/code3.jpg" alt="Vue code example" />
+            <p>
+              Vue.js is a framework which allows developers to update the information displayed within sites live without the requirement of refreshing
+              the page. This means data needs to flow between components and in this example we have methods to track and update variables live 
+              as the user performs actions and also data passing back and forth between components.
+            </p>
+            <p>
+              To implement this, I created 'calculated' methods which track the changes to the 'quote' and can then calculate the prices based on that data.
+              Where information is needed in sub components it is passed as props with listeners waiting for manipulations to it before calling methods in
+              the parent to act on those changes.
+            </p>
+          </div>
+        </div>
+
+        <div class="example-wrapper">
+          <div class="example-text">
+            <h4>Laravel</h4>
+            <img class="example-pic" src="/libs/img/code2.jpg" alt="Laravel code example" />
+            <p>
+              Laravel and Eloquent offer powerful ways to access data stored in databases. This section of code is designed to provide either the
+              full list of products stored or specific search results. In both cases the response is paginated for formatting on the front end.
+            </p>
+            <p>
+              To implement this, I created an Eloquent query that returns the best matches in the name table column and then returns results that
+              additionally match the description table column and sorts these alphabetically. This get the important result to the top with relevant
+              results appeneded in a user friendly fashion. The data is then processed as a resource before being returned in JSON format for use in
+              the application.
+            </p>
+          </div>
+        </div>
+
+        <div class="example-wrapper">
+          <div class="example-text">
             <h4>SQL</h4>
             <img class="example-pic" src="/libs/img/movie-database.png" alt="Table relationship diagram" />
             <p><pre> 
