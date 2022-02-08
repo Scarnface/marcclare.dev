@@ -1,0 +1,69 @@
+/* ================================= 
+  About
+==================================== */
+.about {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.about-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: flex-start;
+  text-align: left;
+  max-width: 450px;
+  margin-bottom: 30px;
+  &:last-of-type {
+    margin-bottom: 6rem;
+  }
+  border-radius: 5px;
+  padding: 1.5rem;
+  background-color: $dark-purple;
+  color: $linen;
+  h4 {
+    width: 100%;
+    padding: 15px 0;
+    font-size: 1.25rem;
+  }
+  // Hover effect on about icons.
+  a:first-of-type {
+    max-width: 70px;
+    max-height: 70px;
+    &:hover .icon {
+      display: none;
+    }
+    &:hover .icon-hover {
+      display: inline-block;
+    }
+  }
+}
+
+.icon {
+  width: 70px;
+  height: 70px;
+  position: relative;
+  left: 0px;
+  top: 0px;
+}
+
+.icon-hover {
+  width: 70px;
+  height: 70px;
+  position: relative;
+  left: 0px;
+  top: 0px;
+  display: none;
+}
+
+#th-profile {
+  margin-top: 2rem;
+  text-decoration: none;
+  color: $amethyst;
+  font-weight: 700;
+  transition: all 1s ease;
+  &:hover {
+    color: $linen;
+  }
+}

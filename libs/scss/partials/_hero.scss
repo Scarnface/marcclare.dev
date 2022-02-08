@@ -1,0 +1,98 @@
+/* ================================= 
+  Hero
+==================================== */
+
+.hero-image {
+  width: 100%;
+  // Sets the image height to always fill the viewport at the highest clipped Y value.
+  height: calc(100% + 6vw);
+  // Link to the required image with a linear-gradient to darken its apperance increasing readability of the overlayed text.
+  background-image: linear-gradient(rgba(0, 0, 0, 0.38), rgba(0, 0, 0, 0.38)),
+    url("../img/heroimg.jpg");
+  // Position and center the image to scale correctly on all viewports.
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  // Add a diagonal effect. Viewport width units used to make angle consistent across screen width.
+  clip-path: polygon(0 0, 100% 0, 100% calc(100% - 6vw), 0 100%);
+}
+
+// The grain effect over the hero image.
+.hero-image::after {
+  width: 350%;
+  height: 350%;
+  top: -100%;
+  left: -50%;
+  position: fixed;
+  opacity: 0.1;
+  animation: noise 8s steps(10) infinite;
+  background-image: url("../img/grain.jpg");
+  content: "";
+}
+
+.hero-text {
+  width: 100%;
+  font-weight: 900;
+  color: $linen;
+  // Centre the text and position it relative to the image.
+  text-align: center;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  // Adjusts for the size of the content.
+  transform: translate(-50%, -50%);
+  font-size: 1rem;
+  span {
+    color: $amethyst;
+    text-shadow: 2px 2px 8px #000;
+  }
+}
+
+// Can't add anchor tags to an animation so this is a hotspot area for the animated scroll arrow.
+.scroll-hotspot {
+  // * Uncomment to make visible for debugging.
+  // background-color: rgba(0, 128, 0, 0.3);
+  width: 42px;
+  height: 170px;
+  display: block;
+  position: absolute;
+  bottom: 6vw;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.scroll-wrapper {
+  position: absolute;
+  // Positions at the bottom of the viewport accounting for diagonal clipping.
+  bottom: 6vw;
+  left: 50%;
+  transform: translateX(-50%) translateY(10px);
+  color: $linen;
+}
+
+#scroll-text {
+  font-size: 1.1rem;
+  font-weight: 700;
+  transform: rotate(90deg) translateX(-40px);
+}
+
+#scroll-arrow {
+  text-align: center;
+  line-height: 3rem;
+  font-size: 3rem;
+  animation: pulse 3s infinite;
+  animation-delay: 2.4s;
+}
+
+// Sets pulse animation on each letter and staggers delay.
+@for $i from 1 through 11 {
+  #scroll-text span:nth-of-type(#{$i}) {
+    animation: pulse 3s infinite;
+    animation-delay: #{$i * 0.2}s;
+  }
+}

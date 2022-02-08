@@ -1,0 +1,86 @@
+/* ================================= 
+  Gallery
+==================================== */
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 6rem;
+}
+
+// Container DIV to anchor effects on
+.gallery-container {
+  width: 100%;
+  position: relative;
+}
+
+// The background image
+#gallery-background {
+  width: 100%;
+  max-height: 2126px;
+  transition: filter 1s ease;
+}
+
+.portfolio-image {
+  // Image starting dimensions roughly equivelant to 4:3 resolution
+  width: 150px;
+  height: 110px;
+  position: absolute;
+  transition: filter 1s ease;
+  // Image starts B&W with white-blue glow effect
+  filter: grayscale(100%) drop-shadow(0 0 10px rgba(177, 177, 252, 0.7));
+  img {
+    width: 100%;
+    height: 100%;
+    border-radius: 2px;
+  }
+  // Universal hover effects. Per image listed below by ID
+  &:hover {
+    transition: filter 1s ease;
+    cursor: pointer;
+  }
+  // Adds a screen door effect to the image
+  &::before {
+    content: " ";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 2;
+    // The lines of the screen door
+    background: repeating-linear-gradient(
+      transparent,
+      transparent 1px,
+      black 2px,
+      black 2px
+    );
+    pointer-events: none;
+  }
+  // Adds a flicker effect to the image
+  &::after {
+    content: " ";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 2;
+    background: rgba(18, 16, 16, 0.1);
+    opacity: 0;
+    animation: flicker 0.15s infinite;
+    pointer-events: none;
+  }
+}
+
+// The dynamic descriptions of each project
+#project-info {
+  width: 300px;
+  height: 200px;
+  font-family: "Roboto Condensed", sans-serif;
+  font-weight: 400;
+  position: absolute;
+  color: #fff;
+}

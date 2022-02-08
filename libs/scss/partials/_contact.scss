@@ -1,0 +1,53 @@
+/* ================================= 
+  Contact
+==================================== */
+
+.contact-form {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  input[type="text"],
+  select,
+  textarea {
+    width: 100%;
+    height: 3rem;
+    margin-bottom: 30px;
+    border-radius: 5px;
+    padding: 5px 10px;
+    // Allow user to resize text area.
+    resize: vertical;
+    box-shadow: inset 0 0 15px #000000;
+    background-color: $lavender-gray;
+    color: $dark-purple;
+    font-family: inherit;
+    font-size: 1rem;
+    &:focus {
+      border: solid 3px $amethyst;
+    }
+  }
+  button[type="submit"] {
+    border: solid 3px $amethyst;
+    border-radius: 4px;
+    padding: 10px 20px;
+    background-color: transparent;
+    color: $amethyst;
+    font-size: 1rem;
+    text-transform: uppercase;
+    &:hover {
+      cursor: pointer;
+      background-color: $amethyst;
+      color: #000000;
+    }
+  }
+  textarea {
+    padding-top: 15px;
+    height: 200px;
+  }
+}
+
+.contactInfo-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+}

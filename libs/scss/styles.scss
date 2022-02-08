@@ -1,0 +1,213 @@
+/* ================================= 
+  Imports
+==================================== */
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300;600&display=swap");
+
+@import "partials/variables";
+@import "partials/animations";
+@import "partials/menu";
+@import "partials/hero";
+@import "partials/gallery";
+@import "partials/contact";
+@import "partials/about";
+@import "partials/breakpoints";
+
+/* ================================= 
+  Base Element Styles
+==================================== */
+
+* {
+  // Include border and padding in total dimensions.
+  box-sizing: border-box;
+  // Removes auto margins added by browsers.
+  margin: 0;
+  // Fix for fonts appearing at the wrong weight in Chrome.
+  -webkit-font-smoothing: antialiased;
+}
+
+// Set the specific height for the entire document relative to the viewport.
+body,
+html {
+  height: 100%;
+  background-color: $dark-purple;
+  // Specify the desired and fallback fonts.
+  font-family: "Roboto", Arial, sans-serif;
+  font-weight: 400;
+  color: $linen;
+  text-align: left;
+}
+
+// Add a consistent margin to the whole document.
+.margin-wrapper {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+// Remove default styling to allow custom styling.
+button {
+  text-transform: uppercase;
+  text-decoration: none;
+  font: inherit;
+  outline: inherit;
+  border: inherit;
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+input,
+textarea {
+  outline: none;
+  border: none;
+}
+
+textarea:focus,
+input:focus {
+  border-color: transparent;
+}
+
+/* ================================= 
+  Layout Sections
+==================================== */
+
+// Style a default section
+.dsection {
+  padding: 3rem 0 6rem;
+  // Style a diagonal section and alternate applying it to default sections.
+  &:nth-of-type(even) {
+    background-image: radial-gradient($amethyst, $dark-purple);
+    // Add a diagonal effect. Viewport width units used to make angle consistent across screen widths.
+    clip-path: polygon(0 6vw, 100% 0, 100% calc(100% - 6vw), 0 100%);
+    padding: 4rem 0;
+  }
+}
+
+.lastDsection {
+  padding: 2rem 0 2rem;
+}
+
+.section-title {
+  width: 100%;
+  padding-top: 2rem;
+  padding-bottom: 4rem;
+  text-align: center;
+  font-family: "Source Code Pro", monospace;
+  font-size: 1.5rem;
+  font-weight: 300;
+  line-height: 1.2;
+  color: $linen;
+  animation: neon 3s infinite;
+}
+
+/* ================================= 
+  Introduction
+==================================== */
+
+// Scales the sections's font size.
+.intro-text {
+  p {
+    font-weight: 700;
+    margin-bottom: 15px;
+    font-size: 1.25rem;
+  }
+  a {
+    text-decoration: none;
+    color: $amethyst;
+    transition: all 1s ease;
+    &:hover {
+      color: $linen;
+    }
+  }
+}
+
+/* ================================= 
+  Awards and Memberships
+==================================== */
+
+.badge-wrapper {
+  display: flex;
+  justify-content: center;
+  img {
+    flex-shrink: 1;
+    width: auto;
+    height: 100px;
+    &:not(:last-of-type) {
+      padding-right: 25px;
+    }
+  }
+}
+
+/* ================================= 
+  Footer
+==================================== */
+
+footer {
+  text-align: center;
+  font-size: 0.7rem;
+  padding: 0.2rem;
+  background-color: $lavender-gray;
+  color: $dark-purple;
+}
+
+/* ================================= 
+  Code Examples
+==================================== */
+
+.example-wrapper {
+  max-height: max-content;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  color: $dark-purple;
+  background-color: $lavender-gray;
+  &:not(:last-of-type) {
+    margin-bottom: 30px;
+  }
+  border: 5px solid $amethyst;
+  border-radius: 5px;
+  a {
+    align-items: center;
+  }
+}
+
+.example-pic {
+  max-width: 100%;
+}
+
+.example-text {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  font-family: "Source Code Pro", monospace;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.2;
+  padding: 0 15px;
+  min-width: 90%;
+  h4 {
+    text-align: center;
+    font-size: 2rem;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    width: 100%;
+  }
+  p {
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+  img {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    max-width: 60%;
+  }
+  pre {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    white-space: pre-line;
+  }
+}

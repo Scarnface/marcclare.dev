@@ -1,0 +1,171 @@
+/* ================================================================== 
+  S - Small devices (phones, 768px and down)
+================================================================== */
+@media only screen and (max-width: 767px) {
+  // CONTAINER
+  .margin-wrapper {
+    width: 100%;
+  }
+}
+
+/* ================================================================== 
+  M - Medium devices (landscape tablets, 768px and up)
+================================================================== */
+@media only screen and (min-width: 768px) {
+  // CONTAINER
+  .margin-wrapper {
+    width: 750px;
+  }
+
+  // LAYOUT SECTIONS
+  body .dsection:nth-of-type(even) {
+    padding: 6rem 0;
+  }
+
+  body .section-title {
+    font-size: 2rem;
+  }
+
+  // MENU
+  body .menu-btn {
+    font-size: 3rem;
+  }
+
+  // HERO
+  body .hero-text {
+    h1 {
+      font-size: 4rem;
+      margin-bottom: 20px;
+    }
+    h2 {
+      font-size: 2rem;
+    }
+  }
+
+  // ABOUT
+  body .about {
+    justify-content: space-between;
+  }
+
+  body .about-wrapper {
+    max-width: calc(50% - 15px);
+    &:nth-of-type(3) {
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+}
+
+/* ================================================================== 
+  L - Large devices (laptops/desktops, 992px and up)
+================================================================== */
+@media only screen and (min-width: 992px) {
+  // CONTAINER
+  .margin-wrapper {
+    width: 970px;
+  }
+
+  // LAYOUT SECTIONS
+  body .section-title {
+    font-size: 2.5rem;
+  }
+
+  // INTRODUCTION
+  body .intro-text p {
+    font-size: 1.5rem;
+  }
+
+  // CONTACT
+  .contact-form {
+    max-width: 970px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+// CODE EXAMPLES
+body .example-wrapper {
+  flex-direction: row;
+  align-items: center;
+  a {
+    max-width: 50%;
+  }
+}
+
+body .example-pic {
+  padding-left: 15px;
+  max-width: 100%;
+}
+
+body .example-text {
+  max-width: 50%;
+}
+
+/* ================================================================== 
+  XL - Extra large devices (large laptops and desktops, 1260px and up)
+================================================================== */
+@media only screen and (min-width: 1260px) {
+  // CONTAINER
+  .margin-wrapper {
+    width: 1200px;
+  }
+
+  // LAYOUT SECTIONS
+  body .dsection:nth-of-type(even) {
+    padding: 8rem 0;
+  }
+
+  body .lastDsection {
+    padding: 2rem 0 3rem;
+  }
+
+  body .section-title {
+    font-size: 3rem;
+  }
+
+  // HERO
+  body .hero-text h1 {
+    font-size: 5rem;
+  }
+
+  // INTRODUCTION
+  body .intro-text p {
+    font-size: 1.75rem;
+    margin-bottom: 30px;
+  }
+
+  // ABOUT
+  body .about-wrapper {
+    max-width: calc(30% - 10px);
+    height: 400px;
+    &:nth-of-type(3) {
+      margin-left: 0;
+      margin-right: 0;
+    }
+  }
+}
+
+// CODE EXAMPLES
+
+.example-text {
+  h4 {
+    font-size: 3rem;
+  }
+  p {
+    font-size: 1.25rem;
+  }
+}
+
+/* ================================================================== 
+  IE10+ - 'Special' Edition
+================================================================== */
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  // HERO
+  body .hero-image {
+    overflow-x: hidden;
+  }
+
+  body .hero-image:after {
+    display: none;
+  }
+}
